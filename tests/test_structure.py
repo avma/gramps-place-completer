@@ -132,3 +132,36 @@ class VersionTests(unittest.TestCase):
         from placecompleter import wikidata
         self.assertIn("PlaceCompleter/" + placecompleter.__version__, wikidata.USER_AGENT)
         self.assertIn("https://github.com/avma/gramps-place-completer", wikidata.USER_AGENT)         # a way to reach the author, as Wikimedia asks
+
+
+class RegistrationTests(unittest.TestCase):
+    """What the addon manager of Gramps shows about the addon: it says that it is experimental, who wrote it, and where the help is."""
+
+    def registrations(self):
+        import ast
+        with open(os.path.join(ROOT, "PlaceCompleter.gpr.py"), encoding="utf-8") as fh:
+            tree = ast.parse(fh.read())
+        return [{kw.arg: kw.value for kw in node.keywords} for node in ast.walk(tree)
+                if isinstance(node, ast.Call) and isinstance(node.func, ast.Name) and node.func.id == "register"]
+
+    def test_every_registration_is_experimental_and_has_a_help_address(self):
+        import ast
+        regs = self.registrations()
+        self.assertEqual(len(regs), 4)                                                         # the tool, two gramplets, the quick view
+        for kw in regs:
+            self.assertEqual(ast.unparse(kw["status"]), "EXPERIMENTAL", kw["id"].value)
+            self.assertEqual(ast.unparse(kw["help_url"]), "HELP_URL", kw["id"].value)
+
+    def test_the_help_address_is_the_homepage_of_the_engine(self):
+        import ast
+        import placecompleter
+        with open(os.path.join(ROOT, "PlaceCompleter.gpr.py"), encoding="utf-8") as fh:
+            tree = ast.parse(fh.read())
+        value = next(n.value.value for n in tree.body if isinstance(n, ast.Assign) and n.targets[0].id == "HELP_URL")
+        self.assertEqual(value, placecompleter.HOMEPAGE)
+
+    def test_the_author_is_the_holder_of_the_copyright(self):
+        import ast
+        for kw in self.registrations():
+            if "authors" in kw:
+                self.assertEqual([e.value for e in kw["authors"].elts], ["Avi Markovitz"], kw["id"].value)

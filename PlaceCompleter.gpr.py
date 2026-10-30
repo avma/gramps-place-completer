@@ -20,7 +20,7 @@
 #
 # Registration of Place Completer in Gramps: a tool (Tools > Family Tree Processing), a gramplet of the Events view, a gramplet of the Places
 # view, and an entry in the right-click menu of the Places view (Quick View > Place Completer).
-# The names register, TOOL, GRAMPLET, QUICKREPORT, CATEGORY_QR_PLACE, TOOL_DBPROC, TOOL_MODE_GUI, UNSTABLE are provided by Gramps when it reads this file.
+# The names register, TOOL, GRAMPLET, QUICKREPORT, CATEGORY_QR_PLACE, TOOL_DBPROC, TOOL_MODE_GUI, EXPERIMENTAL are provided by Gramps when it reads this file.
 from gramps.version import major_version
 
 # Gramps runs this file with its own _ : the texts of Gramps first, then the translation of the addon (locale/<language>/LC_MESSAGES/addon.mo next to this
@@ -34,6 +34,8 @@ if "_" not in globals():
 # these, and names 6.0 otherwise, so that any other Gramps declines it on purpose instead of running it untested.
 TESTED_WITH = ("6.0", "6.1")
 
+HELP_URL = "https://github.com/avma/gramps-place-completer"          # the Help button of the addon manager opens it (the same as placecompleter.HOMEPAGE)
+
 register(
     TOOL,
     id="placecompleter",
@@ -44,9 +46,10 @@ register(
     ),
     version="0.1.1",
     gramps_target_version=major_version if major_version in TESTED_WITH else "6.0",
-    status=UNSTABLE,
+    status=EXPERIMENTAL,
+    help_url=HELP_URL,
     fname="placecompleter_tool.py",
-    authors=["Avi Markovich"],
+    authors=["Avi Markovitz"],
     authors_email=[""],
     category=TOOL_DBPROC,
     toolclass="PlaceCompleterTool",
@@ -61,7 +64,8 @@ register(
     description=_("Shows the active event's place and date and opens the Place Completer window with them filled in."),
     version="0.1.1",
     gramps_target_version=major_version if major_version in TESTED_WITH else "6.0",
-    status=UNSTABLE,
+    status=EXPERIMENTAL,
+    help_url=HELP_URL,
     fname="placecompleter_gramplet.py",
     height=150,
     expand=False,
@@ -77,7 +81,8 @@ register(
     description=_("Shows the active place and what it lacks, and opens the Place Completer window with its name."),
     version="0.1.1",
     gramps_target_version=major_version if major_version in TESTED_WITH else "6.0",
-    status=UNSTABLE,
+    status=EXPERIMENTAL,
+    help_url=HELP_URL,
     fname="placecompleter_gramplet.py",
     height=150,
     expand=False,
@@ -93,9 +98,10 @@ register(
     description=_("Open the Place Completer window for this place."),
     version="0.1.1",
     gramps_target_version=major_version if major_version in TESTED_WITH else "6.0",
-    status=UNSTABLE,
+    status=EXPERIMENTAL,
+    help_url=HELP_URL,
     fname="placecompleter_quickview.py",
-    authors=["Avi"],
+    authors=["Avi Markovitz"],
     authors_email=[""],
     category=CATEGORY_QR_PLACE,
     runfunc="run",

@@ -1569,7 +1569,7 @@ class RegistrationTests(unittest.TestCase):
         """Run the gpr file as Gramps does; `major` stands in for the version of Gramps that reads it."""
         calls = []
         names = {"register": lambda *a, **k: calls.append((a, k)), "TOOL": "TOOL", "GRAMPLET": "GRAMPLET", "TOOL_DBPROC": "DBPROC",
-                 "TOOL_MODE_GUI": "GUI", "UNSTABLE": "UNSTABLE", "QUICKREPORT": "QUICKREPORT", "CATEGORY_QR_PLACE": 4}
+                 "TOOL_MODE_GUI": "GUI", "EXPERIMENTAL": "EXPERIMENTAL", "QUICKREPORT": "QUICKREPORT", "CATEGORY_QR_PLACE": 4}
         stub = {}
         if major is not None:
             stub = {"gramps.version": types.SimpleNamespace(major_version=major)}
@@ -1598,15 +1598,18 @@ class RegistrationTests(unittest.TestCase):
 
     def test_the_names_are_given_through_the_underscore_that_gramps_provides(self):
         """Gramps runs the file with its own _ (Gramps first, then the locale folder of the addon): the file must not replace it, or the names stay English."""
+        import placecompleter
         calls = []
         names = {"register": lambda *a, **k: calls.append((a, k)), "TOOL": "TOOL", "GRAMPLET": "GRAMPLET", "TOOL_DBPROC": "DBPROC", "TOOL_MODE_GUI": "GUI",
-                 "UNSTABLE": "UNSTABLE", "QUICKREPORT": "QUICKREPORT", "CATEGORY_QR_PLACE": 4, "_": lambda text: "T<" + text + ">"}
+                 "EXPERIMENTAL": "EXPERIMENTAL", "QUICKREPORT": "QUICKREPORT", "CATEGORY_QR_PLACE": 4, "_": lambda text: "T<" + text + ">"}
         with open(os.path.join(ROOT, "PlaceCompleter.gpr.py"), encoding="utf-8") as fh:
             exec(compile(fh.read(), "PlaceCompleter.gpr.py", "exec"), names)
         self.assertTrue(calls)
         for _args, kw in calls:
             self.assertTrue(kw["name"].startswith("T<Place Completer"), kw["name"])
             self.assertTrue(kw["description"].startswith("T<"), kw["description"])
+            self.assertEqual(kw["status"], "EXPERIMENTAL", kw["name"])                              # (it is experimental: the addon manager says so)
+            self.assertEqual(kw["help_url"], placecompleter.HOMEPAGE, kw["name"])                    # (the Help button opens the repository)
         self.assertEqual(names["_"]("x"), "T<x>")                                                   # the file kept the _ that Gramps gave
 
     def registered(self, kind, id_):
