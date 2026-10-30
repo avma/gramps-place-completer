@@ -80,6 +80,11 @@ Tested only on Linux Mint (version 22.3 at the time of writing). It has not been
 
 If you test this addon on Windows or macOS, feedback is welcome, though fixes for non-Linux platforms cannot be guaranteed.
 
+## Your own place types
+
+If your tree uses custom place types for administrative units (a canton, a district, in any language), copy `data/type-conventions.json` to `~/.config/placecompleter/type-conventions.json`
+and fill it in (see `data/type-conventions.example-he.json`); an update of the addon does not touch that copy. Without it, the types of Gramps itself are used.
+
 ## Languages
 
 Available in English with a complete **Hebrew** translation (`po/he-local.po`). Place type designations match those natively used by Gramps. Template files for localization can be found at `po/template.pot`, and `tools/po_exchange.py` facilitates compatibility with Poedit.
