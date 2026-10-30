@@ -27,6 +27,7 @@ You provide a place name and a date (e.g., *Kolozsvár, 1899*). The addon formul
 
 **What it does not do:** It never modifies your data without explicit approval; it never alters existing tree data without flagging it (nothing is checked by default; conflicts are never chosen by *Select all*); and it does not automatically merge duplicate places (though it alerts you when two places share similarities). Ambiguous tree entries—such as *Johnston* in Iowa versus *Johnston* in Rhode Island—are automatically distinguished by coordinates when they are more than 30 km apart.
 
+   ![The proposals window](docs/screenshots/place-completer-window.png)
 ## Supported AI Engines
 
 | Engine | Prerequisites | Notes |
