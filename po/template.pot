@@ -1,0 +1,1536 @@
+# Place Completer: the texts to translate. Made by tools/extract_strings.py; do not edit.
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+
+#: PlaceCompleter.gpr.py:40 PlaceCompleter.gpr.py:60 PlaceCompleter.gpr.py:69
+msgid "Place Completer"
+msgstr ""
+
+#: PlaceCompleter.gpr.py:41
+msgid "Completes the historical hierarchy of a place on a date: an AI answers, the program matches it to your places, shows what Gramps would display, and writes only what you check (one Undo)."
+msgstr ""
+
+#: PlaceCompleter.gpr.py:61
+msgid "Shows the active event's place and date and opens the Place Completer window with them filled in."
+msgstr ""
+
+#: PlaceCompleter.gpr.py:76
+msgid "Place Completer (places)"
+msgstr ""
+
+#: PlaceCompleter.gpr.py:77
+msgid "Shows the active place and what it lacks, and opens the Place Completer window with its name."
+msgstr ""
+
+#: PlaceCompleter.gpr.py:93
+msgid "Open the Place Completer window for this place."
+msgstr ""
+
+#: placecompleter_tool.py:174 placecompleter_tool.py:843
+msgid "_Close"
+msgstr ""
+
+#: placecompleter_tool.py:175
+msgid "Apply checked changes"
+msgstr ""
+
+#: placecompleter_tool.py:187
+msgid "optional: a word that distinguishes places, e.g., Iowa or the country, e.g., Italy"
+msgstr ""
+
+#: placecompleter_tool.py:200
+msgid "Enter the API key for the selected AI once: it will be saved securely"
+msgstr ""
+
+#: placecompleter_tool.py:257
+msgid "Retrieved administrative levels (uncheck uncertain levels)"
+msgstr ""
+
+#: placecompleter_tool.py:262
+msgid "Other changes (each box is a grouped change applied as a set)"
+msgstr ""
+
+#: placecompleter_tool.py:356
+msgid "Proposed changes"
+msgstr ""
+
+#: placecompleter_tool.py:359 placecompleter_tool.py:360
+msgid "Confidence"
+msgstr ""
+
+#: placecompleter_tool.py:539 placecompleter_tool.py:618 placecompleter_tool.py:722
+msgid "_Cancel"
+msgstr ""
+
+#: placecompleter_tool.py:540 placecompleter_tool.py:619
+msgid "_OK"
+msgstr ""
+
+#: placecompleter_tool.py:570
+msgid "The response is ready. Looking up coordinates on Wikidata…"
+msgstr ""
+
+#: placecompleter_tool.py:702 placecompleter/ollama.py:103
+msgid "Ollama is not installed"
+msgstr ""
+
+#: placecompleter_tool.py:703
+msgid "Ollama runs a local AI model: free, no API key required.\nIt lacks web access and may be less reliable than Google AI mode or Claude.\nThe installer will ask for administrator permissions in the terminal window that opens. The command:"
+msgstr ""
+
+#: placecompleter_tool.py:723
+msgid "Download"
+msgstr ""
+
+#: placecompleter_tool.py:737
+msgid "another model name (optional)"
+msgstr ""
+
+#: placecompleter_tool.py:821
+msgid "Key saved. Finding an available model…"
+msgstr ""
+
+#: placecompleter_tool.py:844
+msgid "Remove"
+msgstr ""
+
+#: placecompleter_tool.py:845
+msgid "Test"
+msgstr ""
+
+#: placecompleter_tool.py:846
+msgid "Save"
+msgstr ""
+
+#: placecompleter_tool.py:856
+msgid "paste the key here"
+msgstr ""
+
+#: placecompleter_tool.py:864
+msgid "Sent only to %s."
+msgstr ""
+
+#: placecompleter_tool.py:197
+msgid "Ask"
+msgstr ""
+
+#: placecompleter_tool.py:199
+msgid "Key…"
+msgstr ""
+
+#: placecompleter_tool.py:214
+msgid "Wikipedia languages"
+msgstr ""
+
+#: placecompleter_tool.py:220
+msgid "Look up coordinates on Wikidata (only place names are sent)"
+msgstr ""
+
+#: placecompleter_tool.py:235
+msgid "Response (if copied from a browser, paste it here)"
+msgstr ""
+
+#: placecompleter_tool.py:273 placecompleter_tool.py:429
+msgid "Select all"
+msgstr ""
+
+#: placecompleter_tool.py:285
+msgid "Issues to review"
+msgstr ""
+
+#: placecompleter_tool.py:352 placecompleter_tool.py:258
+msgid "Select"
+msgstr ""
+
+#: placecompleter_tool.py:438
+msgid "All items are unchecked."
+msgstr ""
+
+#: placecompleter_tool.py:538 placecompleter_tool.py:617
+msgid "Which place is this?"
+msgstr ""
+
+#: placecompleter_tool.py:640
+msgid "Cancelled: no place selected."
+msgstr ""
+
+#: placecompleter_tool.py:710
+msgid "Command copied: open a terminal and paste it (Ctrl+Shift+V)."
+msgstr ""
+
+#: placecompleter_tool.py:721
+msgid "Download a model"
+msgstr ""
+
+#: placecompleter_tool.py:727
+msgid "Ollama is running but no model is installed.\nDownloading a model (a few GB) takes a few minutes and stays stored locally on this computer.\nSelect a model below or enter a model name from ollama.com/library:"
+msgstr ""
+
+#: placecompleter_tool.py:752
+msgid "Starting download…"
+msgstr ""
+
+#: placecompleter_tool.py:778 placecompleter/ollama.py:136
+msgid "download cancelled"
+msgstr ""
+
+#: placecompleter_tool.py:842
+msgid "API key"
+msgstr ""
+
+#: placecompleter_tool.py:975
+msgid "This family tree is opened as read-only."
+msgstr ""
+
+#: placecompleter_tool.py:979
+msgid "Select at least one proposed change first."
+msgstr ""
+
+#: placecompleter_tool.py:985
+msgid "Changes are applied together in one step; Edit > Undo will revert all of them."
+msgstr ""
+
+#: placecompleter_tool.py:202 placecompleter/grampslink.py:89
+msgid "Place"
+msgstr ""
+
+#: placecompleter_tool.py:202
+msgid "Date"
+msgstr ""
+
+#: placecompleter_tool.py:203
+msgid "Region hint"
+msgstr ""
+
+#: placecompleter_tool.py:203
+msgid "Question"
+msgstr ""
+
+#: placecompleter_tool.py:204
+msgid "AI"
+msgstr ""
+
+#: placecompleter_tool.py:246
+msgid "Paste from clipboard"
+msgstr ""
+
+#: placecompleter_tool.py:246
+msgid "Analyze"
+msgstr ""
+
+#: placecompleter_tool.py:258
+msgid "Level"
+msgstr ""
+
+#: placecompleter_tool.py:429
+msgid "Clear all"
+msgstr ""
+
+#: placecompleter_tool.py:442
+msgid "%d change(s) in CONFLICT with existing tree data (replacing a different date)"
+msgstr ""
+
+#: placecompleter_tool.py:444
+msgid "%d web link(s) to a site of unknown type (check if official)"
+msgstr ""
+
+#: placecompleter_tool.py:446
+msgid "%d conflicting change(s) (select one option)"
+msgstr ""
+
+#: placecompleter_tool.py:448
+msgid "%d change(s) depending on these options"
+msgstr ""
+
+#: placecompleter_tool.py:449
+msgid "%d change(s) selected. Remaining to review: %s."
+msgstr ""
+
+#: placecompleter_tool.py:449
+msgid "%d change(s) selected."
+msgstr ""
+
+#: placecompleter_tool.py:463
+msgid "Invalid language codes ignored: %s. Please use standard 2-letter codes (e.g., en, he, fr)."
+msgstr ""
+
+#: placecompleter_tool.py:549
+msgid "Exclude this level"
+msgstr ""
+
+#: placecompleter_tool.py:589 placecompleter/geo.py:79
+msgid "Could not query Wikidata: %s"
+msgstr ""
+
+#: placecompleter_tool.py:606
+msgid "Click Ask first, or paste a response into the text box."
+msgstr ""
+
+#: placecompleter_tool.py:609
+msgid "Specify the place name and date for the query."
+msgstr ""
+
+#: placecompleter_tool.py:622
+msgid "This name matches multiple places. Which one did you mean?"
+msgstr ""
+
+#: placecompleter_tool.py:677
+msgid "Starting Ollama…"
+msgstr ""
+
+#: placecompleter_tool.py:706
+msgid "Copy command"
+msgstr ""
+
+#: placecompleter_tool.py:706
+msgid "Open terminal to run installer"
+msgstr ""
+
+#: placecompleter_tool.py:747
+msgid "Downloading %s"
+msgstr ""
+
+#: placecompleter_tool.py:827
+msgid "Key saved, but could not select a model: %s"
+msgstr ""
+
+#: placecompleter_tool.py:840
+msgid "%s does not require an API key."
+msgstr ""
+
+#: placecompleter_tool.py:871
+msgid "No API key saved for this AI engine yet."
+msgstr ""
+
+#: placecompleter_tool.py:879
+msgid "Testing API key connection…"
+msgstr ""
+
+#: placecompleter_tool.py:904 placecompleter_tool.py:833
+msgid "Key saved (%s)."
+msgstr ""
+
+#: placecompleter_tool.py:950
+msgid "Gramps display format for an event on this date: %s"
+msgstr ""
+
+#: placecompleter_tool.py:983
+msgid "Apply %d change(s) to the family tree?"
+msgstr ""
+
+#: placecompleter_tool.py:544
+msgid "The response specifies «%(name)s» (%(type)s), matching several existing places in your tree. No changes will be made until you choose one."
+msgstr ""
+
+#: placecompleter_tool.py:549
+msgid "New place «%s»"
+msgstr ""
+
+#: placecompleter_tool.py:672
+msgid "Ollama service is not running"
+msgstr ""
+
+#: placecompleter_tool.py:673
+msgid "Ollama is installed locally but is not currently active.\nStart it now? It will run in the background (ollama serve) until stopped or the computer shuts down."
+msgstr ""
+
+#: placecompleter_tool.py:690
+msgid "Downloading model %s…"
+msgstr ""
+
+#: placecompleter_tool.py:696
+msgid "Model %s successfully installed."
+msgstr ""
+
+#: placecompleter_tool.py:713
+msgid "A terminal window is open: enter your administrator password there. Once installation finishes, click Ask again."
+msgstr ""
+
+#: placecompleter_tool.py:763
+msgid "Downloading…"
+msgstr ""
+
+#: placecompleter_tool.py:829
+msgid "API key saved, but service is unavailable: %s"
+msgstr ""
+
+#: placecompleter_tool.py:870
+msgid "Key already saved: %(hint)s (in %(where)s). Entering a new key will overwrite it."
+msgstr ""
+
+#: placecompleter_tool.py:493
+msgid "Could not launch web browser. Please open this URL manually:\n%s"
+msgstr ""
+
+#: placecompleter_tool.py:682
+msgid "To start manually via terminal run:  ollama serve   (or:  sudo systemctl start ollama )"
+msgstr ""
+
+#: placecompleter_tool.py:831
+msgid "Key saved; model %s was automatically selected."
+msgstr ""
+
+#: placecompleter_tool.py:865
+msgid "Key saved in %s (encrypted via system keyring)."
+msgstr ""
+
+#: placecompleter_tool.py:866
+msgid "No system keyring detected; key saved unencrypted in %s. Do not copy or sync this folder."
+msgstr ""
+
+#: placecompleter_tool.py:986
+msgid "%d change(s) will be skipped: %s"
+msgstr ""
+
+#: placecompleter_tool.py:333
+msgid "requires configuration:"
+msgstr ""
+
+#: placecompleter_tool.py:675
+msgid "Start service"
+msgstr ""
+
+#: placecompleter_tool.py:895
+msgid "The saved key has been removed."
+msgstr ""
+
+#: placecompleter_gramplet.py:123
+msgid "Select an event."
+msgstr ""
+
+#: placecompleter_gramplet.py:140
+msgid "Select a place."
+msgstr ""
+
+#: placecompleter_gramplet.py:86
+msgid "Open Place Completer with this event's place and date"
+msgstr ""
+
+#: placecompleter_gramplet.py:85
+msgid "Complete place data…"
+msgstr ""
+
+#: placecompleter_gramplet.py:126
+msgid "%(type)s, %(date)s"
+msgstr ""
+
+#: placecompleter_gramplet.py:127
+msgid "This event has no place assigned."
+msgstr ""
+
+#: placecompleter_gramplet.py:128
+msgid "Names are missing for this date (place displayed with «?»)"
+msgstr ""
+
+#: placecompleter_gramplet.py:134 placecompleter_quickview.py:66
+msgid "Place Completer window is already open."
+msgstr ""
+
+#: placecompleter_gramplet.py:153 placecompleter_gramplet.py:127 placecompleter_quickview.py:63
+msgid "Gramps currently displays: %s"
+msgstr ""
+
+#: placecompleter_gramplet.py:154 placecompleter_quickview.py:64
+msgid "Analyze the response, then choose which changes to apply."
+msgstr ""
+
+#: placecompleter_gramplet.py:154 placecompleter_quickview.py:64
+msgid "Missing data: %s"
+msgstr ""
+
+#: placecompleter_gramplet.py:126
+msgid "no valid date"
+msgstr ""
+
+#: placecompleter_gramplet.py:152 placecompleter_quickview.py:62
+msgid "(no name)"
+msgstr ""
+
+#: placecompleter_quickview.py:65
+msgid "Place Completer opened for this place: specify a date and click Ask."
+msgstr ""
+
+#: placecompleter/chainlinks.py:264
+msgid "These links already exist and require no changes: %s"
+msgstr ""
+
+#: placecompleter/chainlinks.py:107
+msgid "a place cannot contain itself"
+msgstr ""
+
+#: placecompleter/chainlinks.py:109
+msgid "this would create a circular hierarchy loop"
+msgstr ""
+
+#: placecompleter/chainlinks.py:127
+msgid "%s -> %s excluded from hierarchy chain: %s. Next level linked directly to %s instead"
+msgstr ""
+
+#: placecompleter/chainlinks.py:148
+msgid "it is a settlement sharing its name with the area specified in the answer"
+msgstr ""
+
+#: placecompleter/chainlinks.py:155
+msgid "CONFLICT: in the tree, %s is linked to %s, but the response places it under %s (from %s), and the existing link is incorrect: %s. Result if you disconnect: %s will no longer be inside %s. Not selected automatically: changes to existing data must be approved one by one."
+msgstr ""
+
+#: placecompleter/chainlinks.py:213
+msgid "%s -> %s: existing tree link has an invalid date range (%s). The response period (%s-%s) will replace it if selected"
+msgstr ""
+
+#: placecompleter/chainlinks.py:251
+msgid "%s is also linked to %s, and the response places it under %s (from %s): both links will be retained, with the new link prioritized for matching years"
+msgstr ""
+
+#: placecompleter/chainlinks.py:89
+msgid "the type of %s in the tree is «%s» but the response specifies %s: non-settlement types are not modified automatically here. Adjust the place type in Gramps if needed"
+msgstr ""
+
+#: placecompleter/chainlinks.py:175
+msgid "%s is also linked to %s, which appears identical to %s (same name and type). Merge them in Gramps (Edit > Merge Places) to consolidate this hierarchy level"
+msgstr ""
+
+#: placecompleter/chainlinks.py:197
+msgid "%s is also linked directly to %s (listed before the link to %s): it applies only to the years before this link takes effect"
+msgstr ""
+
+#: placecompleter/chainlinks.py:200
+msgid "%s is also linked directly to %s (listed after the link to %s): it applies only to the years before this link takes effect"
+msgstr ""
+
+#: placecompleter/chainlinks.py:189
+msgid "%s is also linked directly to %s (prior to link %s) covering the same date range. Disconnecting will lose no data: %s is accessible via %s"
+msgstr ""
+
+#: placecompleter/chainlinks.py:192
+msgid "%s is also linked directly to %s (after link %s) covering the same date range. Disconnecting will lose no data: %s is accessible via %s"
+msgstr ""
+
+#: placecompleter/chainlinks.py:224
+msgid "%s -> %s: the response specifies %s-%s, but the tree contains %s, and %s covers the intervening years; date period left unchanged for verification"
+msgstr ""
+
+#: placecompleter/chainlinks.py:228
+msgid "%s -> %s: the response specifies %s-%s and the tree contains %s, with gaps not covered by the link; date period was left unchanged for review"
+msgstr ""
+
+#: placecompleter/citations.py:130
+msgid "Very Low"
+msgstr ""
+
+#: placecompleter/citations.py:130
+msgid "Low"
+msgstr ""
+
+#: placecompleter/citations.py:130
+msgid "Normal"
+msgstr ""
+
+#: placecompleter/citations.py:109
+msgid "Reported by an AI search"
+msgstr ""
+
+#: placecompleter/citations.py:113
+msgid "Found by %(engine)s (%(model)s) on %(day)s, responding to query regarding «%(place)s» on %(date)s (query format: %(form)s)."
+msgstr ""
+
+#: placecompleter/citations.py:108
+msgid "Wikidata statement"
+msgstr ""
+
+#: placecompleter/citations.py:109
+msgid "Reported by AI search supporting: %s"
+msgstr ""
+
+#: placecompleter/citations.py:118
+msgid "Retrieved from Wikidata on %(day)s while completing «%(place)s»."
+msgstr ""
+
+#: placecompleter/citations.py:125
+msgid "Confidence level %(level)s: %(why)s."
+msgstr ""
+
+#: placecompleter/citations.py:142
+msgid "a Wikidata statement"
+msgstr ""
+
+#: placecompleter/citations.py:146
+msgid "the response does not specify which fields this page supports"
+msgstr ""
+
+#: placecompleter/citations.py:155
+msgid "downgraded one confidence level due to internal contradictions or discrepancies with saved responses"
+msgstr ""
+
+#: placecompleter/citations.py:158
+msgid "the web link is a commercial, tourism, or social site rather than an official record source"
+msgstr ""
+
+#: placecompleter/citations.py:121
+msgid "Saved response: %s"
+msgstr ""
+
+#: placecompleter/citations.py:123
+msgid "The response indicates uncertainty regarding: %s"
+msgstr ""
+
+#: placecompleter/citations.py:148
+msgid "the response expresses uncertainty regarding all claims cited on this page: %s"
+msgstr ""
+
+#: placecompleter/citations.py:150
+msgid "the response expresses uncertainty regarding part of this claim: %s"
+msgstr ""
+
+#: placecompleter/citations.py:152
+msgid "the response cites this page for %s without expressing uncertainty"
+msgstr ""
+
+#: placecompleter/confidence.py:66
+msgid "Confidence level rating for proposed changes:\nConfirmed: Verified by independent sources (Wikidata, regional pack, or existing tree data).\nReported: Stated directly in the AI response with a cited web source.\nInferred: Derived automatically by analyzing related data (requires user review).\nUnsure: AI indicated uncertainty, contradicted itself, or lacked citations.\nNote: Multi-step changes inherit the confidence level of their least-certain step."
+msgstr ""
+
+#: placecompleter/confidence.py:101
+msgid "stated in the AI response without supporting web citations"
+msgstr ""
+
+#: placecompleter/confidence.py:61
+msgid "Confirmed"
+msgstr ""
+
+#: placecompleter/confidence.py:61
+msgid "Reported"
+msgstr ""
+
+#: placecompleter/confidence.py:61
+msgid "Inferred"
+msgstr ""
+
+#: placecompleter/confidence.py:61
+msgid "Unsure"
+msgstr ""
+
+#: placecompleter/confidence.py:89
+msgid "derived automatically from related data; verify correctness"
+msgstr ""
+
+#: placecompleter/confidence.py:94
+msgid "the response contains internal contradictions or conflicts with saved historical data"
+msgstr ""
+
+#: placecompleter/confidence.py:96
+msgid "deduced automatically from existing place names and types in the tree; verify correctness"
+msgstr ""
+
+#: placecompleter/confidence.py:98
+msgid "deduced automatically from the AI response; verify correctness"
+msgstr ""
+
+#: placecompleter/confidence.py:100
+msgid "stated in the AI response with a supporting source citation"
+msgstr ""
+
+#: placecompleter/confidence.py:88
+msgid "verified by independent sources (Wikidata, regional dataset, or existing tree)"
+msgstr ""
+
+#: placecompleter/confidence.py:92
+msgid "the response indicated uncertainty about %s"
+msgstr ""
+
+#: placecompleter/dates.py:170
+msgid "(no date)"
+msgstr ""
+
+#: placecompleter/dates.py:176
+msgid "before "
+msgstr ""
+
+#: placecompleter/dates.py:176
+msgid "after "
+msgstr ""
+
+#: placecompleter/dates.py:176
+msgid "about "
+msgstr ""
+
+#: placecompleter/dates.py:177
+msgid "from "
+msgstr ""
+
+#: placecompleter/dates.py:177
+msgid "to "
+msgstr ""
+
+#: placecompleter/dates.py:182
+msgid " (est.)"
+msgstr ""
+
+#: placecompleter/engines.py:60
+msgid "Google AI mode"
+msgstr ""
+
+#: placecompleter/engines.py:61
+msgid "ChatGPT (web search enabled)"
+msgstr ""
+
+#: placecompleter/engines.py:64
+msgid "Gemini (query copied to clipboard: paste into the browser prompt)"
+msgstr ""
+
+#: placecompleter/engines.py:66
+msgid "Custom AI: query is copied; paste into your AI tool and paste the response back here"
+msgstr ""
+
+#: placecompleter/engines.py:67
+msgid "Claude API with web search"
+msgstr ""
+
+#: placecompleter/engines.py:69
+msgid "OpenAI-compatible endpoint (without internal web search)"
+msgstr ""
+
+#: placecompleter/engines.py:71
+msgid "Local Ollama instance (no internet access)"
+msgstr ""
+
+#: placecompleter/engines.py:228
+msgid "cannot connect to %s: %s"
+msgstr ""
+
+#: placecompleter/engines.py:231
+msgid ". Destination unreachable: the local model server (e.g. Ollama) is either not installed or not currently running"
+msgstr ""
+
+#: placecompleter/engines.py:437
+msgid "no key required"
+msgstr ""
+
+#: placecompleter/engines.py:443
+msgid "configured, %d characters"
+msgstr ""
+
+#: placecompleter/engines.py:203
+msgid "Ollama service is active but has no models installed. Run 'ollama pull llama3.2' in terminal and try again"
+msgstr ""
+
+#: placecompleter/engines.py:390
+msgid "contains leading/trailing whitespace or line breaks (automatically trimmed)"
+msgstr ""
+
+#: placecompleter/engines.py:393
+msgid "enclosed in quotation marks (automatically stripped)"
+msgstr ""
+
+#: placecompleter/engines.py:396
+msgid "contains internal spaces or line breaks: clipboard data might be corrupted"
+msgstr ""
+
+#: placecompleter/engines.py:398
+msgid "contains non-ASCII characters (check for formatting marks or localized keyboard input)"
+msgstr ""
+
+#: placecompleter/engines.py:400
+msgid "invalid Anthropic API key format (must begin with 'sk-ant-')"
+msgstr ""
+
+#: placecompleter/engines.py:427
+msgid "This is an Anthropic Claude key, but the engine sends requests to %s. Please select 'Claude API with web search' from the engine list."
+msgstr ""
+
+#: placecompleter/engines.py:430
+msgid "Anthropic API keys must start with 'sk-ant-'. The provided key appears invalid or belongs to a different provider. It will be sent to %s."
+msgstr ""
+
+#: placecompleter/engines.py:442
+msgid "API key in %s: MISSING%s"
+msgstr ""
+
+#: placecompleter/engines.py:458
+msgid "No API key available to test."
+msgstr ""
+
+#: placecompleter/engines.py:484
+msgid "API key validated successfully%s."
+msgstr ""
+
+#: placecompleter/engines.py:538
+msgid "the response is empty"
+msgstr ""
+
+#: placecompleter/engines.py:189
+msgid "this engine requires a model specification. Define it in %s, e.g.: {\"engines\": {\"%s\": {\"model\": \"model-name\"}}}"
+msgstr ""
+
+#: placecompleter/engines.py:206
+msgid "could not select a model from %s (%s). Specify a target model in %s, e.g.: {\"engines\": {\"%s\": {\"model\": \"model-name\"}}}"
+msgstr ""
+
+#: placecompleter/engines.py:239
+msgid "only http and https addresses are allowed: %s"
+msgstr ""
+
+#: placecompleter/engines.py:278 placecompleter/keystore.py:142
+msgid "key file %s has insecure permissions (readable by others). Execute: chmod 600 %s"
+msgstr ""
+
+#: placecompleter/engines.py:324
+msgid "export environment variable %s (requires starting Gramps from the matching terminal session); or"
+msgstr ""
+
+#: placecompleter/engines.py:357
+msgid "no response from host %s:%d"
+msgstr ""
+
+#: placecompleter/engines.py:359
+msgid "Ollama is not active locally. Click Ask to run guided setup. Manual steps: 1) Install from ollama.com; 2) Start service with 'ollama serve'; 3) Download model using 'ollama pull llama3.2'."
+msgstr ""
+
+#: placecompleter/engines.py:470
+msgid "This engine does not use an API key."
+msgstr ""
+
+#: placecompleter/engines.py:504
+msgid "response returned empty content (stop reason: %s)"
+msgstr ""
+
+#: placecompleter/engines.py:536
+msgid "response structure is invalid or unrecognized"
+msgstr ""
+
+#: placecompleter/engines.py:250 placecompleter/engines.py:262 placecompleter/ollama.py:130
+msgid "service returned HTTP error %s: %s"
+msgstr ""
+
+#: placecompleter/engines.py:362
+msgid "start the local model server daemon, or update base_url in %s"
+msgstr ""
+
+#: placecompleter/engines.py:366
+msgid "key file permissions are insecure (readable by others)"
+msgstr ""
+
+#: placecompleter/engines.py:366
+msgid "unable to read key file"
+msgstr ""
+
+#: placecompleter/engines.py:484
+msgid "; model %s is active"
+msgstr ""
+
+#: placecompleter/engines.py:208
+msgid "none"
+msgstr ""
+
+#: placecompleter/engines.py:325
+msgid "API key missing. Enter it via the Key button (stored securely in keyring or restricted user file), or %s specify key_file in %s."
+msgstr ""
+
+#: placecompleter/engines.py:371
+msgid "use the Key button to store your credential%s, or specify key_file in %s"
+msgstr ""
+
+#: placecompleter/engines.py:477
+msgid "Service %s rejected the API key (HTTP %d). Sent key suffix: %s. Verify key validity, quota limits, and provider matching."
+msgstr ""
+
+#: placecompleter/engines.py:481
+msgid "API key validated, but model «%s» is unrecognized by host. Select another model in %s."
+msgstr ""
+
+#: placecompleter/engines.py:531
+msgid "model %s is no longer offered by host (%s); model choice will re-evaluate on next request"
+msgstr ""
+
+#: placecompleter/engines.py:552
+msgid "%s\n  Service %s rejected API key authentication%s. Verify key active status in provider dashboard and re-enter using Key button."
+msgstr ""
+
+#: placecompleter/engines.py:528
+msgid ". Target model missing: download using 'ollama pull %s'"
+msgstr ""
+
+#: placecompleter/engines.py:372
+msgid ", or set environment variable $%s before launching Gramps"
+msgstr ""
+
+#: placecompleter/engines.py:554
+msgid " sent (%s)"
+msgstr ""
+
+#: placecompleter/findplace.py:78
+msgid "tree contains a place named «%s» (%s) located %.0f km from query location; treated as a distinct place and left unchanged"
+msgstr ""
+
+#: placecompleter/findplace.py:92
+msgid "%d places in the tree match this name: select target place"
+msgstr ""
+
+#: placecompleter/geo.py:47
+msgid "No matching place with spatial coordinates found on Wikidata"
+msgstr ""
+
+#: placecompleter/geo.py:51
+msgid "matching Wikidata locations exceed the %d km distance threshold from the location returned in the answer"
+msgstr ""
+
+#: placecompleter/geo.py:56
+msgid "multiple nearby places match this name on Wikidata: %s"
+msgstr ""
+
+#: placecompleter/geo.py:58
+msgid "multiple places match this name on Wikidata: %s"
+msgstr ""
+
+#: placecompleter/grampslink.py:82
+msgid "coordinates"
+msgstr ""
+
+#: placecompleter/grampslink.py:84
+msgid "type"
+msgstr ""
+
+#: placecompleter/grampslink.py:86
+msgid "name language"
+msgstr ""
+
+#: placecompleter/grampslink.py:88
+msgid "cited source"
+msgstr ""
+
+#: placecompleter/hierarchy.py:99
+msgid "Administrative hierarchy for %s in %d (from local to national): %s. Select applicable types for this place; add intermediate levels only if historically accurate. "
+msgstr ""
+
+#: placecompleter/hierarchy.py:98
+msgid " [may not apply]"
+msgstr ""
+
+#: placecompleter/hints.py:31
+msgid "Place name to query (e.g., Parma, Sissa, Johnston).\nUse Region hint to distinguish homonymous places."
+msgstr ""
+
+#: placecompleter/hints.py:32
+msgid "Target year for historical names and administrative structure (e.g., 1850).\nPartial or full dates are supported (e.g., 1990-05 or 1990-05-17)."
+msgstr ""
+
+#: placecompleter/hints.py:34
+msgid "Preferred Wikipedia link languages (comma-separated list, in priority order).\nAdds matching articles plus Wikidata link. Defaults to English if preferred languages are unavailable.\nExamples:\n  he, en\n  fr, es"
+msgstr ""
+
+#: placecompleter/hints.py:36
+msgid "Optional disambiguation term (county, state, region, or country).\nExamples:\n  Parma -> Italy\n  Johnston -> Iowa\nProviding a country will prompt historical administrative levels for that specific year."
+msgstr ""
+
+#: placecompleter/hints.py:38
+msgid "Query prompt format sent to AI engine:\nauto: Automatically cycles prompt formats until successful (recommended).\ntable: Concise prompt returning structured tabular data.\nclassic: Comprehensive prompt describing all fields in detail.\nshort: Compact prompt paragraph for engines with input limits.\ndated: Classic prompt with explicit instruction to match historical date context.\nlong: Extended prompt requesting comparative present-day versus historical analysis."
+msgstr ""
+
+#: placecompleter/hints.py:43
+msgid "Selected AI service provider.\nWeb options (Google AI, ChatGPT, Gemini) open in browser for manual paste back.\nAPI key options (Claude, OpenAI) and local Ollama process queries automatically.\nCheckmarks indicate ready status; crosses detail missing setup."
+msgstr ""
+
+#: placecompleter/hints.py:46
+msgid "Submit query to selected AI. Does not modify family tree data."
+msgstr ""
+
+#: placecompleter/hints.py:47
+msgid "Query Wikidata for missing place coordinates after analysis.\nOnly place names are transmitted."
+msgstr ""
+
+#: placecompleter/hints.py:48
+msgid "AI response panel. Automated responses populate here directly.\nFor browser queries, copy and paste the raw response text here."
+msgstr ""
+
+#: placecompleter/hints.py:50
+msgid "Paste clipboard text into the response box."
+msgstr ""
+
+#: placecompleter/hints.py:51
+msgid "Analyze response text and generate preview of tree modifications. No data is changed yet."
+msgstr ""
+
+#: placecompleter/hints.py:52
+msgid "Identified administrative levels, ordered from local to regional.\nUncheck any uncertain level to exclude it from tree updates."
+msgstr ""
+
+#: placecompleter/hints.py:54
+msgid "Analysis summary. Red warnings indicate items requiring review before applying changes."
+msgstr ""
+
+#: placecompleter/hints.py:55
+msgid "Apply selected changes to the family tree in a single operation (reversible via Edit > Undo)."
+msgstr ""
+
+#: placecompleter/hints.py:57
+msgid "Toggle selection for all non-conflicting proposals.\nManual review required for: tree conflicts, unverified web links, and mutually exclusive changes.\nReview modifications to existing tree elements carefully before applying."
+msgstr ""
+
+#: placecompleter/ingest.py:76
+msgid "response lacks place name; no changes proposed"
+msgstr ""
+
+#: placecompleter/ingest.py:81
+msgid "place name is ambiguous. Select target location and query again using --hint \"%s\":"
+msgstr ""
+
+#: placecompleter/ingest.py:85
+msgid "response indicates ambiguous place name: %s"
+msgstr ""
+
+#: placecompleter/ingest.py:83
+msgid "  %d. %s  (%s, %s)%s"
+msgstr ""
+
+#: placecompleter/keystore.py:57
+msgid "key storage location unavailable (disabled)"
+msgstr ""
+
+#: placecompleter/keystore.py:71 placecompleter/keystore.py:106
+msgid "system keyring"
+msgstr ""
+
+#: placecompleter/keystore.py:129
+msgid "unencrypted local file (restricted permissions)"
+msgstr ""
+
+#: placecompleter/keystore.py:217
+msgid "%s…%s, %d characters"
+msgstr ""
+
+#: placecompleter/keystore.py:63
+msgid "key persistence disabled (PLACECOMPLETER_KEYSTORE=none)"
+msgstr ""
+
+#: placecompleter/keystore.py:215
+msgid "%d characters"
+msgstr ""
+
+#: placecompleter/keystore.py:95
+msgid "system keyring failed to store key"
+msgstr ""
+
+#: placecompleter/keystore.py:191
+msgid "system keyring daemon/bindings unavailable (libsecret or secret-tool required)"
+msgstr ""
+
+#: placecompleter/keystore.py:122
+msgid "secret-tool failed to save key: %s"
+msgstr ""
+
+#: placecompleter/keystore.py:86
+msgid "unable to read system keyring: %s"
+msgstr ""
+
+#: placecompleter/keystore.py:93
+msgid "system keyring rejected key: %s"
+msgstr ""
+
+#: placecompleter/keystore.py:101
+msgid "failed to remove key from system keyring: %s"
+msgstr ""
+
+#: placecompleter/levels.py:75
+msgid "a place cannot contain another place of identical administrative type"
+msgstr ""
+
+#: placecompleter/levels.py:77
+msgid "settlement places belong to a single tier; nesting settlements is invalid"
+msgstr ""
+
+#: placecompleter/levels.py:81
+msgid "parent place administrative level rank is lower than child place"
+msgstr ""
+
+#: placecompleter/makeplaces.py:72
+msgid "level «%s» (%s) matches the name of child place or parent tier; created as distinct place «%s»"
+msgstr ""
+
+#: placecompleter/makeplaces.py:91
+msgid "response defines period %s-%s for place; as no subsequent name is specified, name «%s» period end date remains open"
+msgstr ""
+
+#: placecompleter/makeplaces.py:96 placecompleter/namefixes.py:88
+msgid "name «%s» applies from %s (establishment of ruling state %s); provided in state official language (inferred)"
+msgstr ""
+
+#: placecompleter/namefixes.py:102
+msgid "response identifies potential official web links; excluded automatically (verify and attach manually if valid): %s"
+msgstr ""
+
+#: placecompleter/namefixes.py:81
+msgid "name «%s» end date (%s) matches response boundary without successor name; period upper limit opened"
+msgstr ""
+
+#: placecompleter/ollama.py:61
+msgid "small and fast (~2 GB, recommended)"
+msgstr ""
+
+#: placecompleter/ollama.py:62
+msgid "ultra-compact: faster response, reduced accuracy"
+msgstr ""
+
+#: placecompleter/ollama.py:63
+msgid "Google model family (~a few GB)"
+msgstr ""
+
+#: placecompleter/ollama.py:64
+msgid "general-purpose model (~a few GB)"
+msgstr ""
+
+#: placecompleter/ollama.py:155
+msgid "download terminated prematurely"
+msgstr ""
+
+#: placecompleter/ollama.py:116
+msgid "Ollama launched but is not responding yet; check logs in %s"
+msgstr ""
+
+#: placecompleter/ollama.py:179
+msgid "Terminal application not detected. Copy command and execute manually in system terminal."
+msgstr ""
+
+#: placecompleter/ollama.py:110
+msgid "Failed to launch Ollama: %s"
+msgstr ""
+
+#: placecompleter/ollama.py:150
+msgid "download process interrupted: %s"
+msgstr ""
+
+#: placecompleter/ollama.py:183
+msgid "Could not launch terminal application: %s"
+msgstr ""
+
+#: placecompleter/resolve.py:50
+msgid "response omits administrative tier %s (%s) present for %s on date %s"
+msgstr ""
+
+#: placecompleter/resolve.py:178
+msgid "ACTION REQUIRED: %s matches existing %s (containing %s). Select target entity (excluded until resolved)"
+msgstr ""
+
+#: placecompleter/resolve.py:72
+msgid "%s excluded per user selection"
+msgstr ""
+
+#: placecompleter/resolve.py:84
+msgid "ACTION REQUIRED: %s matches existing places (%s). Select target entity (excluded until resolved)"
+msgstr ""
+
+#: placecompleter/resolve.py:125
+msgid "administrative level %d (%s) excluded per user selection"
+msgstr ""
+
+#: placecompleter/resolve.py:132
+msgid "%s is identical to %s (listed as municipal container). Duplicate entity creation prevented"
+msgstr ""
+
+#: placecompleter/resolve.py:200
+msgid "%s is not historically valid on %s according to defined time boundaries"
+msgstr ""
+
+#: placecompleter/resolve.py:176
+msgid "«%s» is not in your tree under that name, but «%s» holds «%s» there. Is it the same place? Nothing is created until you choose."
+msgstr ""
+
+#: placecompleter/screen.py:75
+msgid "hierarchy chain terminates at state «%s» without national container; please attach sovereign country entity"
+msgstr ""
+
+#: placecompleter/session.py:60
+msgid "primary name"
+msgstr ""
+
+#: placecompleter/session.py:349
+msgid "Review proposals, select acceptable modifications, and click Apply."
+msgstr ""
+
+#: placecompleter/session.py:60
+msgid "alternative name #%d"
+msgstr ""
+
+#: placecompleter/session.py:80
+msgid "Create place «%s» (%s%s); primary name: %s"
+msgstr ""
+
+#: placecompleter/session.py:82
+msgid "Attach web link %s to %s (%s)"
+msgstr ""
+
+#: placecompleter/session.py:84
+msgid "Add place name «%s» (%s) to %s: %s"
+msgstr ""
+
+#: placecompleter/session.py:86
+msgid "Assign date period to name «%s» (%s) of %s: %s"
+msgstr ""
+
+#: placecompleter/session.py:89
+msgid "Update date period for name «%s» (%s) of %s: %s -> %s"
+msgstr ""
+
+#: placecompleter/session.py:92
+msgid "Set missing coordinates for %s: %s, %s (%s)"
+msgstr ""
+
+#: placecompleter/session.py:96
+msgid "Rename %s to «%s» (previous name retained as alternative name)"
+msgstr ""
+
+#: placecompleter/session.py:99
+msgid "Set language tag for name «%s» (%s) of %s to %s"
+msgstr ""
+
+#: placecompleter/session.py:102
+msgid "Change administrative place type of %s from %s to %s"
+msgstr ""
+
+#: placecompleter/session.py:105
+msgid "Set administrative place type of %s to %s"
+msgstr ""
+
+#: placecompleter/session.py:107
+msgid "Enclose %s inside %s: %s%s"
+msgstr ""
+
+#: placecompleter/session.py:111
+msgid "Disconnect %s from %s (removes hierarchy link; retains place entities)"
+msgstr ""
+
+#: placecompleter/session.py:113
+msgid "Prioritize link of %s inside %s over link inside %s"
+msgstr ""
+
+#: placecompleter/session.py:116
+msgid "Update hierarchy link date range for %s inside %s: %s -> %s%s"
+msgstr ""
+
+#: placecompleter/session.py:212
+msgid "Querying %s (%s) regarding «%s» for date %s…"
+msgstr ""
+
+#: placecompleter/session.py:295
+msgid "Name matches multiple places; select target entity."
+msgstr ""
+
+#: placecompleter/session.py:427
+msgid "verify official status of web source"
+msgstr ""
+
+#: placecompleter/session.py:429
+msgid "disconnects place link"
+msgstr ""
+
+#: placecompleter/session.py:431
+msgid "modifies hierarchy link"
+msgstr ""
+
+#: placecompleter/session.py:433
+msgid "inserts intermediate level"
+msgstr ""
+
+#: placecompleter/session.py:435
+msgid "renames place"
+msgstr ""
+
+#: placecompleter/session.py:437
+msgid "modifies place type"
+msgstr ""
+
+#: placecompleter/session.py:439
+msgid "modifies existing tree data"
+msgstr ""
+
+#: placecompleter/session.py:440
+msgid "populates unassigned field"
+msgstr ""
+
+#: placecompleter/session.py:472
+msgid "These modification steps are interdependent."
+msgstr ""
+
+#: placecompleter/session.py:478
+msgid "Requires the new link: selecting this option automatically checks the dependent link."
+msgstr ""
+
+#: placecompleter/session.py:685
+msgid "Wikidata queried: %d place(s) populated with coordinates."
+msgstr ""
+
+#: placecompleter/session.py:739
+msgid "%d change(s) applied in a single batch (reversible via Edit > Undo)%s%s%s."
+msgstr ""
+
+#: placecompleter/session.py:63
+msgid "unspecified language"
+msgstr ""
+
+#: placecompleter/session.py:78
+msgid "type pending selection"
+msgstr ""
+
+#: placecompleter/session.py:79
+msgid ", coordinates %s, %s%s"
+msgstr ""
+
+#: placecompleter/session.py:165
+msgid "Please enter a place name."
+msgstr ""
+
+#: placecompleter/session.py:191
+msgid "Max query attempts reached without valid response. Add a Region hint or switch AI engine."
+msgstr ""
+
+#: placecompleter/session.py:205
+msgid "Query sent to %s for «%s» on %s (format: %s). Copy full AI response text and click Analyze."
+msgstr ""
+
+#: placecompleter/session.py:209
+msgid "Query for «%s» on %s copied. Paste into AI interface, then copy response back here and click Analyze."
+msgstr ""
+
+#: placecompleter/session.py:245
+msgid "Please enter an API key first."
+msgstr ""
+
+#: placecompleter/session.py:276
+msgid "No response text found. Please paste AI response text first."
+msgstr ""
+
+#: placecompleter/session.py:283
+msgid "AI returned unfulfilled prompt. Try adding a province in Region hint or switch AI engine."
+msgstr ""
+
+#: placecompleter/session.py:319
+msgid "No selectable options available."
+msgstr ""
+
+#: placecompleter/session.py:448
+msgid "Insert %s between %s and %s"
+msgstr ""
+
+#: placecompleter/session.py:452
+msgid "Move %s from %s to %s"
+msgstr ""
+
+#: placecompleter/session.py:456
+msgid "Create place «%s»%s"
+msgstr ""
+
+#: placecompleter/session.py:458
+msgid "%s [name occurs %d times in this place; period assigned to all occurrences]"
+msgstr ""
+
+#: placecompleter/session.py:467
+msgid "new link placed before the existing link, because Gramps uses the first link that fits the date; the existing link is retained for the remaining years"
+msgstr ""
+
+#: placecompleter/session.py:469
+msgid "link to previous place retained strictly for years preceding new link start date"
+msgstr ""
+
+#: placecompleter/session.py:471
+msgid "target place entity must exist prior to hierarchy linking"
+msgstr ""
+
+#: placecompleter/session.py:727
+msgid "No items selected."
+msgstr ""
+
+#: placecompleter/session.py:63
+msgid "language: %s"
+msgstr ""
+
+#: placecompleter/session.py:94
+msgid "from AI response: verify accuracy (coordinates may deviate slightly)"
+msgstr ""
+
+#: placecompleter/session.py:117
+msgid " (to use the intermediate level)"
+msgstr ""
+
+#: placecompleter/session.py:169
+msgid "Date format must be YYYY, YYYY-MM, or YYYY-MM-DD."
+msgstr ""
+
+#: placecompleter/session.py:176
+msgid "%s is not ready for queries (%s): %s."
+msgstr ""
+
+#: placecompleter/session.py:202
+msgid "Query for «%s» on %s copied and %s launched. Paste query (Ctrl+V) and submit; once completed, copy full response back here and click Analyze."
+msgstr ""
+
+#: placecompleter/session.py:212
+msgid "model selected automatically"
+msgstr ""
+
+#: placecompleter/session.py:284
+msgid "Google returned no search results for this query"
+msgstr ""
+
+#: placecompleter/session.py:289
+msgid "%s. Fallback prompt format generated (%s)."
+msgstr ""
+
+#: placecompleter/session.py:291
+msgid "%s; all prompt fallback formats exhausted."
+msgstr ""
+
+#: placecompleter/session.py:306
+msgid "CONFLICTS WITH SAVED RESPONSE: "
+msgstr ""
+
+#: placecompleter/session.py:373
+msgid "Modified places will receive source citations linked to web repositories, including confidence ratings and retrieval metadata."
+msgstr ""
+
+#: placecompleter/session.py:472
+msgid "These modification steps are interdependent: "
+msgstr ""
+
+#: placecompleter/session.py:682
+msgid "Wikidata: %s: coordinates %s, %s from %s%s"
+msgstr ""
+
+#: placecompleter/session.py:108
+msgid " (an intermediate level inserted before the direct link to %s, which applies to the other years)"
+msgstr ""
+
+#: placecompleter/session.py:221
+msgid "AI engine error: %s"
+msgstr ""
+
+#: placecompleter/session.py:285
+msgid "Text does not conform to expected response template (starts with: %s)"
+msgstr ""
+
+#: placecompleter/session.py:456
+msgid " and place it in the hierarchy"
+msgstr ""
+
+#: placecompleter/session.py:669
+msgid "Wikidata: %s: %s%s"
+msgstr ""
+
+#: placecompleter/session.py:740
+msgid "; %d skipped: %s"
+msgstr ""
+
+#: placecompleter/session.py:741
+msgid "; %d source(s) cited on modified places"
+msgstr ""
+
+#: placecompleter/session.py:742
+msgid "; %d secondary source(s) omitted (max %d citations per place per run)"
+msgstr ""
+
+#: placecompleter/session.py:669
+msgid "no results found"
+msgstr ""
+
+#: placecompleter/session.py:670
+msgid "; coordinates from AI response retained for review"
+msgstr ""
+
+#: placecompleter/session.py:683
+msgid " (%.1f km from the location returned in the answer)"
+msgstr ""
+
+#: placecompleter/table.py:233
+msgid "response specifies name «%s» is active from %s; omitted from tree updates for manual review"
+msgstr ""
+
+#: placecompleter/table.py:235
+msgid "response lists alternative locations matching name: %s. Use Region hint to refine search target"
+msgstr ""
+
+#: placecompleter/table.py:216
+msgid "administrative level %d (%s) lacks type classification in response"
+msgstr ""
+
+#: placecompleter/table.py:195
+msgid "response references domain (%s) rather than direct page URL; citation omitted"
+msgstr ""
+
+#: placecompleter/writer.py:60 placecompleter/writer.py:86 placecompleter/writer.py:106
+msgid "target place entity no longer exists in tree"
+msgstr ""
+
+#: placecompleter/writer.py:70
+msgid "parent hierarchy link position has shifted"
+msgstr ""
+
+#: placecompleter/writer.py:72
+msgid "hierarchy link sequence has been modified"
+msgstr ""
+
+#: placecompleter/writer.py:74
+msgid "link date range was modified after analysis phase"
+msgstr ""
+
+#: placecompleter/writer.py:95 placecompleter/writer.py:134
+msgid "place name position has shifted"
+msgstr ""
+
+#: placecompleter/writer.py:97
+msgid "place name date range was modified after analysis phase"
+msgstr ""
+
+#: placecompleter/writer.py:108 placecompleter/writer.py:67
+msgid "hierarchy link already exists"
+msgstr ""
+
+#: placecompleter/writer.py:64
+msgid "parent place entity no longer exists in tree"
+msgstr ""
+
+#: placecompleter/writer.py:123
+msgid "place already contains spatial coordinates"
+msgstr ""
+
+#: placecompleter/writer.py:92
+msgid "place name already exists"
+msgstr ""
+
+#: placecompleter/writer.py:126
+msgid "place name was modified after analysis phase"
+msgstr ""
+
+#: placecompleter/writer.py:172
+msgid "a place with this web link already exists"
+msgstr ""
+
+#: placecompleter/writer.py:179 placecompleter/writer.py:191
+msgid "required new place entity is excluded from current selection"
+msgstr ""
+
+#: placecompleter/writer.py:130
+msgid "place type was modified after analysis phase"
+msgstr ""
+
+#: placecompleter/writer.py:136
+msgid "place name already has a language tag assigned"
+msgstr ""
+
+#: placecompleter/writer.py:141
+msgid "place entity already has an administrative type assigned"
+msgstr ""
+
+#: (shown from data)
+msgid "CONFLICTS WITH SAVED RESPONSE: text is IDENTICAL to response saved for %s. AI returned static text across different dates; name and type accuracy cannot be verified"
+msgstr ""
+
+#: (shown from data)
+msgid "assumption"
+msgstr ""
+
+#: (shown from data)
+msgid "evidence"
+msgstr ""
+
+#: (shown from data)
+msgid "CONFLICT"
+msgstr ""

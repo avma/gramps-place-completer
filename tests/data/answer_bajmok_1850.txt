@@ -1,0 +1,13 @@
+PLACE_NAME_ON_DATE: Bajmok
+LANGUAGE: de
+OTHER_NAMES: hu: Bajmok (1462-present)
+sr: Бајмок (1918-present)
+SETTLEMENT_TYPE_ON_DATE: village / Dorf
+COORDINATES: 45.9667, 19.4167
+CONTAINERS: 1 | Zombor District | District / Bezirk | 1849-1860 | Austrian Empire
+2 | Batsch-Bodrog | Komitat / County | 1849-1860 | Austrian Empire
+3 | Voivodeship of Serbia and Banat of Temeschwar | Kronland / Crownland | 1849-1860 | Austrian Empire
+STATE_ON_DATE: Austrian Empire | 1804-1867
+SOURCES: https://en.wikipedia.org/wiki/Bajmok | PLACE_NAME_ON_DATE, COORDINATES, OTHER_NAMES
+https://en.wikipedia.org/wiki/Voivodeship_of_Serbia_and_Banat_of_Temeschwar | CONTAINERS, STATE_ON_DATE
+NOT_SURE: LANGUAGE, SETTLEMENT_TYPE_ON_DATE, CONTAINERS

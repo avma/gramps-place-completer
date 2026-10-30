@@ -1,0 +1,14 @@
+PLACE_NAME_ON_DATE: Sissa
+LANGUAGE: it
+OTHER_NAMES: UNKNOWN
+SETTLEMENT_TYPE_ON_DATE: town / comune
+COORDINATES: 44.9619, 10.2586
+CONTAINERS:
+1 | [Sissa](https://www.google.com/search?kgmid=%2Fm%2F07d4q4) | comune / municipality | 1806-2013 | Repubblica Italiana
+2 | [Parma](https://www.google.com/search?kgmid=%2Fm%2F03wxlr) | provincia / province | 1860-present | Repubblica Italiana
+3 | [Emilia-Romagna](https://www.google.com/search?kgmid=%2Fm%2F015m08) | regione / region | 1970-present | Repubblica Italiana
+4 | Italia | stato / state | 1946-present | Repubblica Italiana
+STATE_ON_DATE: Repubblica Italiana | 1946-present
+SOURCES: https://en.wikipedia.org/wiki/Sissa,_Sissa_Trecasali | COORDINATES and SETTLEMENT_TYPE_ON_DATE
+https://en.wikipedia.org/wiki/Sissa_Trecasali | PLACE_NAME_ON_DATE and CONTAINERS
+NOT_SURE: OTHER_NAMES

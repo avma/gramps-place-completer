@@ -1,0 +1,216 @@
+{
+  "schema": "placecompleter.pack.v1",
+  "pack": {
+    "id": "world-basics",
+    "version": 1,
+    "license": "CC0-1.0",
+    "created": "2026-10-13",
+    "origin": "user"
+  },
+  "places": [
+    {
+      "key": "usa",
+      "names": [
+        "United States",
+        "USA",
+        "United States of America",
+        "U.S.",
+        "ארצות הברית",
+        "ארה\"ב"
+      ]
+    },
+    {
+      "key": "israel",
+      "names": [
+        "Israel",
+        "ישראל",
+        "State of Israel",
+        "Izrael"
+      ]
+    },
+    {
+      "key": "germany",
+      "names": [
+        "Germany",
+        "Deutschland",
+        "Németország",
+        "גרמניה"
+      ]
+    },
+    {
+      "key": "austria",
+      "names": [
+        "Austria",
+        "Österreich",
+        "Ausztria",
+        "אוסטריה"
+      ]
+    },
+    {
+      "key": "romania",
+      "names": [
+        "Romania",
+        "România",
+        "Románia",
+        "רומניה"
+      ]
+    },
+    {
+      "key": "serbia",
+      "names": [
+        "Serbia",
+        "Srbija",
+        "Szerbia",
+        "Србија",
+        "סרביה"
+      ]
+    },
+    {
+      "key": "slovakia",
+      "names": [
+        "Slovakia",
+        "Slovensko",
+        "Szlovákia",
+        "סלובקיה"
+      ]
+    },
+    {
+      "key": "ukraine",
+      "names": [
+        "Ukraine",
+        "Україна",
+        "Ukrajna",
+        "אוקראינה"
+      ]
+    },
+    {
+      "key": "poland",
+      "names": [
+        "Poland",
+        "Polska",
+        "Lengyelország",
+        "פולין"
+      ]
+    },
+    {
+      "key": "hungary-modern",
+      "names": [
+        "Hungary",
+        "Magyarország",
+        "Ungarn",
+        "הונגריה"
+      ]
+    },
+    {
+      "key": "croatia",
+      "names": [
+        "Croatia",
+        "Hrvatska",
+        "Horvátország",
+        "קרואטיה"
+      ]
+    },
+    {
+      "key": "czechia",
+      "names": [
+        "Czech Republic",
+        "Czechia",
+        "Česko",
+        "Csehország",
+        "צ'כיה"
+      ]
+    },
+    {
+      "key": "italy",
+      "names": [
+        "Italy",
+        "Italia",
+        "Repubblica Italiana",
+        "Italian Republic",
+        "Regno d'Italia",
+        "Kingdom of Italy",
+        "Olaszország",
+        "Italien",
+        "איטליה"
+      ]
+    },
+    {
+      "key": "switzerland",
+      "names": [
+        "Switzerland",
+        "Schweiz",
+        "Suisse",
+        "Svizzera",
+        "Svizra",
+        "Swiss Confederation",
+        "Schweizerische Eidgenossenschaft",
+        "Confédération suisse",
+        "Confederazione Svizzera",
+        "Svájc",
+        "שווייץ"
+      ]
+    },
+    {
+      "key": "netherlands",
+      "names": [
+        "Netherlands",
+        "The Netherlands",
+        "Nederland",
+        "Koninkrijk der Nederlanden",
+        "Kingdom of the Netherlands",
+        "Pays-Bas",
+        "Niederlande",
+        "Hollandia",
+        "הולנד"
+      ]
+    },
+    {
+      "key": "france",
+      "names": [
+        "France",
+        "République française",
+        "French Republic",
+        "Frankreich",
+        "Franciaország",
+        "צרפת"
+      ]
+    },
+    {
+      "key": "united-kingdom",
+      "names": [
+        "United Kingdom",
+        "UK",
+        "Great Britain",
+        "United Kingdom of Great Britain and Northern Ireland",
+        "Vereinigtes Königreich",
+        "Egyesült Királyság",
+        "בריטניה"
+      ]
+    },
+    {
+      "key": "slovenia",
+      "names": [
+        "Slovenia",
+        "Slovenija",
+        "Republika Slovenija",
+        "Slowenien",
+        "Szlovénia",
+        "סלובניה"
+      ]
+    },
+    {
+      "key": "russia",
+      "names": [
+        "Russia",
+        "Russian Federation",
+        "Rossiya",
+        "Россия",
+        "Российская Федерация",
+        "Russland",
+        "Oroszország",
+        "רוסיה"
+      ]
+    }
+  ],
+  "edges": []
+}

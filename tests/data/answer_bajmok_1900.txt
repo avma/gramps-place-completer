@@ -1,0 +1,17 @@
+PLACE_NAME_ON_DATE: Bajmok
+LANGUAGE: hu
+OTHER_NAMES: sr: Bajmok (1918-present)
+de: Bajmok (1802-1918)
+SETTLEMENT_TYPE_ON_DATE: village, nagyközség (large village)
+COORDINATES: 45.9678, 19.4233
+CONTAINERS:
+1 | Bácsalmási járás | járás, district | 1802-1918 | Kingdom of Hungary
+2 | Bács-Bodrog vármegye | vármegye, county | 1802-1920 | Kingdom of Hungary
+STATE_ON_DATE: Kingdom of Hungary | 1867-1918
+SOURCES:
+wikipedia.org | coordinates and settlement name
+https://www.arcanum.com/hu/online-kiadvanyok/Lexikonok-a-pallas-nagy-lexikona-2/b-26DA/bajmok-28D7/ | settlement type and district container in 1900
+wikipedia.org | county container details
+NOT_SURE: None
+If you wish, let me know if you would like an administrative lookup for Bajmok at a different historical date, or if you need help looking up other places in Bács-Bodrog County.
+Try without personalization

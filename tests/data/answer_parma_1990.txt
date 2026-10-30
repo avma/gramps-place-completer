@@ -1,0 +1,13 @@
+PLACE_NAME_ON_DATE: Parma
+LANGUAGE: it
+OTHER_NAMES: eml: Pärma (1946-present)
+la: Parma (183 BC-1859)
+SETTLEMENT_TYPE_ON_DATE: city, comune
+COORDINATES: 44.8015, 10.3280
+CONTAINERS: 1 | [Provincia di Parma](https://www.google.com/search?kgmid=%2Fm%2F03wxlr) | province, provincia | 1860-present | Italia
+2 | [Regione Emilia-Romagna](https://www.google.com/search?kgmid=%2Fm%2F015m08) | region, regione | 1970-present | Italia
+3 | [Italia](https://www.google.com/search?kgmid=%2Fm%2F03rjj) | sovereign state | 1946-present | Italia
+STATE_ON_DATE: Italia | 1946-present
+NOTES: None
+SOURCES: https://en.wikipedia.org/wiki/Parma | PLACE_NAME_ON_DATE, COORDINATES, CONTAINERS
+NOT_SURE: NONE

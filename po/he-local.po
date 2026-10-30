@@ -1,0 +1,1561 @@
+# Place Completer: Hebrew. A text left with an empty msgstr is shown in English.
+msgid ""
+msgstr ""
+"Language: he\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+
+msgid "Place Completer"
+msgstr "השלמת מדרג מקומות"
+
+msgid "_Close"
+msgstr "_סגירה"
+
+msgid "Enter the API key for the selected AI once: it will be saved securely"
+msgstr ""
+"הזנת מפתח ‪API‬ של הבינה המלאכותית שנבחרה, פעם אחת: המפתח יישמר באופן מאובטח"
+
+msgid "_Cancel"
+msgstr "_ביטול"
+
+msgid "_OK"
+msgstr "_בסדר"
+
+msgid "The response is ready. Looking up coordinates on Wikidata…"
+msgstr "התשובה מוכנה. חיפוש נקודות־ציון ב־‪Wikidata‬…"
+
+msgid "Remove"
+msgstr "הסרה"
+
+msgid "Test"
+msgstr "בדיקה"
+
+msgid "Save"
+msgstr "שמירה"
+
+msgid "paste the key here"
+msgstr "הדבקת המפתח כאן"
+
+msgid "Sent only to %s."
+msgstr "נשלח אל ‪%s‬ בלבד."
+
+msgid "Ask"
+msgstr "שליחה"
+
+msgid "Key…"
+msgstr "מפתח…"
+
+msgid "Look up coordinates on Wikidata (only place names are sent)"
+msgstr "חיפוש נקודות־ציון ב־‪Wikidata‬ (נשלחים שמות המקומות בלבד)"
+
+msgid "Which place is this?"
+msgstr "איזה מקום זה?"
+
+msgid "Cancelled: no place selected."
+msgstr "בוטל: לא נבחר מקום."
+
+msgid "API key"
+msgstr "מפתח ‪API‬"
+
+msgid "This family tree is opened as read-only."
+msgstr "אילן־היוחסין הזה נפתח לקריאה בלבד."
+
+msgid "Select at least one proposed change first."
+msgstr "יש לבחור תחילה שינוי מוצע אחד לפחות."
+
+msgid "Place"
+msgstr "מקום"
+
+msgid "Date"
+msgstr "תאריך"
+
+msgid "Region hint"
+msgstr "רמז אזור"
+
+msgid "AI"
+msgstr "בינה מלאכותית"
+
+msgid "Question"
+msgstr "שאלה"
+
+msgid "Paste from clipboard"
+msgstr "הדבקה מלוח־גזירים"
+
+msgid "Analyze"
+msgstr "ניתוח"
+
+msgid "Level"
+msgstr "רמה"
+
+msgid ""
+"The response specifies «%(name)s» (%(type)s), matching several existing "
+"places in your tree. No changes will be made until you choose one."
+msgstr ""
+"התשובה מציינת את «%(name)s» (%(type)s), והיא מתאימה לכמה מקומות קיימים "
+"באילן־היוחסין. שום שינוי לא ייעשה עד לבחירת אחד מהם."
+
+msgid "Exclude this level"
+msgstr "הוצאת הרמה הזו"
+
+msgid "Could not query Wikidata: %s"
+msgstr "לא ניתן היה לפנות אל ‪Wikidata‬: %s"
+
+msgid "This name matches multiple places. Which one did you mean?"
+msgstr "השם הזה מתאים לכמה מקומות. לאיזה מהם הכוונה?"
+
+msgid "%s does not require an API key."
+msgstr "%s אינו דורש מפתח ‪API‬."
+
+msgid "No API key saved for this AI engine yet."
+msgstr "עדיין לא נשמר מפתח ‪API‬ למנוע הבינה המלאכותית הזה."
+
+msgid "Testing API key connection…"
+msgstr "בדיקת החיבור עם מפתח ‪API‬…"
+
+msgid "Key saved. Finding an available model…"
+msgstr "המפתח נשמר. חיפוש מודל זמין…"
+
+msgid "Key saved, but could not select a model: %s"
+msgstr "המפתח נשמר, אך לא ניתן היה לבחור מודל: %s"
+
+msgid "Key saved; model %s was automatically selected."
+msgstr "המפתח נשמר; המודל %s נבחר אוטומטית."
+
+msgid ""
+"could not select a model from %s (%s). Specify a target model in %s, e.g.: "
+"{\"engines\": {\"%s\": {\"model\": \"model-name\"}}}"
+msgstr ""
+"לא ניתן היה לבחור מודל מתוך ‪%s‬ (%s). יש לציין מודל יעד ב־‪%s‬, לדוגמה: "
+"‪{\"engines\": {\"%s\": {\"model\": \"model-name\"}}}‬"
+
+msgid "none"
+msgstr "אין"
+
+msgid ""
+"model %s is no longer offered by host (%s); model choice will re-evaluate on"
+" next request"
+msgstr ""
+"המודל %s כבר אינו מוצע על ידי המארח (%s); בחירת המודל תיבדק מחדש בבקשה הבאה"
+
+msgid "model selected automatically"
+msgstr "המודל נבחר אוטומטית"
+
+msgid "API key saved, but service is unavailable: %s"
+msgstr "מפתח ‪API‬ נשמר, אך השירות אינו זמין: %s"
+
+msgid "Key saved (%s)."
+msgstr "המפתח נשמר (%s)."
+
+msgid "Apply %d change(s) to the family tree?"
+msgstr "להחיל %d שינויים על אילן־היוחסין?"
+
+msgid "New place «%s»"
+msgstr "מקום חדש «%s»"
+
+msgid ""
+"Key already saved: %(hint)s (in %(where)s). Entering a new key will "
+"overwrite it."
+msgstr "כבר נשמר מפתח: %(hint)s (ב־%(where)s). הזנת מפתח חדש תחליף אותו."
+
+msgid ""
+"Could not launch web browser. Please open this URL manually:\n"
+"%s"
+msgstr ""
+"לא ניתן היה לשגר דפדפן. יש לפתוח את הכתובת הזו ידנית:\n"
+"‪%s‬"
+
+msgid "Key saved in %s (encrypted via system keyring)."
+msgstr "המפתח נשמר ב־%s (מוצפן באמצעות מחזיק המפתחות של המערכת)."
+
+msgid ""
+"No system keyring detected; key saved unencrypted in %s. Do not copy or sync"
+" this folder."
+msgstr ""
+"לא נמצא מחזיק מפתחות של המערכת; המפתח נשמר ללא הצפנה ב־‪%s‬. אין להעתיק או "
+"לסנכרן את התיקיה הזו."
+
+msgid "requires configuration:"
+msgstr "דורש הגדרה:"
+
+msgid "The saved key has been removed."
+msgstr "המפתח השמור הוסר."
+
+msgid "Select an event."
+msgstr "יש לבחור אירוע."
+
+msgid "Select a place."
+msgstr "יש לבחור מקום."
+
+msgid "Open Place Completer with this event's place and date"
+msgstr "פתיחת השלמת מדרג מקומות עם המקום והתאריך של האירוע הזה"
+
+msgid "Complete place data…"
+msgstr "השלמת נתוני מקום…"
+
+msgid "%(type)s, %(date)s"
+msgstr "%(type)s, %(date)s"
+
+msgid "This event has no place assigned."
+msgstr "לאירוע הזה לא הוגדר מקום."
+
+msgid "Names are missing for this date (place displayed with «?»)"
+msgstr "חסרים שמות לתאריך הזה (במקום מופיע «?»)"
+
+msgid "Place Completer window is already open."
+msgstr "חלון השלמת מדרג מקומות כבר פתוח."
+
+msgid "Gramps currently displays: %s"
+msgstr "גרמפס מציג כעת: %s"
+
+msgid "Missing data: %s"
+msgstr "נתונים חסרים: %s"
+
+msgid "no valid date"
+msgstr "אין תאריך תקין"
+
+msgid "(no name)"
+msgstr "(ללא שם)"
+
+msgid "Place Completer opened for this place: specify a date and click Ask."
+msgstr ""
+"השלמת מדרג מקומות נפתחה עבור המקום הזה: יש להזין תאריך ולהקיש על ״שליחה״."
+
+msgid "Reported by an AI search"
+msgstr "דווח על ידי חיפוש בבינה מלאכותית"
+
+msgid ""
+"Found by %(engine)s (%(model)s) on %(day)s, responding to query regarding "
+"«%(place)s» on %(date)s (query format: %(form)s)."
+msgstr ""
+"נמצא על ידי %(engine)s (%(model)s) ב־%(day)s, בתשובה לשאלה בנוגע "
+"ל־«%(place)s» ב־%(date)s (תסדיר השאלה: %(form)s)."
+
+msgid "Wikidata statement"
+msgstr "הצהרת ‪Wikidata‬"
+
+msgid "Reported by AI search supporting: %s"
+msgstr "דווח על ידי חיפוש בבינה מלאכותית שתומך ב־%s"
+
+msgid "Retrieved from Wikidata on %(day)s while completing «%(place)s»."
+msgstr "נלקח מ־‪Wikidata‬ ב־%(day)s בעת השלמת «%(place)s»."
+
+msgid "Saved response: %s"
+msgstr "תשובה שמורה: %s"
+
+msgid "The response indicates uncertainty regarding: %s"
+msgstr "התשובה מציינת אי־ודאות לגבי: %s"
+
+msgid "Gemini (query copied to clipboard: paste into the browser prompt)"
+msgstr ""
+"‪Gemini‬ (השאלה הועתקה ללוח־הגזירים: יש להדביק אותה בשורת ההנחיה בדפדפן)"
+
+msgid ""
+". Destination unreachable: the local model server (e.g. Ollama) is either "
+"not installed or not currently running"
+msgstr ""
+". היעד אינו נגיש: שרת המודלים המקומי (לדוגמה ‪Ollama‬) אינו מותקן או אינו "
+"פועל כעת"
+
+msgid "start the local model server daemon, or update base_url in %s"
+msgstr "יש להפעיל את תהליך שרת המודלים המקומי, או לעדכן את ‪base_url‬ ב־‪%s‬"
+
+msgid ". Target model missing: download using 'ollama pull %s'"
+msgstr ". המודל היעד חסר: יש להורידו באמצעות ‪'ollama pull %s'‬"
+
+msgid "primary name"
+msgstr "שם ראשי"
+
+msgid "alternative name #%d"
+msgstr "שם חלופי מס׳ %d"
+
+msgid "unspecified language"
+msgstr "שפה לא מצוינת"
+
+msgid "language: %s"
+msgstr "שפה: %s"
+
+msgid "Ollama is not installed"
+msgstr "‪Ollama‬ אינו מותקן"
+
+msgid "Download"
+msgstr "הורדה"
+
+msgid "another model name (optional)"
+msgstr "שם מודל אחר (לא חובה)"
+
+msgid "Command copied: open a terminal and paste it (Ctrl+Shift+V)."
+msgstr "הפקודה הועתקה: יש לפתוח מסוף ולהדביק אותה (‪Ctrl+Shift+V‬)."
+
+msgid "Download a model"
+msgstr "הורדת מודל"
+
+msgid "Starting download…"
+msgstr "תחילת ההורדה…"
+
+msgid "download cancelled"
+msgstr "ההורדה בוטלה"
+
+msgid "Starting Ollama…"
+msgstr "הפעלת ‪Ollama‬…"
+
+msgid "Copy command"
+msgstr "העתקת הפקודה"
+
+msgid "Open terminal to run installer"
+msgstr "פתיחת מסוף להרצת ההתקנה"
+
+msgid "Downloading %s"
+msgstr "הורדת %s"
+
+msgid "Ollama service is not running"
+msgstr "שירות ‪Ollama‬ אינו פועל"
+
+msgid "Downloading model %s…"
+msgstr "הורדת המודל %s…"
+
+msgid "Model %s successfully installed."
+msgstr "המודל %s הותקן בהצלחה."
+
+msgid ""
+"A terminal window is open: enter your administrator password there. Once "
+"installation finishes, click Ask again."
+msgstr ""
+"נפתח חלון מסוף: יש להזין בו את ססמת המנהל. עם סיום ההתקנה, יש להקיש שוב על "
+"״שליחה״."
+
+msgid "Downloading…"
+msgstr "הורדה…"
+
+msgid ""
+"To start manually via terminal run:  ollama serve   (or:  sudo systemctl "
+"start ollama )"
+msgstr ""
+"להפעלה ידנית במסוף:  ‪ollama serve‬   (או:  ‪sudo systemctl start ollama‬ )"
+
+msgid "Start service"
+msgstr "הפעלת השירות"
+
+msgid ""
+"Ollama service is active but has no models installed. Run 'ollama pull "
+"llama3.2' in terminal and try again"
+msgstr ""
+"שירות ‪Ollama‬ פעיל אך לא הותקנו בו מודלים. יש להריץ במסוף ‪ollama pull "
+"llama3.2‬ ולנסות שוב"
+
+msgid ""
+"Ollama is not active locally. Click Ask to run guided setup. Manual steps: "
+"1) Install from ollama.com; 2) Start service with 'ollama serve'; 3) "
+"Download model using 'ollama pull llama3.2'."
+msgstr ""
+"‪Ollama‬ אינו פעיל במחשב זה. יש להקיש על ״שליחה״ להפעלת ההגדרה המודרכת. "
+"שלבים ידניים: 1) התקנה מ־‪ollama.com‬; 2) הפעלת השירות באמצעות ‪'ollama "
+"serve'‬; 3) הורדת מודל באמצעות ‪'ollama pull llama3.2'‬."
+
+msgid "download terminated prematurely"
+msgstr "ההורדה הסתיימה בטרם עת"
+
+msgid "Ollama launched but is not responding yet; check logs in %s"
+msgstr "‪Ollama‬ שוגר אך עדיין אינו מגיב; יש לבדוק את היומנים ב־‪%s‬"
+
+msgid ""
+"Terminal application not detected. Copy command and execute manually in "
+"system terminal."
+msgstr ""
+"לא נמצא יישום מסוף. יש להעתיק את הפקודה ולהריץ אותה ידנית במסוף המערכת."
+
+msgid "Failed to launch Ollama: %s"
+msgstr "שיגור ‪Ollama‬ נכשל: %s"
+
+msgid "download process interrupted: %s"
+msgstr "תהליך ההורדה הופסק: %s"
+
+msgid "Could not launch terminal application: %s"
+msgstr "לא ניתן היה לשגר את יישום המסוף: %s"
+
+msgid "small and fast (~2 GB, recommended)"
+msgstr "קטן ומהיר (כ־‪2 GB‬, מומלץ)"
+
+msgid "ultra-compact: faster response, reduced accuracy"
+msgstr "קומפקטי במיוחד: תשובה מהירה יותר, דיוק מופחת"
+
+msgid "Google model family (~a few GB)"
+msgstr "משפחת מודלים של ‪Google‬ (כמה ‪GB‬)"
+
+msgid "general-purpose model (~a few GB)"
+msgstr "מודל כללי (כמה ‪GB‬)"
+
+msgid "Very Low"
+msgstr "נמוך מאוד"
+
+msgid "Low"
+msgstr "נמוך"
+
+msgid "Normal"
+msgstr "סדיר"
+
+msgid "Confidence level %(level)s: %(why)s."
+msgstr "רמת ודאות %(level)s: %(why)s."
+
+msgid "a Wikidata statement"
+msgstr "הצהרת ‪Wikidata‬"
+
+msgid "the response does not specify which fields this page supports"
+msgstr "התשובה אינה מציינת אילו שדות העמוד הזה תומך בהם"
+
+msgid ""
+"downgraded one confidence level due to internal contradictions or "
+"discrepancies with saved responses"
+msgstr "הורדה רמת ודאות אחת עקב סתירות פנימיות או אי־התאמות לתשובות שמורות"
+
+msgid ""
+"the response expresses uncertainty regarding all claims cited on this page: "
+"%s"
+msgstr "התשובה מביעה אי־ודאות לגבי כל הטענות שהעמוד הזה מצוטט בגינן: %s"
+
+msgid "the response expresses uncertainty regarding part of this claim: %s"
+msgstr "התשובה מביעה אי־ודאות לגבי חלק מהטענה הזו: %s"
+
+msgid "the response cites this page for %s without expressing uncertainty"
+msgstr "התשובה מצטטת את העמוד הזה בגין %s בלי להביע אי־ודאות"
+
+msgid "no response from host %s:%d"
+msgstr "אין תגובה מהמארח ‪%s:%d‬"
+
+msgid ""
+"Query for «%s» on %s copied and %s launched. Paste query (Ctrl+V) and "
+"submit; once completed, copy full response back here and click Analyze."
+msgstr ""
+"השאלה בנוגע ל־«%s» ב־%s הועתקה, ו־%s שוגר. יש להדביק את השאלה (‪Ctrl+V‬) "
+"ולשלוח אותה; עם השלמת התשובה יש להעתיק אותה במלואה חזרה לכאן ולהקיש על "
+"״ניתוח״."
+
+msgid "Google AI mode"
+msgstr "‪Google AI mode‬"
+
+msgid "ChatGPT (web search enabled)"
+msgstr "‪ChatGPT‬ (חיפוש מרשתת מופעל)"
+
+msgid ""
+"Custom AI: query is copied; paste into your AI tool and paste the response "
+"back here"
+msgstr ""
+"בינה מלאכותית אחרת: השאלה מועתקת; יש להדביק אותה בכלי הבינה המלאכותית "
+"ולהדביק את התשובה חזרה כאן"
+
+msgid "Claude API with web search"
+msgstr "‪Claude API‬ עם חיפוש מרשתת"
+
+msgid "OpenAI-compatible endpoint (without internal web search)"
+msgstr "נקודת קצה תואמת ‪OpenAI‬ (ללא חיפוש מרשתת פנימי)"
+
+msgid "Local Ollama instance (no internet access)"
+msgstr "‪Ollama‬ מקומי (ללא גישה למרשתת)"
+
+msgid "no key required"
+msgstr "אין צורך במפתח"
+
+msgid "configured, %d characters"
+msgstr "הוגדר, %d תווים"
+
+msgid ""
+"contains leading/trailing whitespace or line breaks (automatically trimmed)"
+msgstr "מכיל רווחים או שבירות שורה בתחילתו או בסופו (מוסרים אוטומטית)"
+
+msgid "enclosed in quotation marks (automatically stripped)"
+msgstr "עטוף במרכאות (מוסרות אוטומטית)"
+
+msgid ""
+"contains internal spaces or line breaks: clipboard data might be corrupted"
+msgstr "מכיל רווחים או שבירות שורה בתוכו: ייתכן שהנתונים בלוח־הגזירים פגומים"
+
+msgid ""
+"contains non-ASCII characters (check for formatting marks or localized "
+"keyboard input)"
+msgstr ""
+"מכיל תווים שאינם ‪ASCII‬ (יש לבדוק אם נוספו סימני עיצוב או הוזן קלט ממקלדת "
+"מותאמת שפה)"
+
+msgid "invalid Anthropic API key format (must begin with 'sk-ant-')"
+msgstr "תסדיר מפתח ‪API‬ של ‪Anthropic‬ אינו תקין (חייב להתחיל ב־‪'sk-ant-'‬)"
+
+msgid ""
+"This is an Anthropic Claude key, but the engine sends requests to %s. Please"
+" select 'Claude API with web search' from the engine list."
+msgstr ""
+"זה מפתח ‪Claude‬ של ‪Anthropic‬, אך המנוע שולח בקשות אל ‪%s‬. יש לבחור "
+"ברשימת המנועים את ״‪Claude API‬ עם חיפוש מרשתת״."
+
+msgid ""
+"Anthropic API keys must start with 'sk-ant-'. The provided key appears "
+"invalid or belongs to a different provider. It will be sent to %s."
+msgstr ""
+"מפתחות ‪API‬ של ‪Anthropic‬ חייבים להתחיל ב־‪'sk-ant-'‬. המפתח שסופק נראה לא"
+" תקין או שייך לספק אחר. הוא יישלח אל ‪%s‬."
+
+msgid "API key in %s: MISSING%s"
+msgstr "מפתח ‪API‬ ב־%s: חסר%s"
+
+msgid "No API key available to test."
+msgstr "אין מפתח ‪API‬ לבדיקה."
+
+msgid "API key validated successfully%s."
+msgstr "מפתח ‪API‬ אומת בהצלחה%s."
+
+msgid "the response is empty"
+msgstr "התשובה ריקה"
+
+msgid ""
+"key file %s has insecure permissions (readable by others). Execute: chmod "
+"600 %s"
+msgstr ""
+"לקובץ המפתח ‪%s‬ הרשאות לא בטוחות (קריא לאחרים). יש להריץ: ‪chmod 600 %s‬"
+
+msgid ""
+"API key missing. Enter it via the Key button (stored securely in keyring or "
+"restricted user file), or %s specify key_file in %s."
+msgstr ""
+"מפתח ‪API‬ חסר. יש להזין אותו באמצעות הלחצן ״מפתח…״ (נשמר באופן מאובטח "
+"במחזיק המפתחות או בקובץ משתמש מוגבל), או %s לציין ‪key_file‬ ב־‪%s‬."
+
+msgid "This engine does not use an API key."
+msgstr "המנוע הזה אינו משתמש במפתח ‪API‬."
+
+msgid "response returned empty content (stop reason: %s)"
+msgstr "התשובה חזרה ללא תוכן (סיבת העצירה: %s)"
+
+msgid ""
+"this engine requires a model specification. Define it in %s, e.g.: "
+"{\"engines\": {\"%s\": {\"model\": \"model-name\"}}}"
+msgstr ""
+"המנוע הזה מחייב ציון מודל. יש להגדיר אותו ב־‪%s‬, לדוגמה: ‪{\"engines\": "
+"{\"%s\": {\"model\": \"model-name\"}}}‬"
+
+msgid "response structure is invalid or unrecognized"
+msgstr "מבנה התשובה אינו תקין או אינו מזוהה"
+
+msgid "service returned HTTP error %s: %s"
+msgstr "השירות החזיר שגיאת ‪HTTP %s‬: %s"
+
+msgid "cannot connect to %s: %s"
+msgstr "לא ניתן להתחבר אל ‪%s‬: %s"
+
+msgid "key file permissions are insecure (readable by others)"
+msgstr "הרשאות קובץ המפתח אינן בטוחות (קריא לאחרים)"
+
+msgid "unable to read key file"
+msgstr "לא ניתן לקרוא את קובץ המפתח"
+
+msgid "; model %s is active"
+msgstr "; המודל %s פעיל"
+
+msgid ""
+"use the Key button to store your credential%s, or specify key_file in %s"
+msgstr "יש להשתמש בלחצן ״מפתח…״ לשמירת המפתח%s, או לציין ‪key_file‬ ב־‪%s‬"
+
+msgid ""
+"Service %s rejected the API key (HTTP %d). Sent key suffix: %s. Verify key "
+"validity, quota limits, and provider matching."
+msgstr ""
+"השירות ‪%s‬ דחה את מפתח ‪API‬ (‪HTTP %d‬). סיומת המפתח שנשלח: ‪%s‬. יש לוודא"
+" את תקינות המפתח, את מגבלות המכסה ואת התאמת הספק."
+
+msgid ""
+"%s\n"
+"  Service %s rejected API key authentication%s. Verify key active status in provider dashboard and re-enter using Key button."
+msgstr ""
+"%s\n"
+"  השירות ‪%s‬ דחה את אימות מפתח ‪API‬%s. יש לוודא שהמפתח פעיל בלוח הבקרה של הספק ולהזין אותו מחדש באמצעות הלחצן ״מפתח…״."
+
+msgid ""
+"export environment variable %s (requires starting Gramps from the matching "
+"terminal session); or"
+msgstr "יש לייצא משתנה סביבה ‪%s‬ (נדרש אתחול גרמפס מאותו מושב מסוף); או"
+
+msgid ", or set environment variable $%s before launching Gramps"
+msgstr ", או לקבוע משתנה סביבה ‪$%s‬ לפני אתחול גרמפס"
+
+msgid " sent (%s)"
+msgstr " שנשלח (%s)"
+
+msgid "No matching place with spatial coordinates found on Wikidata"
+msgstr "לא נמצא ב־‪Wikidata‬ מקום מתאים עם נקודות־ציון"
+
+msgid ""
+"matching Wikidata locations exceed the %d km distance threshold from the "
+"location returned in the answer"
+msgstr ""
+"המקומות התואמים ב־‪Wikidata‬ חורגים מסף המרחק של %d ק״מ מהמיקום שהוחזר "
+"בתשובה"
+
+msgid "multiple nearby places match this name on Wikidata: %s"
+msgstr "כמה מקומות קרובים תואמים לשם הזה ב־‪Wikidata‬: %s"
+
+msgid "multiple places match this name on Wikidata: %s"
+msgstr "כמה מקומות תואמים לשם הזה ב־‪Wikidata‬: %s"
+
+msgid "coordinates"
+msgstr "נקודות־ציון"
+
+msgid "type"
+msgstr "סוג"
+
+msgid "name language"
+msgstr "שפת השם"
+
+msgid "cited source"
+msgstr "מקור מצוטט"
+
+msgid ""
+"place name is ambiguous. Select target location and query again using --hint"
+" \"%s\":"
+msgstr ""
+"שם המקום אינו חד־משמעי. יש לבחור מיקום יעד ולשאול שוב באמצעות ‪--hint "
+"\"%s\"‬:"
+
+msgid "response indicates ambiguous place name: %s"
+msgstr "התשובה מציינת שם מקום לא חד־משמעי: %s"
+
+msgid "%d places in the tree match this name: select target place"
+msgstr "%d מקומות באילן־היוחסין מתאימים לשם הזה: יש לבחור את מקום היעד"
+
+msgid "%s excluded per user selection"
+msgstr "%s הוצא לפי בחירת המשתמש"
+
+msgid ""
+"ACTION REQUIRED: %s matches existing places (%s). Select target entity "
+"(excluded until resolved)"
+msgstr ""
+"נדרשת פעולה: %s מתאים למקומות קיימים (%s). יש לבחור את מקום היעד (מוחרג עד "
+"להכרעה)"
+
+msgid "administrative level %d (%s) excluded per user selection"
+msgstr "הרמה המנהלית %d (%s) הוצאה לפי בחירת המשתמש"
+
+msgid ""
+"%s is identical to %s (listed as municipal container). Duplicate entity "
+"creation prevented"
+msgstr "%s זהה ל־%s (רשום כמכיל עירוני). יצירת מקום כפול נמנעה"
+
+msgid ""
+"%s is not historically valid on %s according to defined time boundaries"
+msgstr "%s אינו תקף היסטורית ב־%s לפי גבולות הזמן שהוגדרו"
+
+msgid "  %d. %s  (%s, %s)%s"
+msgstr "  %d. %s  (%s, %s)%s"
+
+msgid "key storage location unavailable (disabled)"
+msgstr "מקום שמירת המפתחות אינו זמין (מושבת)"
+
+msgid "system keyring"
+msgstr "מחזיק המפתחות של המערכת"
+
+msgid "unencrypted local file (restricted permissions)"
+msgstr "קובץ מקומי לא מוצפן (הרשאות מוגבלות)"
+
+msgid "%s…%s, %d characters"
+msgstr "%s…%s, %d תווים"
+
+msgid "key persistence disabled (PLACECOMPLETER_KEYSTORE=none)"
+msgstr "שמירת מפתחות מושבתת (‪PLACECOMPLETER_KEYSTORE=none‬)"
+
+msgid "%d characters"
+msgstr "%d תווים"
+
+msgid "system keyring failed to store key"
+msgstr "מחזיק המפתחות של המערכת נכשל בשמירת המפתח"
+
+msgid ""
+"system keyring daemon/bindings unavailable (libsecret or secret-tool "
+"required)"
+msgstr ""
+"תהליך הרקע או הכריכות של מחזיק המפתחות של המערכת אינם זמינים (נדרש "
+"‪libsecret‬ או ‪secret-tool‬)"
+
+msgid "secret-tool failed to save key: %s"
+msgstr "‪secret-tool‬ נכשל בשמירת המפתח: %s"
+
+msgid "unable to read system keyring: %s"
+msgstr "לא ניתן לקרוא את מחזיק המפתחות של המערכת: %s"
+
+msgid "system keyring rejected key: %s"
+msgstr "מחזיק המפתחות של המערכת דחה את המפתח: %s"
+
+msgid "failed to remove key from system keyring: %s"
+msgstr "הסרת המפתח ממחזיק המפתחות של המערכת נכשלה: %s"
+
+msgid "Review proposals, select acceptable modifications, and click Apply."
+msgstr ""
+"יש לעבור על ההצעות, לסמן את השינויים המקובלים ולהקיש על ״החלת השינויים "
+"שסומנו״."
+
+msgid "Create place «%s» (%s%s); primary name: %s"
+msgstr "יצירת מקום «%s» (%s%s); שם ראשי: %s"
+
+msgid "Add place name «%s» (%s) to %s: %s"
+msgstr "הוספת שם מקום «%s» (%s) אל %s: %s"
+
+msgid "Assign date period to name «%s» (%s) of %s: %s"
+msgstr "הענקת תקופת תאריכים לשם «%s» (%s) של %s: %s"
+
+msgid ""
+"%s [name occurs %d times in this place; period assigned to all occurrences]"
+msgstr "%s [השם מופיע %d פעמים במקום הזה; התקופה מוענקת לכל ההופעות]"
+
+msgid "Update date period for name «%s» (%s) of %s: %s -> %s"
+msgstr "עדכון תקופת התאריכים של השם «%s» (%s) של %s: %s -> %s"
+
+msgid "Set missing coordinates for %s: %s, %s (%s)"
+msgstr "קביעת נקודות־ציון חסרות עבור %s: %s, %s (%s)"
+
+msgid "Rename %s to «%s» (previous name retained as alternative name)"
+msgstr "שינוי שמו של %s ל־«%s» (השם הקודם נשמר כשם חלופי)"
+
+msgid "Set language tag for name «%s» (%s) of %s to %s"
+msgstr "קביעת תג שפה לשם «%s» (%s) של %s ל־%s"
+
+msgid "Set administrative place type of %s to %s"
+msgstr "קביעת סוג המקום המנהלי של %s ל־%s"
+
+msgid "Enclose %s inside %s: %s%s"
+msgstr "הכלת %s בתוך %s: %s%s"
+
+msgid "Update hierarchy link date range for %s inside %s: %s -> %s%s"
+msgstr "עדכון טווח התאריכים של קישור המדרג של %s בתוך %s: %s -> %s%s"
+
+msgid "Name matches multiple places; select target entity."
+msgstr "השם מתאים לכמה מקומות; יש לבחור את מקום היעד."
+
+msgid "modifies hierarchy link"
+msgstr "שינוי קישור מדרג"
+
+msgid "inserts intermediate level"
+msgstr "הוספת רמת ביניים"
+
+msgid "renames place"
+msgstr "שינוי שם מקום"
+
+msgid "populates unassigned field"
+msgstr "מילוי שדה ריק"
+
+msgid "Wikidata queried: %d place(s) populated with coordinates."
+msgstr "בוצעה פנייה אל ‪Wikidata‬: נקודות־ציון הושלמו עבור %d מקומות."
+
+msgid "type pending selection"
+msgstr "הסוג ממתין לבחירה"
+
+msgid ", coordinates %s, %s%s"
+msgstr ", נקודות־ציון %s, %s%s"
+
+msgid ""
+"Max query attempts reached without valid response. Add a Region hint or "
+"switch AI engine."
+msgstr ""
+"הושג מספר הניסיונות המרבי ללא תשובה תקפה. יש להוסיף ״רמז אזור״ או לעבור "
+"למנוע בינה מלאכותית אחר."
+
+msgid ""
+"Query sent to %s for «%s» on %s (format: %s). Copy full AI response text and"
+" click Analyze."
+msgstr ""
+"השאלה נשלחה אל %s בנוגע ל־«%s» ב־%s (תסדיר: %s). יש להעתיק את מלל התשובה "
+"המלא ולהקיש על ״ניתוח״."
+
+msgid ""
+"Query for «%s» on %s copied. Paste into AI interface, then copy response "
+"back here and click Analyze."
+msgstr ""
+"השאלה בנוגע ל־«%s» ב־%s הועתקה. יש להדביק אותה במנשק הבינה המלאכותית, להעתיק"
+" חזרה את התשובה ולהקיש על ״ניתוח״."
+
+msgid "Please enter an API key first."
+msgstr "יש להזין תחילה מפתח ‪API‬."
+
+msgid "No response text found. Please paste AI response text first."
+msgstr "לא נמצא מלל תשובה. יש להדביק תחילה את מלל תשובת הבינה המלאכותית."
+
+msgid "Google returned no search results for this query"
+msgstr "‪Google‬ לא החזיר תוצאות חיפוש לשאלה הזו"
+
+msgid "No selectable options available."
+msgstr "אין אפשרויות לבחירה."
+
+msgid "Insert %s between %s and %s"
+msgstr "הוספת %s בין %s ל־%s"
+
+msgid "Create place «%s»%s"
+msgstr "יצירת מקום «%s»%s"
+
+msgid "No items selected."
+msgstr "לא נבחרו פריטים."
+
+msgid " (to use the intermediate level)"
+msgstr " (כדי להשתמש ברמת הביניים)"
+
+msgid "Date format must be YYYY, YYYY-MM, or YYYY-MM-DD."
+msgstr "תסדיר התאריך חייב להיות ‪YYYY‬, ‪YYYY-MM‬ או ‪YYYY-MM-DD‬."
+
+msgid "%s is not ready for queries (%s): %s."
+msgstr "%s אינו מוכן לשאלות (%s): %s."
+
+msgid "Text does not conform to expected response template (starts with: %s)"
+msgstr "המלל אינו תואם את תבנית התשובה הצפויה (מתחיל ב: %s)"
+
+msgid "%s. Fallback prompt format generated (%s)."
+msgstr "%s. הוכן תסדיר הנחיה חלופי (%s)."
+
+msgid "%s; all prompt fallback formats exhausted."
+msgstr "%s; כל תסדירי ההנחיה החלופיים מוצו."
+
+msgid "CONFLICTS WITH SAVED RESPONSE: "
+msgstr "סתירה לתשובה שמורה: "
+
+msgid "Wikidata: %s: coordinates %s, %s from %s%s"
+msgstr "‪Wikidata‬: %s: נקודות־ציון %s, %s מ־%s%s"
+
+msgid ""
+" (an intermediate level inserted before the direct link to %s, which applies"
+" to the other years)"
+msgstr " (רמת ביניים שהוכנסה לפני הקישור הישיר אל %s, החל על שאר השנים)"
+
+msgid "AI engine error: %s"
+msgstr "שגיאת מנוע הבינה המלאכותית: %s"
+
+msgid " and place it in the hierarchy"
+msgstr " והכנסתו למדרג"
+
+msgid "Wikidata: %s: %s%s"
+msgstr "‪Wikidata‬: %s: %s%s"
+
+msgid "; %d skipped: %s"
+msgstr "; %d דולגו: %s"
+
+msgid "no results found"
+msgstr "לא נמצאו תוצאות"
+
+msgid "; coordinates from AI response retained for review"
+msgstr "; נקודות־הציון מתשובת הבינה המלאכותית נשמרו לבדיקה"
+
+msgid " (%.1f km from the location returned in the answer)"
+msgstr " (%.1f ק״מ מהמיקום שהוחזר בתשובה)"
+
+msgid "target place entity no longer exists in tree"
+msgstr "מקום היעד כבר אינו קיים באילן־היוחסין"
+
+msgid "parent hierarchy link position has shifted"
+msgstr "מיקום קישור האב השתנה"
+
+msgid "link date range was modified after analysis phase"
+msgstr "טווח התאריכים של הקישור שונה לאחר שלב הניתוח"
+
+msgid "place name position has shifted"
+msgstr "מיקום שם המקום השתנה"
+
+msgid "place name date range was modified after analysis phase"
+msgstr "טווח התאריכים של שם המקום שונה לאחר שלב הניתוח"
+
+msgid "parent place entity no longer exists in tree"
+msgstr "מקום האב כבר אינו קיים באילן־היוחסין"
+
+msgid "place already contains spatial coordinates"
+msgstr "למקום כבר יש נקודות־ציון"
+
+msgid "hierarchy link already exists"
+msgstr "קישור המדרג כבר קיים"
+
+msgid "place name already exists"
+msgstr "שם המקום כבר קיים"
+
+msgid "place name was modified after analysis phase"
+msgstr "שם המקום שונה לאחר שלב הניתוח"
+
+msgid "a place with this web link already exists"
+msgstr "כבר קיים מקום עם קישור המרשתת הזה"
+
+msgid "required new place entity is excluded from current selection"
+msgstr "המקום החדש הנדרש אינו כלול בבחירה הנוכחית"
+
+msgid "place name already has a language tag assigned"
+msgstr "לשם המקום כבר הוגדרה שפה"
+
+msgid "place entity already has an administrative type assigned"
+msgstr "למקום כבר הוגדר סוג מנהלי"
+
+msgid ""
+"CONFLICTS WITH SAVED RESPONSE: text is IDENTICAL to response saved for %s. "
+"AI returned static text across different dates; name and type accuracy "
+"cannot be verified"
+msgstr ""
+"סתירה לתשובה שמורה: המלל זהה לתשובה ששמורה עבור %s. הבינה המלאכותית החזירה "
+"מלל קבוע לתאריכים שונים; לא ניתן לאמת את דיוק השם והסוג"
+
+msgid "assumption"
+msgstr "הנחה"
+
+msgid "evidence"
+msgstr "ראיה"
+
+msgid "CONFLICT"
+msgstr "סתירה"
+
+msgid "(no date)"
+msgstr "(ללא תאריך)"
+
+msgid "before "
+msgstr "לפני "
+
+msgid "after "
+msgstr "אחרי "
+
+msgid "about "
+msgstr "בערך "
+
+msgid "from "
+msgstr "מ־"
+
+msgid "to "
+msgstr "עד ל־"
+
+msgid " (est.)"
+msgstr " (משוער)"
+
+msgid "Apply checked changes"
+msgstr "החלת השינויים שסומנו"
+
+msgid ""
+"optional: a word that distinguishes places, e.g., Iowa or the country, e.g.,"
+" Italy"
+msgstr ""
+"לא חובה: מילה שמבדילה בין מקומות, לדוגמה ‪Iowa‬ או המדינה, לדוגמה ‪Italy‬"
+
+msgid "Retrieved administrative levels (uncheck uncertain levels)"
+msgstr "רמות מנהליות שנמצאו (יש לבטל את סימון הרמות שאינן ודאיות)"
+
+msgid "Other changes (each box is a grouped change applied as a set)"
+msgstr "שינויים נוספים (כל תיבה היא שינוי מקובץ שמוחל כקבוצה)"
+
+msgid "Proposed changes"
+msgstr "שינויים מוצעים"
+
+msgid "Confidence"
+msgstr "ודאות"
+
+msgid ""
+"Ollama runs a local AI model: free, no API key required.\n"
+"It lacks web access and may be less reliable than Google AI mode or Claude.\n"
+"The installer will ask for administrator permissions in the terminal window that opens. The command:"
+msgstr ""
+"‪Ollama‬ מריץ מודל בינה מלאכותית מקומי: חינם, בלי מפתח ‪API‬.\n"
+"אין לו גישה למרשתת, ולכן הוא עשוי להיות פחות אמין מ־‪Google AI mode‬ או מ־‪Claude‬.\n"
+"ההתקנה תבקש הרשאות מנהל במסוף שייפתח. הפקודה:"
+
+msgid "Wikipedia languages"
+msgstr "שפות ‪Wikipedia‬"
+
+msgid "Response (if copied from a browser, paste it here)"
+msgstr "תשובה (אם הועתקה מדפדפן, יש להדביק אותה כאן)"
+
+msgid "Select all"
+msgstr "בחירת הכול"
+
+msgid "Issues to review"
+msgstr "נושאים לבדיקה"
+
+msgid "Select"
+msgstr "בחירה"
+
+msgid "All items are unchecked."
+msgstr "כל הסימונים בוטלו."
+
+msgid ""
+"Ollama is running but no model is installed.\n"
+"Downloading a model (a few GB) takes a few minutes and stays stored locally on this computer.\n"
+"Select a model below or enter a model name from ollama.com/library:"
+msgstr ""
+"‪Ollama‬ פועל אך לא הותקן מודל.\n"
+"הורדת מודל (כמה ‪GB‬) נמשכת כמה דקות, והוא נשמר במחשב זה.\n"
+"יש לבחור מודל להלן או להזין שם מודל מ־‪ollama.com/library‬:"
+
+msgid ""
+"Changes are applied together in one step; Edit > Undo will revert all of "
+"them."
+msgstr "השינויים מוחלים יחד בצעד אחד; עריכה ← הסגה תסיג את כולם."
+
+msgid "Clear all"
+msgstr "ניקוי הכול"
+
+msgid ""
+"%d change(s) in CONFLICT with existing tree data (replacing a different "
+"date)"
+msgstr "%d שינויים בסתירה לנתונים הקיימים באילן־היוחסין (מחליפים תאריך אחר)"
+
+msgid "%d web link(s) to a site of unknown type (check if official)"
+msgstr "%d קישורי מרשתת לאתר מסוג לא ידוע (יש לבדוק אם הוא רשמי)"
+
+msgid "%d conflicting change(s) (select one option)"
+msgstr "%d שינויים סותרים (יש לבחור אפשרות אחת)"
+
+msgid "%d change(s) depending on these options"
+msgstr "%d שינויים התלויים באפשרויות אלה"
+
+msgid "%d change(s) selected. Remaining to review: %s."
+msgstr "נבחרו %d שינויים. נותרו לבדיקה: %s."
+
+msgid "%d change(s) selected."
+msgstr "נבחרו %d שינויים."
+
+msgid ""
+"Invalid language codes ignored: %s. Please use standard 2-letter codes "
+"(e.g., en, he, fr)."
+msgstr ""
+"קודי שפה לא תקינים לא נלקחו בחשבון: %s. יש להשתמש בקודים תקניים בני שתי "
+"אותיות (לדוגמה ‪en, he, fr‬)."
+
+msgid "Click Ask first, or paste a response into the text box."
+msgstr "יש להקיש תחילה על ״שליחה״, או להדביק תשובה בתיבת המלל."
+
+msgid "Specify the place name and date for the query."
+msgstr "יש להזין את שם המקום ואת התאריך של השאלה."
+
+msgid "Gramps display format for an event on this date: %s"
+msgstr "כך גרמפס יציג אירוע בתאריך הזה: %s"
+
+msgid ""
+"Ollama is installed locally but is not currently active.\n"
+"Start it now? It will run in the background (ollama serve) until stopped or the computer shuts down."
+msgstr ""
+"‪Ollama‬ מותקן במחשב זה אך אינו פעיל כעת.\n"
+"להפעילו עכשיו? הוא ירוץ ברקע (‪ollama serve‬) עד לעצירתו או לכיבוי המחשב."
+
+msgid "%d change(s) will be skipped: %s"
+msgstr "%d שינויים ידולגו: %s"
+
+msgid "Analyze the response, then choose which changes to apply."
+msgstr "ניתוח התשובה ובחירת השינויים להחלה."
+
+msgid "These links already exist and require no changes: %s"
+msgstr "הקישורים האלה כבר קיימים ואינם דורשים שינוי: %s"
+
+msgid "a place cannot contain itself"
+msgstr "מקום אינו יכול להכיל את עצמו"
+
+msgid "this would create a circular hierarchy loop"
+msgstr "הדבר ייצור לולאה במדרג"
+
+msgid ""
+"%s -> %s excluded from hierarchy chain: %s. Next level linked directly to %s"
+" instead"
+msgstr "%s -> %s הוצא משרשרת המדרג: %s. הרמה הבאה מקושרת במקומו ישירות אל %s"
+
+msgid ""
+"it is a settlement sharing its name with the area specified in the answer"
+msgstr "זהו יישוב ששמו זהה לשם האזור שצוין בתשובה"
+
+msgid ""
+"CONFLICT: in the tree, %s is linked to %s, but the response places it under "
+"%s (from %s), and the existing link is incorrect: %s. Result if you "
+"disconnect: %s will no longer be inside %s. Not selected automatically: "
+"changes to existing data must be approved one by one."
+msgstr ""
+"סתירה: באילן־היוחסין %s מקושר אל %s, אך התשובה מציבה אותו תחת %s (מ־%s), "
+"והקישור הקיים שגוי: %s. התוצאה בניתוק: %s לא יהיה עוד בתוך %s. לא נבחר "
+"אוטומטית: שינויים בנתונים קיימים מחייבים אישור אחד לאחד."
+
+msgid ""
+"%s -> %s: existing tree link has an invalid date range (%s). The response "
+"period (%s-%s) will replace it if selected"
+msgstr ""
+"%s -> %s: לקישור הקיים באילן־היוחסין יש טווח תאריכים לא תקין (%s). תקופת "
+"התשובה (%s-%s) תחליף אותו אם ייבחר"
+
+msgid ""
+"%s is also linked to %s, and the response places it under %s (from %s): both"
+" links will be retained, with the new link prioritized for matching years"
+msgstr ""
+"%s מקושר גם אל %s, והתשובה מציבה אותו תחת %s (מ־%s): שני הקישורים יישמרו, "
+"והקישור החדש יקבל עדיפות לשנים המתאימות"
+
+msgid ""
+"the type of %s in the tree is «%s» but the response specifies %s: non-"
+"settlement types are not modified automatically here. Adjust the place type "
+"in Gramps if needed"
+msgstr ""
+"סוג המקום %s באילן־היוחסין הוא «%s» אך התשובה מציינת %s: סוגים שאינם יישוב "
+"אינם משתנים כאן אוטומטית. יש להתאים את סוג המקום בגרמפס לפי הצורך"
+
+msgid ""
+"%s is also linked to %s, which appears identical to %s (same name and type)."
+" Merge them in Gramps (Edit > Merge Places) to consolidate this hierarchy "
+"level"
+msgstr ""
+"%s מקושר גם אל %s, שנראה זהה ל־%s (אותו שם ואותו סוג). יש למזג אותם בגרמפס "
+"(עריכה ← מיזוג מקומות) כדי לאחד את רמת המדרג הזו"
+
+msgid ""
+"%s is also linked directly to %s (listed before the link to %s): it applies "
+"only to the years before this link takes effect"
+msgstr ""
+"%s מקושר גם ישירות אל %s (מופיע לפני הקישור אל %s): הוא חל רק על השנים שלפני"
+" תחילת תוקפו של הקישור הזה"
+
+msgid ""
+"%s is also linked directly to %s (listed after the link to %s): it applies "
+"only to the years before this link takes effect"
+msgstr ""
+"%s מקושר גם ישירות אל %s (מופיע אחרי הקישור אל %s): הוא חל רק על השנים שלפני"
+" תחילת תוקפו של הקישור הזה"
+
+msgid ""
+"%s is also linked directly to %s (prior to link %s) covering the same date "
+"range. Disconnecting will lose no data: %s is accessible via %s"
+msgstr ""
+"%s מקושר גם ישירות אל %s (לפני הקישור %s) ולאותו טווח תאריכים. הניתוק לא "
+"יאבד נתונים: אל %s מגיעים דרך %s"
+
+msgid ""
+"%s is also linked directly to %s (after link %s) covering the same date "
+"range. Disconnecting will lose no data: %s is accessible via %s"
+msgstr ""
+"%s מקושר גם ישירות אל %s (אחרי הקישור %s) ולאותו טווח תאריכים. הניתוק לא "
+"יאבד נתונים: אל %s מגיעים דרך %s"
+
+msgid ""
+"%s -> %s: the response specifies %s-%s, but the tree contains %s, and %s "
+"covers the intervening years; date period left unchanged for verification"
+msgstr ""
+"%s -> %s: התשובה מציינת %s-%s, אך באילן־היוחסין יש %s, ו־%s מכסה את השנים "
+"שבאמצע; תקופת התאריכים נותרה ללא שינוי לאימות"
+
+msgid ""
+"%s -> %s: the response specifies %s-%s and the tree contains %s, with gaps "
+"not covered by the link; date period was left unchanged for review"
+msgstr ""
+"%s -> %s: התשובה מציינת %s-%s ובאילן־היוחסין יש %s, עם פערים שהקישור אינו "
+"מכסה; תקופת התאריכים נותרה ללא שינוי לבדיקה"
+
+msgid ""
+"the web link is a commercial, tourism, or social site rather than an "
+"official record source"
+msgstr "קישור המרשתת הוא אתר מסחרי, תיירותי או חברתי ולא מקור רשמי"
+
+msgid ""
+"Confidence level rating for proposed changes:\n"
+"Confirmed: Verified by independent sources (Wikidata, regional pack, or existing tree data).\n"
+"Reported: Stated directly in the AI response with a cited web source.\n"
+"Inferred: Derived automatically by analyzing related data (requires user review).\n"
+"Unsure: AI indicated uncertainty, contradicted itself, or lacked citations.\n"
+"Note: Multi-step changes inherit the confidence level of their least-certain step."
+msgstr ""
+"דירוג רמת הוודאות של השינויים המוצעים:\n"
+"מאומת: אומת על ידי מקורות בלתי תלויים (‪Wikidata‬, חבילה אזורית או נתונים קיימים באילן־היוחסין).\n"
+"מדווח: נאמר ישירות בתשובת הבינה המלאכותית עם מקור מרשתת מצוטט.\n"
+"מוסק: נגזר אוטומטית מניתוח נתונים קשורים (נדרשת בדיקה).\n"
+"לא בטוח: הבינה המלאכותית ציינה אי־ודאות, סתרה את עצמה או לא ציטטה מקורות.\n"
+"הערה: שינוי רב־שלבי יורש את רמת הוודאות של השלב הפחות ודאי שבו."
+
+msgid "stated in the AI response without supporting web citations"
+msgstr "נאמר בתשובת הבינה המלאכותית בלי ציטוט מרשתת תומך"
+
+msgid "Confirmed"
+msgstr "מאומת"
+
+msgid "Reported"
+msgstr "מדווח"
+
+msgid "Inferred"
+msgstr "מוסק"
+
+msgid "Unsure"
+msgstr "לא בטוח"
+
+msgid "derived automatically from related data; verify correctness"
+msgstr "נגזר אוטומטית מנתונים קשורים; יש לאמת את נכונותו"
+
+msgid ""
+"the response contains internal contradictions or conflicts with saved "
+"historical data"
+msgstr "התשובה כוללת סתירות פנימיות או סותרת נתונים היסטוריים שמורים"
+
+msgid ""
+"deduced automatically from existing place names and types in the tree; "
+"verify correctness"
+msgstr ""
+"הוסק אוטומטית משמות וסוגי מקומות קיימים באילן־היוחסין; יש לאמת את נכונותו"
+
+msgid "deduced automatically from the AI response; verify correctness"
+msgstr "הוסק אוטומטית מתשובת הבינה המלאכותית; יש לאמת את נכונותו"
+
+msgid "stated in the AI response with a supporting source citation"
+msgstr "נאמר בתשובת הבינה המלאכותית עם ציטוט של מקור תומך"
+
+msgid ""
+"verified by independent sources (Wikidata, regional dataset, or existing "
+"tree)"
+msgstr ""
+"אומת על ידי מקורות בלתי תלויים (‪Wikidata‬, מערך נתונים אזורי או "
+"אילן־היוחסין הקיים)"
+
+msgid "the response indicated uncertainty about %s"
+msgstr "התשובה ציינה אי־ודאות לגבי %s"
+
+msgid ""
+"API key validated, but model «%s» is unrecognized by host. Select another "
+"model in %s."
+msgstr ""
+"מפתח ‪API‬ אומת, אך המארח אינו מזהה את המודל «%s». יש לבחור מודל אחר ב־‪%s‬."
+
+msgid ""
+"tree contains a place named «%s» (%s) located %.0f km from query location; "
+"treated as a distinct place and left unchanged"
+msgstr ""
+"באילן־היוחסין יש מקום בשם «%s» (%s) הנמצא %.0f ק״מ ממיקום השאלה; הוא נחשב "
+"למקום נפרד ונותר ללא שינוי"
+
+msgid ""
+"Administrative hierarchy for %s in %d (from local to national): %s. Select "
+"applicable types for this place; add intermediate levels only if "
+"historically accurate. "
+msgstr ""
+"המדרג המנהלי של %s בשנת %d (ממקומי עד לאומי): %s. יש לבחור את הסוגים "
+"הרלוונטיים למקום הזה; יש להוסיף רמות ביניים רק אם הן מדויקות היסטורית. "
+
+msgid " [may not apply]"
+msgstr " [אולי לא חל]"
+
+msgid ""
+"Place name to query (e.g., Parma, Sissa, Johnston).\n"
+"Use Region hint to distinguish homonymous places."
+msgstr ""
+"שם המקום לחיפוש (לדוגמה ‪Parma, Sissa, Johnston‬).\n"
+"להבחנה בין מקומות בעלי שם זהה יש להשתמש ב״רמז אזור״."
+
+msgid ""
+"Target year for historical names and administrative structure (e.g., 1850).\n"
+"Partial or full dates are supported (e.g., 1990-05 or 1990-05-17)."
+msgstr ""
+"שנת היעד לשמות ולמבנה המנהלי ההיסטוריים (לדוגמה ‪1850‬).\n"
+"נתמכים תאריכים חלקיים או מלאים (לדוגמה ‪1990-05‬ או ‪1990-05-17‬)."
+
+msgid ""
+"Preferred Wikipedia link languages (comma-separated list, in priority order).\n"
+"Adds matching articles plus Wikidata link. Defaults to English if preferred languages are unavailable.\n"
+"Examples:\n"
+"  he, en\n"
+"  fr, es"
+msgstr ""
+"שפות מועדפות לקישורי ‪Wikipedia‬ (רשימה מופרדת בפסיקים, לפי סדר עדיפות).\n"
+"מוסיף מאמרים מתאימים וכן קישור ‪Wikidata‬. ברירת המחדל היא אנגלית אם השפות המועדפות אינן זמינות.\n"
+"דוגמאות:\n"
+"  ‪he, en‬\n"
+"  ‪fr, es‬"
+
+msgid ""
+"Optional disambiguation term (county, state, region, or country).\n"
+"Examples:\n"
+"  Parma -> Italy\n"
+"  Johnston -> Iowa\n"
+"Providing a country will prompt historical administrative levels for that specific year."
+msgstr ""
+"מונח הבחנה לא חובה (מחוז, מדינת־משנה, אזור או מדינה).\n"
+"דוגמאות:\n"
+"  ‪Parma -> Italy‬\n"
+"  ‪Johnston -> Iowa‬\n"
+"ציון מדינה יגרום להצגת הרמות המנהליות ההיסטוריות לשנה המסוימת."
+
+msgid ""
+"Query prompt format sent to AI engine:\n"
+"auto: Automatically cycles prompt formats until successful (recommended).\n"
+"table: Concise prompt returning structured tabular data.\n"
+"classic: Comprehensive prompt describing all fields in detail.\n"
+"short: Compact prompt paragraph for engines with input limits.\n"
+"dated: Classic prompt with explicit instruction to match historical date context.\n"
+"long: Extended prompt requesting comparative present-day versus historical analysis."
+msgstr ""
+"תסדיר ההנחיה שנשלחת למנוע הבינה המלאכותית:\n"
+"‪auto‬: מחזור אוטומטי בין תסדירי ההנחיה עד להצלחה (מומלץ).\n"
+"‪table‬: הנחיה תמציתית שמחזירה נתונים מובנים בטבלה.\n"
+"‪classic‬: הנחיה מקיפה שמתארת כל שדה בפירוט.\n"
+"‪short‬: פסקת הנחיה קומפקטית למנועים עם הגבלת קלט.\n"
+"‪dated‬: הנחיה קלאסית עם הוראה מפורשת להתאים להקשר התאריך ההיסטורי.\n"
+"‪long‬: הנחיה מורחבת שמבקשת ניתוח משווה בין ההווה לתקופה ההיסטורית."
+
+msgid ""
+"Selected AI service provider.\n"
+"Web options (Google AI, ChatGPT, Gemini) open in browser for manual paste back.\n"
+"API key options (Claude, OpenAI) and local Ollama process queries automatically.\n"
+"Checkmarks indicate ready status; crosses detail missing setup."
+msgstr ""
+"ספק שירות הבינה המלאכותית שנבחר.\n"
+"אפשרויות מרשתת (‪Google AI‬, ‪ChatGPT‬, ‪Gemini‬) נפתחות בדפדפן, ויש להדביק את התשובה חזרה ידנית.\n"
+"אפשרויות מפתח ‪API‬ (‪Claude‬, ‪OpenAI‬) ו־‪Ollama‬ מקומי מעבדים שאלות אוטומטית.\n"
+"סימן וי מציין מוכנות; סימן איקס מפרט הגדרה חסרה."
+
+msgid "Submit query to selected AI. Does not modify family tree data."
+msgstr ""
+"שליחת השאלה לבינה המלאכותית שנבחרה. הפעולה אינה משנה את נתוני אילן־היוחסין."
+
+msgid ""
+"Query Wikidata for missing place coordinates after analysis.\n"
+"Only place names are transmitted."
+msgstr ""
+"פנייה אל ‪Wikidata‬ לקבלת נקודות־ציון חסרות של מקומות לאחר הניתוח.\n"
+"נשלחים שמות המקומות בלבד."
+
+msgid ""
+"AI response panel. Automated responses populate here directly.\n"
+"For browser queries, copy and paste the raw response text here."
+msgstr ""
+"חלונית תשובת הבינה המלאכותית. תשובות אוטומטיות מוצגות כאן ישירות.\n"
+"בשאלות דרך דפדפן יש להעתיק לכאן ולהדביק את מלל התשובה כפי שהוא."
+
+msgid "Paste clipboard text into the response box."
+msgstr "הדבקת המלל מלוח־הגזירים בתיבת התשובה."
+
+msgid ""
+"Analyze response text and generate preview of tree modifications. No data is"
+" changed yet."
+msgstr ""
+"ניתוח מלל התשובה ויצירת תצוגה מקדימה של שינויי אילן־היוחסין. עדיין לא משתנים"
+" נתונים."
+
+msgid ""
+"Identified administrative levels, ordered from local to regional.\n"
+"Uncheck any uncertain level to exclude it from tree updates."
+msgstr ""
+"הרמות המנהליות שזוהו, מסודרות ממקומי עד אזורי.\n"
+"ביטול סימון של רמה שאינה ודאית יוציא אותה מעדכוני אילן־היוחסין."
+
+msgid ""
+"Analysis summary. Red warnings indicate items requiring review before "
+"applying changes."
+msgstr ""
+"סיכום הניתוח. אזהרות באדום מציינות פריטים שיש לבדוק לפני החלת השינויים."
+
+msgid ""
+"Apply selected changes to the family tree in a single operation (reversible "
+"via Edit > Undo)."
+msgstr ""
+"החלת השינויים שנבחרו באילן־היוחסין בפעולה אחת (ניתן להסיג באמצעות עריכה ← "
+"הסגה)."
+
+msgid ""
+"Toggle selection for all non-conflicting proposals.\n"
+"Manual review required for: tree conflicts, unverified web links, and mutually exclusive changes.\n"
+"Review modifications to existing tree elements carefully before applying."
+msgstr ""
+"החלפת הבחירה בכל ההצעות שאינן סותרות.\n"
+"נדרשת בדיקה ידנית ל: סתירות עם האילן, קישורי מרשתת שלא אומתו ושינויים שאינם ניתנים לבחירה יחד.\n"
+"יש לבדוק בקפידה שינויים ברכיבים קיימים באילן־היוחסין לפני ההחלה."
+
+msgid "response lacks place name; no changes proposed"
+msgstr "בתשובה חסר שם המקום; לא מוצעים שינויים"
+
+msgid "a place cannot contain another place of identical administrative type"
+msgstr "מקום אינו יכול להכיל מקום אחר מאותו סוג מנהלי"
+
+msgid ""
+"settlement places belong to a single tier; nesting settlements is invalid"
+msgstr "יישובים שייכים לרמה אחת; קינון יישובים אינו תקף"
+
+msgid "parent place administrative level rank is lower than child place"
+msgstr "דרגת הרמה המנהלית של מקום האב נמוכה מזו של מקום הבן"
+
+msgid ""
+"level «%s» (%s) matches the name of child place or parent tier; created as "
+"distinct place «%s»"
+msgstr ""
+"הרמה «%s» (%s) זהה בשמה למקום הבן או לרמת האב; היא נוצרת כמקום נפרד «%s»"
+
+msgid ""
+"response defines period %s-%s for place; as no subsequent name is specified,"
+" name «%s» period end date remains open"
+msgstr ""
+"התשובה מגדירה תקופה %s-%s למקום; מאחר שלא צוין שם מאוחר יותר, תאריך הסיום של"
+" השם «%s» נשאר פתוח"
+
+msgid ""
+"name «%s» applies from %s (establishment of ruling state %s); provided in "
+"state official language (inferred)"
+msgstr ""
+"השם «%s» חל מ־%s (הקמת המדינה השלטת %s); ניתן בשפה הרשמית של המדינה (הסקה)"
+
+msgid ""
+"response identifies potential official web links; excluded automatically "
+"(verify and attach manually if valid): %s"
+msgstr ""
+"התשובה מזהה קישורי מרשתת שעשויים להיות רשמיים; הם לא נוספו אוטומטית (יש לאמת"
+" ולצרף ידנית אם הם תקפים): %s"
+
+msgid ""
+"name «%s» end date (%s) matches response boundary without successor name; "
+"period upper limit opened"
+msgstr ""
+"תאריך הסיום של השם «%s» (%s) תואם את גבול התשובה ללא שם יורש; הגבול העליון "
+"של התקופה נפתח"
+
+msgid "response omits administrative tier %s (%s) present for %s on date %s"
+msgstr "בתשובה חסרה רמה מנהלית %s (%s) הקיימת ב־%s בתאריך %s"
+
+msgid ""
+"ACTION REQUIRED: %s matches existing %s (containing %s). Select target "
+"entity (excluded until resolved)"
+msgstr ""
+"נדרשת פעולה: %s מתאים ל־%s הקיים (המכיל את %s). יש לבחור את מקום היעד (מוחרג"
+" עד להכרעה)"
+
+msgid ""
+"«%s» is not in your tree under that name, but «%s» holds «%s» there. Is it "
+"the same place? Nothing is created until you choose."
+msgstr ""
+"«%s» אינו באילן־היוחסין בשם הזה, אך «%s» מכיל שם את «%s». האם זה אותו מקום? "
+"שום דבר לא ייווצר עד לבחירה."
+
+msgid ""
+"hierarchy chain terminates at state «%s» without national container; please "
+"attach sovereign country entity"
+msgstr ""
+"שרשרת המדרג מסתיימת במדינת־משנה «%s» בלי מדינה מעליה; יש לצרף את המדינה "
+"הריבונית"
+
+msgid "Attach web link %s to %s (%s)"
+msgstr "צירוף קישור מרשתת ‪%s‬ אל %s (%s)"
+
+msgid "Change administrative place type of %s from %s to %s"
+msgstr "שינוי סוג המקום המנהלי של %s מ־%s ל־%s"
+
+msgid "Disconnect %s from %s (removes hierarchy link; retains place entities)"
+msgstr "ניתוק %s מ־%s (מסיר את קישור המדרג; שני המקומות נשארים)"
+
+msgid "Prioritize link of %s inside %s over link inside %s"
+msgstr "מתן עדיפות לקישור של %s בתוך %s על פני הקישור בתוך %s"
+
+msgid "Querying %s (%s) regarding «%s» for date %s…"
+msgstr "פנייה אל %s (%s) בנוגע ל־«%s» לתאריך %s…"
+
+msgid "verify official status of web source"
+msgstr "בדיקת רשמיות מקור המרשתת"
+
+msgid "disconnects place link"
+msgstr "ניתוק קישור מקום"
+
+msgid "modifies place type"
+msgstr "שינוי סוג מקום"
+
+msgid "modifies existing tree data"
+msgstr "שינוי נתונים קיימים באילן־היוחסין"
+
+msgid "These modification steps are interdependent."
+msgstr "שלבי השינוי האלה תלויים זה בזה."
+
+msgid ""
+"Requires the new link: selecting this option automatically checks the "
+"dependent link."
+msgstr "נדרש הקישור החדש: בחירה באפשרות הזו מסמנת אוטומטית את הקישור התלוי."
+
+msgid ""
+"%d change(s) applied in a single batch (reversible via Edit > Undo)%s%s%s."
+msgstr "%d שינויים הוחלו בפעולה אחת (ניתן להסיג באמצעות עריכה ← הסגה)%s%s%s."
+
+msgid "Please enter a place name."
+msgstr "יש להזין שם מקום."
+
+msgid ""
+"AI returned unfulfilled prompt. Try adding a province in Region hint or "
+"switch AI engine."
+msgstr ""
+"הבינה המלאכותית החזירה הנחיה שלא מולאה. יש להוסיף מחוז ב״רמז אזור״ או לעבור "
+"למנוע בינה מלאכותית אחר."
+
+msgid "Move %s from %s to %s"
+msgstr "העברת %s מ־%s אל %s"
+
+msgid ""
+"new link placed before the existing link, because Gramps uses the first link"
+" that fits the date; the existing link is retained for the remaining years"
+msgstr ""
+"הקישור החדש ממוקם לפני הקישור הקיים, מפני שגרמפס משתמש בקישור הראשון שמתאים "
+"לתאריך; הקישור הקיים נשמר לשנים הנותרות"
+
+msgid ""
+"link to previous place retained strictly for years preceding new link start "
+"date"
+msgstr "הקישור אל המקום הקודם נשמר רק לשנים שלפני תחילת הקישור החדש"
+
+msgid "target place entity must exist prior to hierarchy linking"
+msgstr "מקום היעד חייב להתקיים לפני יצירת קישור מדרג אליו"
+
+msgid "from AI response: verify accuracy (coordinates may deviate slightly)"
+msgstr ""
+"מתשובת הבינה המלאכותית: יש לאמת את הדיוק (נקודות־הציון עלולות לסטות מעט)"
+
+msgid ""
+"Modified places will receive source citations linked to web repositories, "
+"including confidence ratings and retrieval metadata."
+msgstr ""
+"מקומות ששונו יקבלו מובאות מקור המקושרות למאגרי מרשתת, כולל דירוגי ודאות "
+"ונתוני אחזור."
+
+msgid "These modification steps are interdependent: "
+msgstr "שלבי השינוי האלה תלויים זה בזה: "
+
+msgid "; %d source(s) cited on modified places"
+msgstr "; %d מקורות צוטטו במקומות ששונו"
+
+msgid "; %d secondary source(s) omitted (max %d citations per place per run)"
+msgstr "; %d מקורות משניים הושמטו (מרבית %d מובאות למקום בהרצה)"
+
+msgid ""
+"response specifies name «%s» is active from %s; omitted from tree updates "
+"for manual review"
+msgstr ""
+"התשובה מציינת שהשם «%s» בתוקף מ־%s; הוא הושמט מעדכוני אילן־היוחסין לבדיקה "
+"ידנית"
+
+msgid ""
+"response lists alternative locations matching name: %s. Use Region hint to "
+"refine search target"
+msgstr ""
+"התשובה מפרטת מקומות חלופיים התואמים לשם: %s. יש להשתמש ב״רמז אזור״ לצמצום "
+"יעד החיפוש"
+
+msgid "administrative level %d (%s) lacks type classification in response"
+msgstr "לרמה המנהלית %d (%s) חסר סוג בתשובה"
+
+msgid ""
+"response references domain (%s) rather than direct page URL; citation "
+"omitted"
+msgstr "התשובה מציינת דומיין (%s) ולא כתובת של עמוד; הציטוט הושמט"
+
+msgid "hierarchy link sequence has been modified"
+msgstr "רצף קישורי המדרג השתנה"
+
+msgid "place type was modified after analysis phase"
+msgstr "סוג המקום שונה לאחר שלב הניתוח"
+
+msgid ""
+"Completes the historical hierarchy of a place on a date: an AI answers, the "
+"program matches it to your places, shows what Gramps would display, and "
+"writes only what you check (one Undo)."
+msgstr ""
+"השלמת המדרג ההיסטורי של מקום בתאריך מסוים: בינה מלאכותית עונה, התוכנה מתאימה"
+" את התשובה למקומות באילן־היוחסין, מציגה מה גרמפס היה מציג, וכותבת רק את מה "
+"שסומן (הסגה אחת)."
+
+msgid "Open the Place Completer window for this place."
+msgstr "פתיחת חלון השלמת מדרג מקומות עבור המקום הזה."
+
+msgid "Place Completer (places)"
+msgstr "השלמת מדרג מקומות (מקומות)"
+
+msgid ""
+"Shows the active event's place and date and opens the Place Completer window"
+" with them filled in."
+msgstr ""
+"הצגת המקום והתאריך של האירוע הפעיל, ופתיחת חלון השלמת מדרג מקומות כשהם כבר "
+"מולאו בו."
+
+msgid ""
+"Shows the active place and what it lacks, and opens the Place Completer "
+"window with its name."
+msgstr "הצגת המקום הפעיל ומה שחסר בו, ופתיחת חלון השלמת מדרג מקומות עם שמו."
+
+msgid "only http and https addresses are allowed: %s"
+msgstr "מותרות רק כתובות ‪http‬ או ‪https‬: ‪%s‬"

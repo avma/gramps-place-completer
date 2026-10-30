@@ -1,0 +1,16 @@
+Administrative history lookup. Place: Trecasali, Italy. Date: 1990.
+Answer ONLY with the block below, in plain text: no introduction, no summary, no questions, no markdown, no bullet points. Write UNKNOWN for anything you cannot verify; do not guess. Years have four digits; periods are written YYYY-YYYY (or YYYY-present).
+
+PLACE_NAME_ON_DATE: <name in the official language of the ruling state on that date>
+LANGUAGE: <language code of that name, e.g. hu, de, ro, sr>
+OTHER_NAMES: <language code>: <name> (<from>-<to>), one per line: only names in other languages or used at other times, not the name above or a short form of it
+SETTLEMENT_TYPE_ON_DATE: <the lowest level that is a place, not a building or a street: hamlet, village, market town, town, city, borough, municipality ..., plus the local historical term>
+COORDINATES: <latitude>, <longitude> (decimal degrees)
+CONTAINERS: one line per administrative level, from the smallest unit that contains the place up to the sovereign state (the country, the last line), each line as:
+<level number: 1 for the smallest unit, then 2, 3 ...; not an official code> | <unit name as used then> | <unit type: the generic English type (state, county, province, region, district, municipality, canton ...) and the local term> | <valid from>-<valid to> | <sovereign state it belonged to>
+STATE_ON_DATE: <name of the sovereign state or empire> | <from>-<to>
+NOTES: <one or two sentences on assumptions, ambiguity or uncertain dates, or NONE>
+SOURCES: one line each, at most 5: <URL> | <what it supports>
+NOT_SURE: <the items above that are uncertain>
+
+Administrative levels of Italy in 1990, from the smallest above the place: municipality (comune) [may not apply]; province (provincia); region (regione); then the country itself. Use these types for the levels that apply to this place; add another level only if the place really has it. Every container must be valid on 1990.

@@ -1,0 +1,17 @@
+PLACE_NAME_ON_DATE: Johnston
+LANGUAGE: en
+OTHER_NAMES: en: [Johnston Station](https://www.google.com/search?kgmid=%2Fm%2F09d4cj) (1905-1970)
+SETTLEMENT_TYPE_ON_DATE: unincorporated community, Johnston Station
+COORDINATES: 41.6731, -93.6977
+CONTAINERS: 1 | [Webster Township](https://www.google.com/search?kgmid=%2Fm%2F0_xc0r7) | township and township | 1846-present | United States
+2 | [Polk County](https://www.google.com/search?kgmid=%2Fm%2F0nrqh) | county and county | 1846-present | United States
+3 | [Iowa](https://www.google.com/search?kgmid=%2Fm%2F03s0w) | state and state | 1846-present | United States
+STATE_ON_DATE: United States | 1776-present
+SOURCES: https://en.wikipedia.org/wiki/Johnston,_Iowa | PLACE_NAME_ON_DATE, OTHER_NAMES, SETTLEMENT_TYPE_ON_DATE, COORDINATES, STATE_ON_DATE
+https://www.cityofjohnston.com/267/History-of-Johnston | SETTLEMENT_TYPE_ON_DATE, CONTAINERS
+NOT_SURE: None
+If you wish to explore more administrative history, please let me know:
+
+* A different place name or historical area
+* A specific target year or era
+* Any specific level of administration you're focusing on

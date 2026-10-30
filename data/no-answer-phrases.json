@@ -1,0 +1,9 @@
+{
+  "description": "Words by which the answer of a search service says that it has no answer (the service writes them in the language of its page). One of them anywhere in the text is enough.",
+  "phrases": [
+    "no answer for this search",
+    "try asking something else",
+    "אין תשובה לחיפוש",
+    "לשאול משהו אחר"
+  ]
+}

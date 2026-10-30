@@ -1,0 +1,14 @@
+PLACE_NAME_ON_DATE: Sissa
+LANGUAGE: it
+OTHER_NAMES: eml: Sésa (1806-present)
+SETTLEMENT_TYPE_ON_DATE: municipality, comune
+COORDINATES: 44.9616, 10.2592
+CONTAINERS: 1 | [Provincia di Parma](https://www.google.com/search?kgmid=%2Fm%2F03wxlr) | province, provincia | 1861-present | Italia
+2 | [Emilia-Romagna](https://www.google.com/search?kgmid=%2Fm%2F015m08) | region, regione | 1970-present | Italia
+3 | [Italia](https://www.google.com/search?kgmid=%2Fm%2F03rjj) | sovereign state | 1946-present | Italia
+STATE_ON_DATE: Italia | 1946-present
+DIFFERS_FROM_TODAY: yes, in 1996 Sissa was an independent municipality (comune), but in 2014 it merged with Trecasali to form the new municipality of Sissa Trecasali, making it a frazione today.
+NOTES: NONE
+SOURCES: https://en.wikipedia.org/wiki/Sissa,_Sissa_Trecasali | supports name, coordinates, status as independent comune in 1996, and 2014 merger
+https://it.wikipedia.org/wiki/Sissa | supports local dialect name Sésa, coordinates, and administrative history
+NOT_SURE: NONE

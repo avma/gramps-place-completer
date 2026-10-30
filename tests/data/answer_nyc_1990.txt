@@ -1,0 +1,10 @@
+PLACE_NAME_ON_DATE: New York City
+LANGUAGE: en
+OTHER_NAMES: en: New York (1664-present)
+SETTLEMENT_TYPE_ON_DATE: city, City of New York
+COORDINATES: 40.7128, -74.0060
+CONTAINERS: 1 | New York State | State of New York | 1788-present | United States of America
+STATE_ON_DATE: United States of America | 1776-present
+SOURCES: https://en.wikipedia.org/wiki/Government_of_New_York_City | administrative organization of NYC
+https://en.wikipedia.org/wiki/New_York_City | general details on New York City
+NOT_SURE: NONE

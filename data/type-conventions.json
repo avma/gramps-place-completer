@@ -1,0 +1,42 @@
+{
+  "description": "Custom place types that the user's own tree uses (the names are in the language of the tree). 'province', 'empire', 'monarchy' and 'district' say which custom types the tree has for such units; 'rules' say which type a unit gets when the answer names it by these words (whole words, any language; value 0 = custom type; the first rule that fits wins). A unit that no rule and no type of Gramps fits gets the word of the answer as a custom type of its own. 'settlements' lists the custom types of this tree that are communities on the level of a village or a town (kibbutz, moshav ...): they cannot be inside one another.",
+  "province": "חבל",
+  "empire": "קייסרות",
+  "monarchy": "מונרכיה",
+  "district": [
+    "תת מחוז",
+    "פלך"
+  ],
+  "rules": [
+    {
+      "words": [
+        "canton",
+        "kanton",
+        "cantone"
+      ],
+      "value": 0,
+      "string": "קנטון"
+    },
+    {
+      "words": [
+        "jaras",
+        "bezirk"
+      ],
+      "value": 0,
+      "string": "תת מחוז"
+    },
+    {
+      "words": [
+        "kerulet",
+        "kreis"
+      ],
+      "value": 0,
+      "string": "פלך"
+    }
+  ],
+  "settlements": [
+    "קיבוץ",
+    "מושב",
+    "כפר קטן"
+  ]
+}

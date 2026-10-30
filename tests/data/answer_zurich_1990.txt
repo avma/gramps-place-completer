@@ -1,0 +1,19 @@
+PLACE_NAME_ON_DATE: Zürich
+LANGUAGE: de
+OTHER_NAMES:
+fr: Zurich
+it: Zurigo
+gsw: Züri
+SETTLEMENT_TYPE_ON_DATE: city, Stadt (politische Gemeinde and Hauptort of the Kanton Zürich)
+COORDINATES: 47.37174, 8.54226
+CONTAINERS:
+261 | Zürich | politische Gemeinde (Stadt), municipality | 1798-present | Schweizerische Eidgenossenschaft
+112 | Bezirk Zürich | Bezirk, district | 1989-present | Schweizerische Eidgenossenschaft
+1 | Kanton Zürich | Kanton, canton | 1351-present | Schweizerische Eidgenossenschaft
+CH | Schweizerische Eidgenossenschaft | Bundesstaat, federal state | 1848-present | Schweizerische Eidgenossenschaft
+STATE_ON_DATE: Schweizerische Eidgenossenschaft | 1848-present
+SOURCES:
+https://www.agvchapp.bfs.admin.ch/de/communes/results?BfsNr=261&EntriesFrom=12.09.1848&EntriesTo=1.1.2025 | BFS municipality number 261, district number 112 (Zürich), and the register entry dated 1990-01-01
+https://de.wikipedia.org/wiki/Bezirk_Z%C3%BCrich | Bezirk Zürich has consisted of the city only since 1 July 1989, with the 1893 and 1934 mergers
+https://de.wikipedia.org/wiki/Z%C3%BCrich | Coordinates, other-language names, the 1798 start of the modern municipality, the Kanton Zürich and Switzerland
+NOT_SURE: NOTES: The place name is ambiguous. I assumed Zürich in Switzerland. Other places called Zurich include Zurich in Ontario, Canada, and Zurich in Friesland, Netherlands. The municipality start year 1798 is the beginning of the modern Stadtgemeinde. Its current boundaries date from the 1934 merger. The canton start year 1351 is the date it joined the Confederation, not the date of the modern canton. The BFS register shows 1990-01-01 as the entry date for the municipality in its current district. I could not verify when the French, Italian and Alemannic names came into use. I left out the Romansh name because the source's form is uncertain. The state start year 1848 is the founding of the Swiss federal state.

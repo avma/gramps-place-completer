@@ -1,0 +1,350 @@
+{
+ "description": "Starter data (to be checked by someone who knows each country): the administrative levels that a place has in a country on a given year, from the smallest above the place up to the country. A level is 'type|local term'; a '?' in front says it may not apply to a place (a municipality may be the place itself; not every place is in a district). Used to ask the AI for the right levels and to say when an answer lacks a level that the country has on that date.",
+ "countries": [
+  {
+   "key": "italy",
+   "names": [
+    "Italy",
+    "Italia",
+    "Repubblica Italiana",
+    "Italian Republic",
+    "Regno d'Italia",
+    "Kingdom of Italy"
+   ],
+   "periods": [
+    {
+     "from": 1861,
+     "to": 1969,
+     "state": "Regno d'Italia / Repubblica Italiana",
+     "levels": [
+      "?municipality|comune",
+      "province|provincia"
+     ]
+    },
+    {
+     "from": 1970,
+     "to": null,
+     "state": "Repubblica Italiana",
+     "levels": [
+      "?municipality|comune",
+      "province|provincia",
+      "region|regione"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "netherlands",
+   "names": [
+    "Netherlands",
+    "Nederland",
+    "Koninkrijk der Nederlanden",
+    "Kingdom of the Netherlands"
+   ],
+   "periods": [
+    {
+     "from": 1815,
+     "to": null,
+     "state": "Koninkrijk der Nederlanden",
+     "levels": [
+      "?municipality|gemeente",
+      "province|provincie"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "switzerland",
+   "names": [
+    "Switzerland",
+    "Schweiz",
+    "Suisse",
+    "Svizzera",
+    "Schweizerische Eidgenossenschaft",
+    "Swiss Confederation"
+   ],
+   "periods": [
+    {
+     "from": 1848,
+     "to": null,
+     "state": "Schweizerische Eidgenossenschaft",
+     "levels": [
+      "?municipality|Gemeinde",
+      "?district|Bezirk",
+      "canton|Kanton"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "usa",
+   "names": [
+    "United States",
+    "USA",
+    "United States of America",
+    "US",
+    "U.S."
+   ],
+   "periods": [
+    {
+     "from": 1776,
+     "to": null,
+     "state": "United States of America",
+     "levels": [
+      "?municipality|city, town or village",
+      "?county|county (parish in Louisiana, borough in Alaska)",
+      "state|state"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "hungary",
+   "names": [
+    "Hungary",
+    "Magyarország",
+    "Kingdom of Hungary",
+    "Magyar Királyság",
+    "Hungarian People's Republic",
+    "Magyar Népköztársaság",
+    "Hungarian Republic"
+   ],
+   "periods": [
+    {
+     "from": 1867,
+     "to": 1949,
+     "state": "Magyar Királyság / Magyarország",
+     "levels": [
+      "?municipality|település (község, város)",
+      "?district|járás",
+      "county|vármegye"
+     ]
+    },
+    {
+     "from": 1950,
+     "to": 1983,
+     "state": "Magyar Népköztársaság",
+     "levels": [
+      "?municipality|település",
+      "?district|járás",
+      "county|megye"
+     ]
+    },
+    {
+     "from": 1984,
+     "to": 2012,
+     "state": "Magyar Köztársaság / Magyarország",
+     "levels": [
+      "?municipality|település",
+      "county|megye"
+     ]
+    },
+    {
+     "from": 2013,
+     "to": null,
+     "state": "Magyarország",
+     "levels": [
+      "?municipality|település",
+      "?district|járás",
+      "county|megye"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "romania",
+   "names": [
+    "Romania",
+    "România",
+    "Kingdom of Romania",
+    "Regatul României",
+    "Romanian People's Republic"
+   ],
+   "periods": [
+    {
+     "from": 1918,
+     "to": 1949,
+     "state": "Regatul României",
+     "levels": [
+      "?municipality|comună",
+      "?district|plasă",
+      "county|județ"
+     ]
+    },
+    {
+     "from": 1950,
+     "to": 1967,
+     "state": "Republica Populară Română",
+     "levels": [
+      "?municipality|comună",
+      "?district|raion",
+      "region|regiune"
+     ]
+    },
+    {
+     "from": 1968,
+     "to": null,
+     "state": "România",
+     "levels": [
+      "?municipality|comună, oraș, municipiu",
+      "county|județ"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "austria",
+   "names": [
+    "Austria",
+    "Österreich",
+    "Republik Österreich",
+    "Republic of Austria"
+   ],
+   "periods": [
+    {
+     "from": 1945,
+     "to": null,
+     "state": "Republik Österreich",
+     "levels": [
+      "?municipality|Gemeinde",
+      "?district|Bezirk",
+      "state|Bundesland"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "poland",
+   "names": [
+    "Poland",
+    "Polska",
+    "Rzeczpospolita Polska",
+    "Republic of Poland"
+   ],
+   "periods": [
+    {
+     "from": 1975,
+     "to": 1998,
+     "state": "Polska",
+     "levels": [
+      "?municipality|gmina",
+      "voivodeship|województwo"
+     ]
+    },
+    {
+     "from": 1999,
+     "to": null,
+     "state": "Rzeczpospolita Polska",
+     "levels": [
+      "?municipality|gmina",
+      "county|powiat",
+      "voivodeship|województwo"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "slovakia",
+   "names": [
+    "Slovakia",
+    "Slovensko",
+    "Slovak Republic",
+    "Slovenská republika"
+   ],
+   "periods": [
+    {
+     "from": 1996,
+     "to": null,
+     "state": "Slovenská republika",
+     "levels": [
+      "?municipality|obec",
+      "district|okres",
+      "region|kraj"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "czechia",
+   "names": [
+    "Czechia",
+    "Czech Republic",
+    "Česká republika",
+    "Česko"
+   ],
+   "periods": [
+    {
+     "from": 2000,
+     "to": null,
+     "state": "Česká republika",
+     "levels": [
+      "?municipality|obec",
+      "?district|okres",
+      "region|kraj"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "ukraine",
+   "names": [
+    "Ukraine",
+    "Україна",
+    "Ukrajina"
+   ],
+   "periods": [
+    {
+     "from": 1991,
+     "to": null,
+     "state": "Україна",
+     "levels": [
+      "?municipality|населений пункт",
+      "district|район",
+      "region|область"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "serbia",
+   "names": [
+    "Serbia",
+    "Srbija",
+    "Republic of Serbia",
+    "Republika Srbija"
+   ],
+   "periods": [
+    {
+     "from": 2006,
+     "to": null,
+     "state": "Republika Srbija",
+     "levels": [
+      "?municipality|opština",
+      "district|okrug",
+      "?autonomous province|autonomna pokrajina"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "israel",
+   "names": [
+    "Israel",
+    "ישראל",
+    "State of Israel"
+   ],
+   "periods": [
+    {
+     "from": 1948,
+     "to": null,
+     "state": "מדינת ישראל",
+     "levels": [
+      "?municipality|רשות מקומית",
+      "?sub-district|נפה",
+      "district|מחוז"
+     ]
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,10 @@
+PLACE_NAME_ON_DATE: Johnston Station
+LANGUAGE: en
+SETTLEMENT_TYPE_ON_DATE: unincorporated community | unincorporated community
+COORDINATES: 41.6736 | -93.6977
+CONTAINERS:
+1 | Polk | county | 1846-present | Iowa
+STATE_ON_DATE: Iowa | 1846-present
+SOURCES: https://en.wikipedia.org/wiki/Johnston,_Iowa | Supports official name as Johnston Station prior to 1969 incorporation, geographical context, and railroad background.
+NOT_SURE: none
+If you require similar historical geographical analysis for another U.S. city or a different historical period, please provide the location name and the specific year.

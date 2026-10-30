@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+.mypy_cache/
+.venv/
+venv/
+
+# made by deploy_addon.py, by the tools, or by hand: never part of the repository
+locale/
+*.mo
+*.bak
+*.off
+*.log
+.DS_Store
+*~
+*.swp
+
+# the work folder of the tools (answers, plans, backups) and the settings of the user
+gramps-place-work/
+engines.json
+models.json
+settings.json
+keys/

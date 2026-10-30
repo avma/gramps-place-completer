@@ -1,0 +1,19 @@
+PLACE_NAME_ON_DATE: Johnston (the community was also called Johnston Station)
+LANGUAGE: en
+OTHER_NAMES:
+en: Johnston Station (UNKNOWN-1969)
+en: Beaver Creek Settlement (UNKNOWN-UNKNOWN)
+en: Ridgedale (UNKNOWN-UNKNOWN)
+en: Huntsville (UNKNOWN-UNKNOWN)
+SETTLEMENT_TYPE_ON_DATE: hamlet (unincorporated community; it was not incorporated as a city until 1969)
+COORDINATES: 41.69111, -93.72361
+CONTAINERS:
+UNKNOWN | Webster Township (the current city also covers Jefferson Township) | township (civil township) | UNKNOWN-present | United States
+19153 | Polk County | county | 1846-present | United States (State of Iowa)
+19 | Iowa | state | 1846-present | United States
+STATE_ON_DATE: United States of America | 1776-present
+SOURCES:
+https://en.wikipedia.org/wiki/Johnston,_Iowa | coordinates (present-day city), Polk County, Webster and Jefferson townships, 1969 incorporation
+https://www.cityofjohnston.com/267/History-of-Johnston | earlier names, Johnston Station, incorporation in 1969
+https://kids.kiddle.co/Johnston,_Iowa | Johnston Station origin in 1905, incorporation in 1969
+NOT_SURE: The coordinates are for the present-day city, not the 1950 Johnston Station settlement. I could not confirm which township contained the settlement in 1950 (Webster or Jefferson). I did not verify the township's start date or number. The county's 1846 start date, the county code 19153 and the state code 19 come from my own knowledge, not from the sources above. The date ranges for the older names are unknown. The "hamlet" label is my own classification of an unincorporated community.

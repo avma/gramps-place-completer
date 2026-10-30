@@ -1,0 +1,65 @@
+{
+  "schema": "placecompleter.pack.v1",
+  "pack": {
+    "id": "hu-habsburg",
+    "version": 1,
+    "license": "CC0-1.0",
+    "created": "2026-10-12",
+    "origin": "wikidata"
+  },
+  "places": [
+    {
+      "key": "hungary",
+      "names": [
+        "Magyarország",
+        "Hungary",
+        "Magyar Királyság",
+        "Kingdom of Hungary"
+      ],
+      "type_value": 1,
+      "wikidata_qid": "Q171150"
+    },
+    {
+      "key": "austrian-empire",
+      "names": [
+        "Kaisertum Österreich",
+        "Austrian Empire"
+      ],
+      "wikidata_qid": "Q131964"
+    },
+    {
+      "key": "voivodeship",
+      "names": [
+        "Szerb Vajdaság és Temesi Bánság",
+        "Voivodeship of Serbia and Banat of Temeschwar",
+        "Serbische Woiwodschaft und Temescher Banat"
+      ]
+    },
+    {
+      "key": "austria-hungary",
+      "names": [
+        "Osztrák-Magyar Monarchia",
+        "Austria-Hungary",
+        "Austro-Hungarian Monarchy",
+        "Österreichisch-Ungarische Monarchie"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "child": "hungary",
+      "parent": "austrian-empire",
+      "valid_from": "1804",
+      "valid_to": "1867",
+      "origin": "wikidata",
+      "evidence": [
+        {
+          "source": "wikidata",
+          "url": "https://www.wikidata.org/wiki/Q171150",
+          "claim": "P131 Q131964, start 1804, end 1867, rank normal",
+          "retrieved": "2026-10-10"
+        }
+      ]
+    }
+  ]
+}

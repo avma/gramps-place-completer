@@ -1,0 +1,15 @@
+PLACE_NAME_ON_DATE: Johnston
+LANGUAGE: en
+OTHER_NAMES: en: Beaver Creek Settlement (1846-1905)
+en: Huntsville (1846-1905)
+en: Ridgedale (1846-1905)
+en: Johnston Station (1905-1969)
+SETTLEMENT_TYPE_ON_DATE: city
+COORDINATES: 41.6714, -93.7139
+CONTAINERS: 1 | Polk County | county | 1846-present | United States of America
+2 | Iowa | state | 1846-present | United States of America
+3 | United States of America | sovereign state | 1776-present | United States of America
+STATE_ON_DATE: United States of America | 1776-present
+SOURCES: wikipedia.org | Place name on date, settlement type, coordinates, and county container
+cityofjohnston.com | Historical names, incorporation date, and settlement history
+NOT_SURE: NONE
