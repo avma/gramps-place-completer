@@ -1,0 +1,42 @@
+{
+  "description": "EXAMPLE: the custom place types of one tree, in Hebrew (the author's). To describe YOUR tree, copy type-conventions.json (the empty one) to ~/.config/placecompleter/type-conventions.json, or set PLACECOMPLETER_CONVENTIONS to a file, and fill it in the same way. 'province', 'empire', 'monarchy': the custom type of the tree for them (empty: the type of Gramps itself); 'district' and 'settlements': custom types of the tree that are districts or settlements; 'rules': when the answer calls a level by one of 'words' (in any language, as the AI writes it) it is given the type 'string' (value 0 = custom).",
+  "province": "חבל",
+  "empire": "קייסרות",
+  "monarchy": "מונרכיה",
+  "district": [
+    "תת מחוז",
+    "פלך"
+  ],
+  "rules": [
+    {
+      "words": [
+        "canton",
+        "kanton",
+        "cantone"
+      ],
+      "value": 0,
+      "string": "קנטון"
+    },
+    {
+      "words": [
+        "jaras",
+        "bezirk"
+      ],
+      "value": 0,
+      "string": "תת מחוז"
+    },
+    {
+      "words": [
+        "kerulet",
+        "kreis"
+      ],
+      "value": 0,
+      "string": "פלך"
+    }
+  ],
+  "settlements": [
+    "קיבוץ",
+    "מושב",
+    "כפר קטן"
+  ]
+}

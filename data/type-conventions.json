@@ -1,42 +1,9 @@
 {
-  "description": "Custom place types that the user's own tree uses (the names are in the language of the tree). 'province', 'empire', 'monarchy' and 'district' say which custom types the tree has for such units; 'rules' say which type a unit gets when the answer names it by these words (whole words, any language; value 0 = custom type; the first rule that fits wins). A unit that no rule and no type of Gramps fits gets the word of the answer as a custom type of its own. 'settlements' lists the custom types of this tree that are communities on the level of a village or a town (kibbutz, moshav ...): they cannot be inside one another.",
-  "province": "חבל",
-  "empire": "קייסרות",
-  "monarchy": "מונרכיה",
-  "district": [
-    "תת מחוז",
-    "פלך"
-  ],
-  "rules": [
-    {
-      "words": [
-        "canton",
-        "kanton",
-        "cantone"
-      ],
-      "value": 0,
-      "string": "קנטון"
-    },
-    {
-      "words": [
-        "jaras",
-        "bezirk"
-      ],
-      "value": 0,
-      "string": "תת מחוז"
-    },
-    {
-      "words": [
-        "kerulet",
-        "kreis"
-      ],
-      "value": 0,
-      "string": "פלך"
-    }
-  ],
-  "settlements": [
-    "קיבוץ",
-    "מושב",
-    "כפר קטן"
-  ]
+  "description": "The custom place types that YOUR tree uses for administrative units (the names are in the language of your tree). This copy is empty, so the types of Gramps itself are used, and a unit that Gramps has no type for (a canton, for example) is given the word of the answer as a custom type. To describe your tree: copy this file to ~/.config/placecompleter/type-conventions.json (or set PLACECOMPLETER_CONVENTIONS to a file) and fill it in; an update of the addon does not touch that copy. 'province', 'empire', 'monarchy': the custom type of your tree for them (empty: the type of Gramps itself); 'district' and 'settlements': custom types of your tree that are districts or settlements; 'rules': when the answer calls a level by one of 'words' (in any language, as the AI writes it) it is given the type 'string' (value 0 = custom). See type-conventions.example-he.json.",
+  "province": "",
+  "empire": "",
+  "monarchy": "",
+  "district": [],
+  "rules": [],
+  "settlements": []
 }

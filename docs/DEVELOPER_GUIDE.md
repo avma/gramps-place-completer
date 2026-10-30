@@ -241,3 +241,20 @@ list of what an outside source (Wikidata, a regional pack, an agent) must supply
 
 This folder is not yet a Gramps addon: the .gpr.py, the review window and the
 Hebrew translation come in later steps.
+
+## The custom place types of a tree (the conventions)
+
+A tree may call a province, an empire, a district or a settlement by a custom type of its own, in its own language. The engine reads that from, in this order:
+`$PLACECOMPLETER_CONVENTIONS` (a file), `~/.config/placecompleter/type-conventions.json` (the file of the user: an update of the addon does not touch it), and
+`data/type-conventions.json` (comes with the addon: **empty**, so the types of Gramps itself are used, and a unit that Gramps has no type for, a canton for example,
+is given the word of the answer as a custom type). `data/type-conventions.example-he.json` is the author's tree (in Hebrew) and is what the tests use to describe a tree.
+The format is in the `description` of the files. The conventions are read when the engine starts. See `kinds.conventions_file` and `tests/test_conventions.py`.
+
+**Planned (phase 1):** learn the types from the tree: Gramps keeps the list of the custom types that a tree uses (`db.get_place_types()`), and a vocabulary of synonyms in several
+languages finds the type of the tree that fits each role.
+
+## Keeping the public repository up to date
+
+The development folder is the source of truth. `python3 tools/sync_public_repo.py CLONE` says what is new, changed or only in the clone of the public repository; `--apply` copies
+(after the scan for personal data); `--delete` also removes what is no longer public. It never touches `README.md` and `docs/screenshots/` of the clone (they are edited there),
+and it commits and pushes nothing.

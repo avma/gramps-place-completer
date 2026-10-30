@@ -27,6 +27,7 @@ whether two types are the same kind.
 # Standard python modules
 #
 # -------------------------------------------------------------------------
+import os
 import re
 
 # -------------------------------------------------------------------------
@@ -48,10 +49,22 @@ SETTLEMENT_TYPES = (("unincorporated", 6), ("hamlet", 17), ("market town", 15), 
                     ("borough", 13), ("municipality", 14), ("locality", 6), ("neighborhood", 11), ("neighbourhood", 11))
 
 
+def conventions_file(directory=""):
+    """The file that describes the custom place types of the user's own tree: the file that PLACECOMPLETER_CONVENTIONS names, else
+    ~/.config/placecompleter/type-conventions.json (an update of the addon does not touch it), else the one that comes with the addon
+    (data/type-conventions.json: empty). With `directory` (the tests): data/type-conventions.json of that folder."""
+    if directory:
+        return os.path.join(directory, "type-conventions.json")
+    for candidate in (os.environ.get("PLACECOMPLETER_CONVENTIONS", ""), os.path.join(os.path.expanduser("~"), ".config", "placecompleter", "type-conventions.json")):
+        if candidate and os.path.isfile(candidate):
+            return candidate
+    return os.path.join(datalib.DATA_DIR, "type-conventions.json")
+
+
 def load_tree_types(directory=""):
-    """The custom place types of the user's own tree (data/type-conventions.json): the type of a province, of an empire, of a monarchy, and the
+    """The custom place types of the user's own tree (see conventions_file): the type of a province, of an empire, of a monarchy, and the
     types that are districts. A missing or empty entry means the type of Gramps itself."""
-    data = datalib.load("type-conventions.json", {}, directory)
+    data = datalib.load_path(conventions_file(directory), {})
     data = data if isinstance(data, dict) else {}
     districts = data.get("district")
     rules = []

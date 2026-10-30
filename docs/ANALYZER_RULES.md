@@ -24,7 +24,7 @@ Tests: `test_existing_data.py`.
 | 1 | Country; the custom empire and monarchy of the tree | |
 | 2 | State, County, Province, Region, Department, District; the custom province, district, canton, járás ... of the tree | |
 | 3 | Municipality | contains settlements |
-| 4 | City, Town, Village, Hamlet; the custom `settlements` of the tree (kibbutz, moshav ...) | an open list: `data/type-conventions.json` |
+| 4 | City, Town, Village, Hamlet; the custom `settlements` of the tree (kibbutz, moshav ...) | an open list: the conventions of the tree (`~/.config/placecompleter/type-conventions.json`, see the developer guide) |
 | 5 | Neighborhood, Borough | |
 | 6 | Street | |
 | 7 | Number, Building, Farm | |
@@ -107,7 +107,7 @@ The question asks for the SIZE CLASS of the settlement, as ONE word of a closed 
 | # | Rule |
 |---|---|
 | ST1 | the list is `metropolis`, `city`, `town`, `village`, `hamlet`, `neighborhood`, `locality`, with anchors in inhabitants of the settlement itself (over about 500,000; 30,000-500,000; 2,000-30,000; 100-2,000; under 100), judged IN the year of the question, relative to the country and period in earlier centuries |
-| ST2 | the types of Gramps: metropolis and city = City, town = Town, village = Village, hamlet = Hamlet, neighborhood = Neighborhood, locality = Locality. A rule of the tree (`data/type-conventions.json`, whole words of the whole answer) comes first: a metropolis can be given a type of its own, and so can a moshav or a kibbutz |
+| ST2 | the types of Gramps: metropolis and city = City, town = Town, village = Village, hamlet = Hamlet, neighborhood = Neighborhood, locality = Locality. A rule of the tree (the conventions file of the tree: `~/.config/placecompleter/type-conventions.json`, whole words of the whole answer) comes first: a metropolis can be given a type of its own, and so can a moshav or a kibbutz |
 | ST3 | a bare word of the list decides; what follows the bar (the local term) cannot change it: `village | commune` is a Village, whatever the commune is in law |
 | ST4 | the legal status (commune, municipality, comune ...) is not an answer to this question; where it is wanted it is a note of the place (not written yet) |
 | ST6 | a place that **exists** keeps its type, except when all of these hold: the answer is one bare word of the list; the type of the tree is a built-in settlement type (City, Locality, Borough, Municipality, Town, Village, Hamlet; never a type of the user's own, never a province or another area); and it differs. Then a **change of type** is proposed: a change to data that exists (P0), not chosen by itself, chosen by the "Select all" button or one by one, with the confidence of the field |

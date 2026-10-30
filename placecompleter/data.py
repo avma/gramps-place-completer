@@ -34,8 +34,13 @@ DATA_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__
 
 def load(name, default, directory=""):
     """The content of data/<name> (JSON), or `default` when the file is missing or damaged."""
+    return load_path(os.path.join(directory or DATA_DIR, name), default)
+
+
+def load_path(path, default=None):
+    """The content of a JSON file, or `default` when it is missing or damaged."""
     try:
-        with open(os.path.join(directory or DATA_DIR, name), encoding="utf-8") as fh:
+        with open(path, encoding="utf-8") as fh:
             return json.load(fh)
     except (OSError, ValueError):
         return default

@@ -172,5 +172,5 @@ def match_container(tree, mention, type_text, sv, threshold=8, aliases=None):
 
 
 # The answer to SETTLEMENT_TYPE_ON_DATE is ONE word of a closed list (see prompts.SETTLEMENT_WORDS): its size class, not its legal status. A metropolis is a City of Gramps
-# (a rule of the tree may give it a type of its own: {"words": ["metropolis"], "value": 0, "string": ...} in data/type-conventions.json).
+# (a rule of the tree may give it a type of its own: {"words": ["metropolis"], "value": 0, "string": ...} in the conventions file of the tree: see kinds.conventions_file).
 SAME_PLACE_KM = 30                       # two places of one name that are farther apart than this are two places (ID1)

@@ -39,6 +39,7 @@ os.environ.update({"HOME": _HOME, "XDG_DATA_HOME": os.path.join(_HOME, "data"), 
                    # the rules that are off by default (the periods and the languages of the names of the levels, NP5 and NL, and the period of the name of a place, NP3) are on in the tests, which
                    # show what they do; test_defaults.py shows that they are off when nobody asks for them
                    "PLACECOMPLETER_RULES_ON": "NP3,NP5,NL"})
+os.environ["PLACECOMPLETER_CONVENTIONS"] = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data", "type-conventions.example-he.json")
 if "GRAMPS_RESOURCES" not in os.environ:                                  # where this computer keeps Gramps (nothing is assumed about it)
     import importlib.util
     _spec = importlib.util.find_spec("gramps")
