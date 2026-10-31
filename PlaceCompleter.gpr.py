@@ -34,7 +34,7 @@ if "_" not in globals():
 # these, and names 6.0 otherwise, so that any other Gramps declines it on purpose instead of running it untested.
 TESTED_WITH = ("6.0", "6.1")
 
-HELP_URL = "https://github.com/avma/gramps-place-completer"          # the Help button of the addon manager opens it (the same as placecompleter.HOMEPAGE)
+HELP_URL = "https://github.com/avma/gramps-place-completer/blob/main/docs/USER_GUIDE.md"          # the Help of the gramplets opens it (the same as placecompleter.GUIDE_URL)
 
 register(
     TOOL,

@@ -24,5 +24,6 @@ The engine has no GTK and no Gramps import. It works on the JSON form Gramps
 stores in its SQLite database, and reproduces Gramps' own place display rules.
 """
 
-HOMEPAGE = "https://github.com/avma/gramps-place-completer"      # where it lives (the User-Agent that Wikimedia asks for says it)
+HOMEPAGE = "https://github.com/avma/gramps-place-completer"
+GUIDE_URL = HOMEPAGE + "/blob/main/docs/USER_GUIDE.md"                    # what the Help button and the Help of the gramplets open      # where it lives (the User-Agent that Wikimedia asks for says it)
 __version__ = "0.1.1"                       # the registration file (PlaceCompleter.gpr.py) says the same: a test sees to it

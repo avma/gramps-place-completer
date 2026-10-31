@@ -25,7 +25,7 @@ You provide a place name and a date (e.g., *Kolozsvár, 1899*). The addon formul
 - Assigns place types, adds names (complete with languages and active periods) and web links, and populates missing coordinates (sourced from Wikidata upon request).
 - Appends a **citation** for each modification, referencing the specific page identified by the AI.
 
-**What it does not do:** It never modifies your data without explicit approval; it never alters existing tree data without flagging it (nothing is checked by default; conflicts are never chosen by *Select all*); and it does not automatically merge duplicate places (though it alerts you when two places share similarities). Ambiguous tree entries—such as *Johnston* in Iowa versus *Johnston* in Rhode Island—are automatically distinguished by coordinates when they are more than 30 km apart.
+**What it does not do:** It never modifies your data without explicit approval; it never alters existing tree data without flagging it (no change is checked by default; conflicts are never chosen by *Select all*); and it does not automatically merge duplicate places (though it alerts you when two places share similarities). Ambiguous tree entries—such as *Johnston* in Iowa versus *Johnston* in Rhode Island—are automatically distinguished by coordinates when they are more than 30 km apart.
 
 ![The proposals window](docs/screenshots/place-completer-window.png)
 
@@ -105,7 +105,7 @@ While several tests construct a live Gramps database, window components are vali
 
 ## Documentation
 
-[docs/DEVELOPER_GUIDE.md](docs/DEVELOPER_GUIDE.md) (architecture and tools) · [docs/MODULES.md](docs/MODULES.md) · [docs/ANALYZER_RULES.md](docs/ANALYZER_RULES.md) (analysis rules and safety boundaries) · [docs/RULES_REVIEW.md](docs/RULES_REVIEW.md) (which rules fire on 20 real-world responses, and which never do) · [docs/CODE_REVIEW.md](docs/CODE_REVIEW.md) · [MAINTENANCE.md](MAINTENANCE.md) · [docs/GLOSSARY_HE.md](docs/GLOSSARY_HE.md) (Hebrew terminology)
+[docs/USER_GUIDE.md](docs/USER_GUIDE.md) (how to use it, step by step) · [docs/DEVELOPER_GUIDE.md](docs/DEVELOPER_GUIDE.md) (architecture and tools) · [docs/MODULES.md](docs/MODULES.md) · [docs/ANALYZER_RULES.md](docs/ANALYZER_RULES.md) (analysis rules and safety boundaries) · [docs/RULES_REVIEW.md](docs/RULES_REVIEW.md) (which rules fire on 20 real-world responses, and which never do) · [docs/CODE_REVIEW.md](docs/CODE_REVIEW.md) · [MAINTENANCE.md](MAINTENANCE.md) · [docs/GLOSSARY_HE.md](docs/GLOSSARY_HE.md) (Hebrew terminology)
 
 ## Related Addons
 

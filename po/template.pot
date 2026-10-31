@@ -3,395 +3,399 @@ msgid ""
 msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 
-#: PlaceCompleter.gpr.py:40 PlaceCompleter.gpr.py:60 PlaceCompleter.gpr.py:69
+#: PlaceCompleter.gpr.py:42 PlaceCompleter.gpr.py:63 PlaceCompleter.gpr.py:73
 msgid "Place Completer"
 msgstr ""
 
-#: PlaceCompleter.gpr.py:41
+#: PlaceCompleter.gpr.py:43
 msgid "Completes the historical hierarchy of a place on a date: an AI answers, the program matches it to your places, shows what Gramps would display, and writes only what you check (one Undo)."
 msgstr ""
 
-#: PlaceCompleter.gpr.py:61
+#: PlaceCompleter.gpr.py:64
 msgid "Shows the active event's place and date and opens the Place Completer window with them filled in."
 msgstr ""
 
-#: PlaceCompleter.gpr.py:76
+#: PlaceCompleter.gpr.py:80
 msgid "Place Completer (places)"
 msgstr ""
 
-#: PlaceCompleter.gpr.py:77
+#: PlaceCompleter.gpr.py:81
 msgid "Shows the active place and what it lacks, and opens the Place Completer window with its name."
 msgstr ""
 
-#: PlaceCompleter.gpr.py:93
+#: PlaceCompleter.gpr.py:98
 msgid "Open the Place Completer window for this place."
 msgstr ""
 
-#: placecompleter_tool.py:174 placecompleter_tool.py:843
+#: placecompleter_tool.py:174
+msgid "_Help"
+msgstr ""
+
+#: placecompleter_tool.py:175 placecompleter_tool.py:851
 msgid "_Close"
 msgstr ""
 
-#: placecompleter_tool.py:175
+#: placecompleter_tool.py:176
 msgid "Apply checked changes"
 msgstr ""
 
-#: placecompleter_tool.py:187
+#: placecompleter_tool.py:188
 msgid "optional: a word that distinguishes places, e.g., Iowa or the country, e.g., Italy"
 msgstr ""
 
-#: placecompleter_tool.py:200
+#: placecompleter_tool.py:201
 msgid "Enter the API key for the selected AI once: it will be saved securely"
 msgstr ""
 
-#: placecompleter_tool.py:257
+#: placecompleter_tool.py:258
 msgid "Retrieved administrative levels (uncheck uncertain levels)"
 msgstr ""
 
-#: placecompleter_tool.py:262
+#: placecompleter_tool.py:263
 msgid "Other changes (each box is a grouped change applied as a set)"
 msgstr ""
 
-#: placecompleter_tool.py:356
+#: placecompleter_tool.py:357
 msgid "Proposed changes"
 msgstr ""
 
-#: placecompleter_tool.py:359 placecompleter_tool.py:360
+#: placecompleter_tool.py:360 placecompleter_tool.py:361
 msgid "Confidence"
 msgstr ""
 
-#: placecompleter_tool.py:539 placecompleter_tool.py:618 placecompleter_tool.py:722
+#: placecompleter_tool.py:547 placecompleter_tool.py:626 placecompleter_tool.py:730
 msgid "_Cancel"
 msgstr ""
 
-#: placecompleter_tool.py:540 placecompleter_tool.py:619
+#: placecompleter_tool.py:548 placecompleter_tool.py:627
 msgid "_OK"
 msgstr ""
 
-#: placecompleter_tool.py:570
+#: placecompleter_tool.py:578
 msgid "The response is ready. Looking up coordinates on Wikidata…"
 msgstr ""
 
-#: placecompleter_tool.py:702 placecompleter/ollama.py:103
+#: placecompleter_tool.py:710 placecompleter/ollama.py:103
 msgid "Ollama is not installed"
 msgstr ""
 
-#: placecompleter_tool.py:703
+#: placecompleter_tool.py:711
 msgid "Ollama runs a local AI model: free, no API key required.\nIt lacks web access and may be less reliable than Google AI mode or Claude.\nThe installer will ask for administrator permissions in the terminal window that opens. The command:"
 msgstr ""
 
-#: placecompleter_tool.py:723
+#: placecompleter_tool.py:731
 msgid "Download"
 msgstr ""
 
-#: placecompleter_tool.py:737
+#: placecompleter_tool.py:745
 msgid "another model name (optional)"
 msgstr ""
 
-#: placecompleter_tool.py:821
+#: placecompleter_tool.py:829
 msgid "Key saved. Finding an available model…"
 msgstr ""
 
-#: placecompleter_tool.py:844
+#: placecompleter_tool.py:852
 msgid "Remove"
 msgstr ""
 
-#: placecompleter_tool.py:845
+#: placecompleter_tool.py:853
 msgid "Test"
 msgstr ""
 
-#: placecompleter_tool.py:846
+#: placecompleter_tool.py:854
 msgid "Save"
 msgstr ""
 
-#: placecompleter_tool.py:856
+#: placecompleter_tool.py:864
 msgid "paste the key here"
 msgstr ""
 
-#: placecompleter_tool.py:864
+#: placecompleter_tool.py:872
 msgid "Sent only to %s."
 msgstr ""
 
-#: placecompleter_tool.py:197
+#: placecompleter_tool.py:198
 msgid "Ask"
 msgstr ""
 
-#: placecompleter_tool.py:199
+#: placecompleter_tool.py:200
 msgid "Key…"
 msgstr ""
 
-#: placecompleter_tool.py:214
+#: placecompleter_tool.py:215
 msgid "Wikipedia languages"
 msgstr ""
 
-#: placecompleter_tool.py:220
+#: placecompleter_tool.py:221
 msgid "Look up coordinates on Wikidata (only place names are sent)"
 msgstr ""
 
-#: placecompleter_tool.py:235
+#: placecompleter_tool.py:236
 msgid "Response (if copied from a browser, paste it here)"
 msgstr ""
 
-#: placecompleter_tool.py:273 placecompleter_tool.py:429
+#: placecompleter_tool.py:274 placecompleter_tool.py:437
 msgid "Select all"
 msgstr ""
 
-#: placecompleter_tool.py:285
+#: placecompleter_tool.py:286
 msgid "Issues to review"
 msgstr ""
 
-#: placecompleter_tool.py:352 placecompleter_tool.py:258
+#: placecompleter_tool.py:353 placecompleter_tool.py:259
 msgid "Select"
 msgstr ""
 
-#: placecompleter_tool.py:438
+#: placecompleter_tool.py:446
 msgid "All items are unchecked."
 msgstr ""
 
-#: placecompleter_tool.py:538 placecompleter_tool.py:617
+#: placecompleter_tool.py:546 placecompleter_tool.py:625
 msgid "Which place is this?"
 msgstr ""
 
-#: placecompleter_tool.py:640
+#: placecompleter_tool.py:648
 msgid "Cancelled: no place selected."
 msgstr ""
 
-#: placecompleter_tool.py:710
+#: placecompleter_tool.py:718
 msgid "Command copied: open a terminal and paste it (Ctrl+Shift+V)."
 msgstr ""
 
-#: placecompleter_tool.py:721
+#: placecompleter_tool.py:729
 msgid "Download a model"
 msgstr ""
 
-#: placecompleter_tool.py:727
+#: placecompleter_tool.py:735
 msgid "Ollama is running but no model is installed.\nDownloading a model (a few GB) takes a few minutes and stays stored locally on this computer.\nSelect a model below or enter a model name from ollama.com/library:"
 msgstr ""
 
-#: placecompleter_tool.py:752
+#: placecompleter_tool.py:760
 msgid "Starting download…"
 msgstr ""
 
-#: placecompleter_tool.py:778 placecompleter/ollama.py:136
+#: placecompleter_tool.py:786 placecompleter/ollama.py:136
 msgid "download cancelled"
 msgstr ""
 
-#: placecompleter_tool.py:842
+#: placecompleter_tool.py:850
 msgid "API key"
 msgstr ""
 
-#: placecompleter_tool.py:975
+#: placecompleter_tool.py:983
 msgid "This family tree is opened as read-only."
 msgstr ""
 
-#: placecompleter_tool.py:979
+#: placecompleter_tool.py:987
 msgid "Select at least one proposed change first."
 msgstr ""
 
-#: placecompleter_tool.py:985
+#: placecompleter_tool.py:993
 msgid "Changes are applied together in one step; Edit > Undo will revert all of them."
 msgstr ""
 
-#: placecompleter_tool.py:202 placecompleter/grampslink.py:89
+#: placecompleter_tool.py:203 placecompleter/grampslink.py:89
 msgid "Place"
 msgstr ""
 
-#: placecompleter_tool.py:202
+#: placecompleter_tool.py:203
 msgid "Date"
 msgstr ""
 
-#: placecompleter_tool.py:203
+#: placecompleter_tool.py:204
 msgid "Region hint"
 msgstr ""
 
-#: placecompleter_tool.py:203
+#: placecompleter_tool.py:204
 msgid "Question"
 msgstr ""
 
-#: placecompleter_tool.py:204
+#: placecompleter_tool.py:205
 msgid "AI"
 msgstr ""
 
-#: placecompleter_tool.py:246
+#: placecompleter_tool.py:247
 msgid "Paste from clipboard"
 msgstr ""
 
-#: placecompleter_tool.py:246
+#: placecompleter_tool.py:247
 msgid "Analyze"
 msgstr ""
 
-#: placecompleter_tool.py:258
+#: placecompleter_tool.py:259
 msgid "Level"
 msgstr ""
 
-#: placecompleter_tool.py:429
-msgid "Clear all"
-msgstr ""
-
-#: placecompleter_tool.py:442
-msgid "%d change(s) in CONFLICT with existing tree data (replacing a different date)"
-msgstr ""
-
-#: placecompleter_tool.py:444
-msgid "%d web link(s) to a site of unknown type (check if official)"
-msgstr ""
-
-#: placecompleter_tool.py:446
-msgid "%d conflicting change(s) (select one option)"
-msgstr ""
-
-#: placecompleter_tool.py:448
-msgid "%d change(s) depending on these options"
-msgstr ""
-
-#: placecompleter_tool.py:449
-msgid "%d change(s) selected. Remaining to review: %s."
-msgstr ""
-
-#: placecompleter_tool.py:449
-msgid "%d change(s) selected."
-msgstr ""
-
-#: placecompleter_tool.py:463
-msgid "Invalid language codes ignored: %s. Please use standard 2-letter codes (e.g., en, he, fr)."
-msgstr ""
-
-#: placecompleter_tool.py:549
-msgid "Exclude this level"
-msgstr ""
-
-#: placecompleter_tool.py:589 placecompleter/geo.py:79
-msgid "Could not query Wikidata: %s"
-msgstr ""
-
-#: placecompleter_tool.py:606
-msgid "Click Ask first, or paste a response into the text box."
-msgstr ""
-
-#: placecompleter_tool.py:609
-msgid "Specify the place name and date for the query."
-msgstr ""
-
-#: placecompleter_tool.py:622
-msgid "This name matches multiple places. Which one did you mean?"
-msgstr ""
-
-#: placecompleter_tool.py:677
-msgid "Starting Ollama…"
-msgstr ""
-
-#: placecompleter_tool.py:706
-msgid "Copy command"
-msgstr ""
-
-#: placecompleter_tool.py:706
-msgid "Open terminal to run installer"
-msgstr ""
-
-#: placecompleter_tool.py:747
-msgid "Downloading %s"
-msgstr ""
-
-#: placecompleter_tool.py:827
-msgid "Key saved, but could not select a model: %s"
-msgstr ""
-
-#: placecompleter_tool.py:840
-msgid "%s does not require an API key."
-msgstr ""
-
-#: placecompleter_tool.py:871
-msgid "No API key saved for this AI engine yet."
-msgstr ""
-
-#: placecompleter_tool.py:879
-msgid "Testing API key connection…"
-msgstr ""
-
-#: placecompleter_tool.py:904 placecompleter_tool.py:833
-msgid "Key saved (%s)."
-msgstr ""
-
-#: placecompleter_tool.py:950
-msgid "Gramps display format for an event on this date: %s"
-msgstr ""
-
-#: placecompleter_tool.py:983
-msgid "Apply %d change(s) to the family tree?"
-msgstr ""
-
-#: placecompleter_tool.py:544
-msgid "The response specifies «%(name)s» (%(type)s), matching several existing places in your tree. No changes will be made until you choose one."
-msgstr ""
-
-#: placecompleter_tool.py:549
-msgid "New place «%s»"
-msgstr ""
-
-#: placecompleter_tool.py:672
-msgid "Ollama service is not running"
-msgstr ""
-
-#: placecompleter_tool.py:673
-msgid "Ollama is installed locally but is not currently active.\nStart it now? It will run in the background (ollama serve) until stopped or the computer shuts down."
-msgstr ""
-
-#: placecompleter_tool.py:690
-msgid "Downloading model %s…"
-msgstr ""
-
-#: placecompleter_tool.py:696
-msgid "Model %s successfully installed."
-msgstr ""
-
-#: placecompleter_tool.py:713
-msgid "A terminal window is open: enter your administrator password there. Once installation finishes, click Ask again."
-msgstr ""
-
-#: placecompleter_tool.py:763
-msgid "Downloading…"
-msgstr ""
-
-#: placecompleter_tool.py:829
-msgid "API key saved, but service is unavailable: %s"
-msgstr ""
-
-#: placecompleter_tool.py:870
-msgid "Key already saved: %(hint)s (in %(where)s). Entering a new key will overwrite it."
-msgstr ""
-
-#: placecompleter_tool.py:493
+#: placecompleter_tool.py:405 placecompleter_tool.py:501
 msgid "Could not launch web browser. Please open this URL manually:\n%s"
 msgstr ""
 
-#: placecompleter_tool.py:682
+#: placecompleter_tool.py:437
+msgid "Clear all"
+msgstr ""
+
+#: placecompleter_tool.py:450
+msgid "%d change(s) in CONFLICT with existing tree data (replacing a different date)"
+msgstr ""
+
+#: placecompleter_tool.py:452
+msgid "%d web link(s) to a site of unknown type (check if official)"
+msgstr ""
+
+#: placecompleter_tool.py:454
+msgid "%d conflicting change(s) (select one option)"
+msgstr ""
+
+#: placecompleter_tool.py:456
+msgid "%d change(s) depending on these options"
+msgstr ""
+
+#: placecompleter_tool.py:457
+msgid "%d change(s) selected. Remaining to review: %s."
+msgstr ""
+
+#: placecompleter_tool.py:457
+msgid "%d change(s) selected."
+msgstr ""
+
+#: placecompleter_tool.py:471
+msgid "Invalid language codes ignored: %s. Please use standard 2-letter codes (e.g., en, he, fr)."
+msgstr ""
+
+#: placecompleter_tool.py:557
+msgid "Exclude this level"
+msgstr ""
+
+#: placecompleter_tool.py:597 placecompleter/geo.py:79
+msgid "Could not query Wikidata: %s"
+msgstr ""
+
+#: placecompleter_tool.py:614
+msgid "Click Ask first, or paste a response into the text box."
+msgstr ""
+
+#: placecompleter_tool.py:617
+msgid "Specify the place name and date for the query."
+msgstr ""
+
+#: placecompleter_tool.py:630
+msgid "This name matches multiple places. Which one did you mean?"
+msgstr ""
+
+#: placecompleter_tool.py:685
+msgid "Starting Ollama…"
+msgstr ""
+
+#: placecompleter_tool.py:714
+msgid "Copy command"
+msgstr ""
+
+#: placecompleter_tool.py:714
+msgid "Open terminal to run installer"
+msgstr ""
+
+#: placecompleter_tool.py:755
+msgid "Downloading %s"
+msgstr ""
+
+#: placecompleter_tool.py:835
+msgid "Key saved, but could not select a model: %s"
+msgstr ""
+
+#: placecompleter_tool.py:848
+msgid "%s does not require an API key."
+msgstr ""
+
+#: placecompleter_tool.py:879
+msgid "No API key saved for this AI engine yet."
+msgstr ""
+
+#: placecompleter_tool.py:887
+msgid "Testing API key connection…"
+msgstr ""
+
+#: placecompleter_tool.py:912 placecompleter_tool.py:841
+msgid "Key saved (%s)."
+msgstr ""
+
+#: placecompleter_tool.py:958
+msgid "Gramps display format for an event on this date: %s"
+msgstr ""
+
+#: placecompleter_tool.py:991
+msgid "Apply %d change(s) to the family tree?"
+msgstr ""
+
+#: placecompleter_tool.py:552
+msgid "The response specifies «%(name)s» (%(type)s), matching several existing places in your tree. No changes will be made until you choose one."
+msgstr ""
+
+#: placecompleter_tool.py:557
+msgid "New place «%s»"
+msgstr ""
+
+#: placecompleter_tool.py:680
+msgid "Ollama service is not running"
+msgstr ""
+
+#: placecompleter_tool.py:681
+msgid "Ollama is installed locally but is not currently active.\nStart it now? It will run in the background (ollama serve) until stopped or the computer shuts down."
+msgstr ""
+
+#: placecompleter_tool.py:698
+msgid "Downloading model %s…"
+msgstr ""
+
+#: placecompleter_tool.py:704
+msgid "Model %s successfully installed."
+msgstr ""
+
+#: placecompleter_tool.py:721
+msgid "A terminal window is open: enter your administrator password there. Once installation finishes, click Ask again."
+msgstr ""
+
+#: placecompleter_tool.py:771
+msgid "Downloading…"
+msgstr ""
+
+#: placecompleter_tool.py:837
+msgid "API key saved, but service is unavailable: %s"
+msgstr ""
+
+#: placecompleter_tool.py:878
+msgid "Key already saved: %(hint)s (in %(where)s). Entering a new key will overwrite it."
+msgstr ""
+
+#: placecompleter_tool.py:690
 msgid "To start manually via terminal run:  ollama serve   (or:  sudo systemctl start ollama )"
 msgstr ""
 
-#: placecompleter_tool.py:831
+#: placecompleter_tool.py:839
 msgid "Key saved; model %s was automatically selected."
 msgstr ""
 
-#: placecompleter_tool.py:865
+#: placecompleter_tool.py:873
 msgid "Key saved in %s (encrypted via system keyring)."
 msgstr ""
 
-#: placecompleter_tool.py:866
+#: placecompleter_tool.py:874
 msgid "No system keyring detected; key saved unencrypted in %s. Do not copy or sync this folder."
 msgstr ""
 
-#: placecompleter_tool.py:986
+#: placecompleter_tool.py:994
 msgid "%d change(s) will be skipped: %s"
 msgstr ""
 
-#: placecompleter_tool.py:333
+#: placecompleter_tool.py:334
 msgid "requires configuration:"
 msgstr ""
 
-#: placecompleter_tool.py:675
+#: placecompleter_tool.py:683
 msgid "Start service"
 msgstr ""
 
-#: placecompleter_tool.py:895
+#: placecompleter_tool.py:903
 msgid "The saved key has been removed."
 msgstr ""
 
@@ -695,167 +699,167 @@ msgstr ""
 msgid "Local Ollama instance (no internet access)"
 msgstr ""
 
-#: placecompleter/engines.py:228
+#: placecompleter/engines.py:233
 msgid "cannot connect to %s: %s"
 msgstr ""
 
-#: placecompleter/engines.py:231
+#: placecompleter/engines.py:236
 msgid ". Destination unreachable: the local model server (e.g. Ollama) is either not installed or not currently running"
 msgstr ""
 
-#: placecompleter/engines.py:437
+#: placecompleter/engines.py:446
 msgid "no key required"
 msgstr ""
 
-#: placecompleter/engines.py:443
+#: placecompleter/engines.py:452
 msgid "configured, %d characters"
 msgstr ""
 
-#: placecompleter/engines.py:203
+#: placecompleter/engines.py:208
 msgid "Ollama service is active but has no models installed. Run 'ollama pull llama3.2' in terminal and try again"
 msgstr ""
 
-#: placecompleter/engines.py:390
+#: placecompleter/engines.py:399
 msgid "contains leading/trailing whitespace or line breaks (automatically trimmed)"
 msgstr ""
 
-#: placecompleter/engines.py:393
+#: placecompleter/engines.py:402
 msgid "enclosed in quotation marks (automatically stripped)"
 msgstr ""
 
-#: placecompleter/engines.py:396
+#: placecompleter/engines.py:405
 msgid "contains internal spaces or line breaks: clipboard data might be corrupted"
 msgstr ""
 
-#: placecompleter/engines.py:398
+#: placecompleter/engines.py:407
 msgid "contains non-ASCII characters (check for formatting marks or localized keyboard input)"
 msgstr ""
 
-#: placecompleter/engines.py:400
+#: placecompleter/engines.py:409
 msgid "invalid Anthropic API key format (must begin with 'sk-ant-')"
 msgstr ""
 
-#: placecompleter/engines.py:427
+#: placecompleter/engines.py:436
 msgid "This is an Anthropic Claude key, but the engine sends requests to %s. Please select 'Claude API with web search' from the engine list."
 msgstr ""
 
-#: placecompleter/engines.py:430
+#: placecompleter/engines.py:439
 msgid "Anthropic API keys must start with 'sk-ant-'. The provided key appears invalid or belongs to a different provider. It will be sent to %s."
 msgstr ""
 
-#: placecompleter/engines.py:442
+#: placecompleter/engines.py:451
 msgid "API key in %s: MISSING%s"
 msgstr ""
 
-#: placecompleter/engines.py:458
+#: placecompleter/engines.py:467
 msgid "No API key available to test."
 msgstr ""
 
-#: placecompleter/engines.py:484
+#: placecompleter/engines.py:493
 msgid "API key validated successfully%s."
 msgstr ""
 
-#: placecompleter/engines.py:538
+#: placecompleter/engines.py:547
 msgid "the response is empty"
 msgstr ""
 
-#: placecompleter/engines.py:189
+#: placecompleter/engines.py:194
 msgid "this engine requires a model specification. Define it in %s, e.g.: {\"engines\": {\"%s\": {\"model\": \"model-name\"}}}"
 msgstr ""
 
-#: placecompleter/engines.py:206
+#: placecompleter/engines.py:211
 msgid "could not select a model from %s (%s). Specify a target model in %s, e.g.: {\"engines\": {\"%s\": {\"model\": \"model-name\"}}}"
 msgstr ""
 
-#: placecompleter/engines.py:239
+#: placecompleter/engines.py:244
 msgid "only http and https addresses are allowed: %s"
 msgstr ""
 
-#: placecompleter/engines.py:278 placecompleter/keystore.py:142
+#: placecompleter/engines.py:287 placecompleter/keystore.py:142
 msgid "key file %s has insecure permissions (readable by others). Execute: chmod 600 %s"
 msgstr ""
 
-#: placecompleter/engines.py:324
+#: placecompleter/engines.py:333
 msgid "export environment variable %s (requires starting Gramps from the matching terminal session); or"
 msgstr ""
 
-#: placecompleter/engines.py:357
+#: placecompleter/engines.py:366
 msgid "no response from host %s:%d"
 msgstr ""
 
-#: placecompleter/engines.py:359
+#: placecompleter/engines.py:368
 msgid "Ollama is not active locally. Click Ask to run guided setup. Manual steps: 1) Install from ollama.com; 2) Start service with 'ollama serve'; 3) Download model using 'ollama pull llama3.2'."
 msgstr ""
 
-#: placecompleter/engines.py:470
+#: placecompleter/engines.py:479
 msgid "This engine does not use an API key."
 msgstr ""
 
-#: placecompleter/engines.py:504
+#: placecompleter/engines.py:513
 msgid "response returned empty content (stop reason: %s)"
 msgstr ""
 
-#: placecompleter/engines.py:536
+#: placecompleter/engines.py:545
 msgid "response structure is invalid or unrecognized"
 msgstr ""
 
-#: placecompleter/engines.py:250 placecompleter/engines.py:262 placecompleter/ollama.py:130
+#: placecompleter/engines.py:259 placecompleter/engines.py:271 placecompleter/ollama.py:130
 msgid "service returned HTTP error %s: %s"
 msgstr ""
 
-#: placecompleter/engines.py:362
+#: placecompleter/engines.py:371
 msgid "start the local model server daemon, or update base_url in %s"
 msgstr ""
 
-#: placecompleter/engines.py:366
+#: placecompleter/engines.py:375
 msgid "key file permissions are insecure (readable by others)"
 msgstr ""
 
-#: placecompleter/engines.py:366
+#: placecompleter/engines.py:375
 msgid "unable to read key file"
 msgstr ""
 
-#: placecompleter/engines.py:484
+#: placecompleter/engines.py:493
 msgid "; model %s is active"
 msgstr ""
 
-#: placecompleter/engines.py:208
+#: placecompleter/engines.py:213
 msgid "none"
 msgstr ""
 
-#: placecompleter/engines.py:325
+#: placecompleter/engines.py:334
 msgid "API key missing. Enter it via the Key button (stored securely in keyring or restricted user file), or %s specify key_file in %s."
 msgstr ""
 
-#: placecompleter/engines.py:371
+#: placecompleter/engines.py:380
 msgid "use the Key button to store your credential%s, or specify key_file in %s"
 msgstr ""
 
-#: placecompleter/engines.py:477
+#: placecompleter/engines.py:486
 msgid "Service %s rejected the API key (HTTP %d). Sent key suffix: %s. Verify key validity, quota limits, and provider matching."
 msgstr ""
 
-#: placecompleter/engines.py:481
+#: placecompleter/engines.py:490
 msgid "API key validated, but model «%s» is unrecognized by host. Select another model in %s."
 msgstr ""
 
-#: placecompleter/engines.py:531
+#: placecompleter/engines.py:540
 msgid "model %s is no longer offered by host (%s); model choice will re-evaluate on next request"
 msgstr ""
 
-#: placecompleter/engines.py:552
+#: placecompleter/engines.py:561
 msgid "%s\n  Service %s rejected API key authentication%s. Verify key active status in provider dashboard and re-enter using Key button."
 msgstr ""
 
-#: placecompleter/engines.py:528
+#: placecompleter/engines.py:537
 msgid ". Target model missing: download using 'ollama pull %s'"
 msgstr ""
 
-#: placecompleter/engines.py:372
+#: placecompleter/engines.py:381
 msgid ", or set environment variable $%s before launching Gramps"
 msgstr ""
 
-#: placecompleter/engines.py:554
+#: placecompleter/engines.py:563
 msgid " sent (%s)"
 msgstr ""
 

@@ -65,7 +65,7 @@ from gramps.gui.plug import tool
 from placecompleter import i18n                                             # first: the engine's texts are made when it is imported
 _ = i18n.install_from_gramps(__file__)
 
-from placecompleter import confidence, engines, geo, hints, keystore, ollama, settings, wikidata   # noqa: E402
+from placecompleter import GUIDE_URL, confidence, engines, geo, hints, keystore, ollama, settings, wikidata   # noqa: E402
 from placecompleter import session as pcsession                             # noqa: E402
 from placecompleter.model import Tree                                       # noqa: E402
 
@@ -171,6 +171,7 @@ class PlaceCompleterTool(tool.Tool, ManagedWindow):
     def _build(self):
         prefs = self._load_prefs()
         dialog = Gtk.Dialog()
+        dialog.add_button(_("_Help"), Gtk.ResponseType.HELP)                    # the user guide, in the web browser
         dialog.add_button(_("_Close"), Gtk.ResponseType.CLOSE)
         self.b_apply = dialog.add_button(_("Apply checked changes"), RESPONSE_WRITE)      # always in sight, below the scrolling part
         self.b_apply.set_tooltip_text(hints.APPLY)
@@ -393,8 +394,15 @@ class PlaceCompleterTool(tool.Tool, ManagedWindow):
     def _response(self, obj, response_id):
         if response_id == Gtk.ResponseType.CLOSE:
             self.close()
+        elif response_id == Gtk.ResponseType.HELP:
+            self._open_help()
         elif response_id == RESPONSE_WRITE:
             self._on_apply()
+
+    def _open_help(self):
+        """The Help button: the user guide, in the web browser (the window stays open)."""
+        if not webbrowser.open(GUIDE_URL):
+            self._say(_("Could not launch web browser. Please open this URL manually:\n%s") % GUIDE_URL)
 
     # ------------------------------------------------------------------ what is remembered
     def _load_prefs(self):

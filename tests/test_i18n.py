@@ -128,7 +128,7 @@ class CatalogTests(unittest.TestCase):
 class GrampsCatalogLeakTests(unittest.TestCase):
     """Gramps's own catalog translates the words that it knows. A word of a sentence of this addon that goes through the translator alone comes out in Hebrew inside an
     English sentence (the word after, for instance). Sentences are whole texts; the words of Gramps that this addon shows on purpose (buttons, labels, types, levels of confidence) are named."""
-    ON_PURPOSE = {"_Close", "_Cancel", "_OK", "Confidence", "Download", "Remove", "Select", "Select all", "Place", "Date", "Very Low", "Low", "Normal", "type",
+    ON_PURPOSE = {"_Close", "_Help", "_Cancel", "_OK", "Confidence", "Download", "Remove", "Select", "Select all", "Place", "Date", "Very Low", "Low", "Normal", "type",
                   "Country", "State", "County", "City", "Parish", "Locality", "Street", "Province", "Region", "Department", "Neighborhood", "District", "Borough",
                   "Municipality", "Town", "Village", "Hamlet", "Farm", "Building", "Number"}
 

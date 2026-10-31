@@ -314,6 +314,20 @@ class WindowTests(Base):
         self.assertNotIn("no model name", "".join(c.args[0] for c in self.tool.status.set_text.call_args_list if c.args))
         self.assertEqual(self.opened, [])
 
+    def test_the_help_button_opens_the_user_guide_and_the_window_stays(self):
+        import placecompleter
+        with mock.patch.object(self.mod.webbrowser, "open", return_value=True) as opened:
+            self.tool._response(None, self.gtk.ResponseType.HELP)
+        opened.assert_called_once_with(placecompleter.GUIDE_URL)
+        self.assertFalse(self.tool.closed)
+
+    def test_when_the_browser_does_not_open_the_help_says_the_address(self):
+        import placecompleter
+        with mock.patch.object(self.mod.webbrowser, "open", return_value=False):
+            self.tool._response(None, self.gtk.ResponseType.HELP)
+        said = "".join(c.args[0] for c in self.tool.status.set_text.call_args_list if c.args)
+        self.assertIn(placecompleter.GUIDE_URL, said)
+
     def test_the_close_button_closes(self):
         self.tool._response(None, self.gtk.ResponseType.CLOSE)
         self.assertTrue(self.tool.closed)
@@ -1457,7 +1471,8 @@ class FitTests(Base):
         main.set_policy.assert_called_with(self.gtk.PolicyType.AUTOMATIC, self.gtk.PolicyType.AUTOMATIC)     # nothing is cut off: it scrolls
         self.assertIs(dialogs[0].get_content_area.return_value.pack_start.call_args.args[0], main)
         responses = [c.args[1] for c in dialogs[0].add_button.call_args_list]
-        self.assertEqual(responses, [self.gtk.ResponseType.CLOSE, self.mod.RESPONSE_WRITE])
+        self.assertEqual(responses, [self.gtk.ResponseType.HELP, self.gtk.ResponseType.CLOSE, self.mod.RESPONSE_WRITE])
+        self.assertEqual(dialogs[0].add_button.call_args_list[0].args[0], "_Help")                  # the label of Gramps' own catalog: nothing new to translate
         self.assertIs(tool.b_apply, dialogs[0].add_button.return_value)
 
     def test_every_scrolled_window_has_a_classic_slim_bar_that_does_not_float_over_the_text(self):
@@ -1609,7 +1624,7 @@ class RegistrationTests(unittest.TestCase):
             self.assertTrue(kw["name"].startswith("T<Place Completer"), kw["name"])
             self.assertTrue(kw["description"].startswith("T<"), kw["description"])
             self.assertEqual(kw["status"], "EXPERIMENTAL", kw["name"])                              # (it is experimental: the addon manager says so)
-            self.assertEqual(kw["help_url"], placecompleter.HOMEPAGE, kw["name"])                    # (the Help button opens the repository)
+            self.assertEqual(kw["help_url"], placecompleter.GUIDE_URL, kw["name"])                   # (the Help of a gramplet opens the user guide)
         self.assertEqual(names["_"]("x"), "T<x>")                                                   # the file kept the _ that Gramps gave
 
     def registered(self, kind, id_):

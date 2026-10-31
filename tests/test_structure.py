@@ -152,13 +152,15 @@ class RegistrationTests(unittest.TestCase):
             self.assertEqual(ast.unparse(kw["status"]), "EXPERIMENTAL", kw["id"].value)
             self.assertEqual(ast.unparse(kw["help_url"]), "HELP_URL", kw["id"].value)
 
-    def test_the_help_address_is_the_homepage_of_the_engine(self):
+    def test_the_help_address_is_the_guide_that_the_help_button_opens(self):
         import ast
         import placecompleter
         with open(os.path.join(ROOT, "PlaceCompleter.gpr.py"), encoding="utf-8") as fh:
             tree = ast.parse(fh.read())
         value = next(n.value.value for n in tree.body if isinstance(n, ast.Assign) and n.targets[0].id == "HELP_URL")
-        self.assertEqual(value, placecompleter.HOMEPAGE)
+        self.assertEqual(value, placecompleter.GUIDE_URL)
+        self.assertTrue(placecompleter.GUIDE_URL.startswith(placecompleter.HOMEPAGE + "/"))
+        self.assertTrue(placecompleter.GUIDE_URL.endswith("docs/USER_GUIDE.md"))
 
     def test_the_author_is_the_holder_of_the_copyright(self):
         import ast

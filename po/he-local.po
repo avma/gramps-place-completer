@@ -1559,3 +1559,6 @@ msgstr "הצגת המקום הפעיל ומה שחסר בו, ופתיחת חלו
 
 msgid "only http and https addresses are allowed: %s"
 msgstr "מותרות רק כתובות ‪http‬ או ‪https‬: ‪%s‬"
+
+msgid "_Help"
+msgstr "_עזרה"
