@@ -49,7 +49,8 @@ import sys
 # Place Completer modules
 #
 # -------------------------------------------------------------------------
-from . import agent, clipboard, complete, engines as enginelib, gaps, ingest as ingestlib, packs, plan as planlib, prompts, wikidata
+from .typelearn import in_types, same_type_text
+from . import agent, clipboard, complete, engines as enginelib, gaps, ingest as ingestlib, kinds, packs, plan as planlib, prompts, wikidata
 from .answers import same_answer_elsewhere          # noqa: F401  (the tests and the commands use this name)
 from .dates import describe
 from .model import Tree
@@ -150,8 +151,61 @@ def _pack_files(args):
     return getattr(args, "pack", None) or sorted(glob.glob(os.path.join(PACKS_DIR, "*.json")))
 
 
+def open_tree(path):
+    """The tree of a sqlite.db, read as the window reads it: the custom place types that the tree uses are learned (kinds.learn_from)."""
+    tree = Tree.from_sqlite(path)
+    kinds.learn_from(tree)
+    return tree
+
+
+def file_role(name):
+    """What the file of the user (type-conventions.json) says that a custom type is: province, empire, monarchy, district, settlement, rule (the type of a rule), or ''."""
+    base = kinds.FILE_TYPES
+    for role in ("province", "empire", "monarchy"):
+        if same_type_text(name, base.get(role)):
+            return role
+    if in_types(name, base.get("district")):
+        return "district"
+    if in_types(name, base.get("settlements")):
+        return "settlement"
+    if any(same_type_text(name, rule.get("string")) for rule in base.get("rules") or []):
+        return "rule"
+    return ""
+
+
+def types_cmd(args):
+    """The custom place types that the tree uses, with the writings that were joined, the role that each was given, and the conventions that result."""
+    tree = open_tree(args.db)
+    if not kinds.LEARNED["types"]:
+        print("no place of this tree has a custom type")
+        return 0
+    print("%-28s %6s  %-11s %s" % ("type (as used for a new place)", "places", "role", "writings found (places)"))
+    from_file = False
+    for t in kinds.LEARNED["types"]:
+        writings = "; ".join("%r (%d)" % (w, n) for w, n in sorted(t["variants"].items(), key=lambda x: (-x[1], x[0])))
+        role = file_role(t["name"])
+        from_file = from_file or bool(role)
+        print("%-28s %6d  %-11s %s" % (t["name"], t["count"], role + "*" if role else t["role"] or "-", writings))
+    if from_file:
+        print("* what your file type-conventions.json says (it comes first); the other roles are from the vocabulary")
+    learned = kinds.LEARNED
+    for note in learned.get("skipped", []):
+        print("\nno rule for %s (%d places): the type of Gramps (%s) is used by %d" % (note["name"], note["count"], kinds.type_name(note["builtin"]), note["builtin_count"]))
+    if learned.get("duplicates"):
+        print("\npossible duplicates (one letter apart; they are not joined: if they are one type, correct them in Gramps):")
+        for d in learned["duplicates"]:
+            print("  %s (%d)  /  %s (%d)" % (d["a"], d["a_count"], d["b"], d["b_count"]))
+    print("\nconventions in use (your file first, then what the tree says):")
+    for key in ("province", "empire", "monarchy", "district", "settlements"):
+        value = kinds.TREE_TYPES[key]
+        print("  %-12s %s" % (key, ("; ".join(value) if isinstance(value, list) else value) or "-"))
+    for rule in kinds.TREE_TYPES["rules"]:
+        print("  rule         %s -> %s" % (", ".join(rule["words"]), rule["string"]))
+    return 0
+
+
 def report(args):
-    tree = Tree.from_sqlite(args.db)
+    tree = open_tree(args.db)
     rows = gaps.analyse(tree, args.about_range)
     print("places: %d | events with a place: %d" % (len(tree.places), len(rows)))
     _print_summary("\nBASELINE", gaps.summarize(rows))
@@ -181,7 +235,7 @@ def report(args):
 
 
 def agent_request(args):
-    tree = Tree.from_sqlite(args.db)
+    tree = open_tree(args.db)
     rows = gaps.analyse(tree, args.about_range)
     props = _all_proposals(tree, rows, _pack_files(args), args.about_range, lambda *_: None)
     after_tree = gaps.apply(tree, props)
@@ -235,7 +289,7 @@ def _wikidata_step(tree, after_tree, after, args, say):
 
 
 def wikidata_pack(args):
-    tree = Tree.from_sqlite(args.db)
+    tree = open_tree(args.db)
     rows = gaps.analyse(tree, args.about_range)
     base = _all_proposals(tree, rows, _pack_files(args), args.about_range, lambda *_: None)
     after_tree = gaps.apply(tree, base)
@@ -256,7 +310,7 @@ def wikidata_pack(args):
 
 
 def make_plan(args):
-    tree = Tree.from_sqlite(args.db)
+    tree = open_tree(args.db)
     rows = gaps.analyse(tree, args.about_range)
     quiet = lambda *_: None
     proposals = _all_proposals(tree, rows, _pack_files(args), args.about_range, quiet)
@@ -331,7 +385,7 @@ def apply_plan(args):
 
 
 def complete_place(args):
-    tree = Tree.from_sqlite(args.db)
+    tree = open_tree(args.db)
     client = wikidata.Client(cache_path=args.cache, fetch=wikidata.urllib_fetch if args.online else None, pause=args.pause)
     for seed in args.seed:
         client.load(seed)
@@ -349,7 +403,7 @@ def complete_place(args):
 
 
 def ingest_text(args):
-    tree = Tree.from_sqlite(args.db)
+    tree = open_tree(args.db)
     with open(args.file, encoding="utf-8") as fh:
         rec = ingestlib.parse_structured(fh.read())
     skip = {int(x) for x in args.skip.split(",") if x.strip()}
@@ -461,7 +515,7 @@ def ai_complete(args, opener=None, wait=None, read=None, choose=None, http=None)
         return 2
     chosen_form = _form(args)
     forms = list(prompts.AUTO_ORDER) if chosen_form == "auto" else [chosen_form]
-    tree = Tree.from_sqlite(args.db)
+    tree = open_tree(args.db)
     text = rec = meta = None
     asked, form_index = 0, 0
     while True:
@@ -557,7 +611,7 @@ def ai_complete(args, opener=None, wait=None, read=None, choose=None, http=None)
 
 
 def agent_validate(args):
-    tree = Tree.from_sqlite(args.db)
+    tree = open_tree(args.db)
     with open(args.request, encoding="utf-8") as fh:
         request = json.load(fh)
     with open(args.response, encoding="utf-8") as fh:
@@ -601,6 +655,8 @@ def main(argv=None):
     common.add_argument("--about-range", type=int, default=50,
                         help="Gramps setting behavior.date-about-range (years)")
     sub = ap.add_subparsers(dest="command", required=True)
+    ty = sub.add_parser("types", parents=[common])
+    ty.add_argument("db", nargs="?", default=SNAP)
     r = sub.add_parser("report", parents=[common])
     r.add_argument("db", nargs="?", default=SNAP)
     r.add_argument("--csv", default="")
@@ -696,7 +752,7 @@ def main(argv=None):
     return {"report": report, "agent-request": agent_request, "agent-validate": agent_validate,
             "wikidata-pack": wikidata_pack, "plan": make_plan, "apply": apply_plan,
             "complete-place": complete_place, "ingest-text": ingest_text, "search-ai": search_ai,
-            "ai-complete": ai_complete, "engines": list_engines, "keys": keys_cmd}[args.command](args)
+            "ai-complete": ai_complete, "engines": list_engines, "keys": keys_cmd, "types": types_cmd}[args.command](args)
 
 
 if __name__ == "__main__":

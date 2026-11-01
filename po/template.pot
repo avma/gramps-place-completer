@@ -31,7 +31,7 @@ msgstr ""
 msgid "_Help"
 msgstr ""
 
-#: placecompleter_tool.py:175 placecompleter_tool.py:851
+#: placecompleter_tool.py:175 placecompleter_tool.py:852
 msgid "_Close"
 msgstr ""
 
@@ -63,55 +63,55 @@ msgstr ""
 msgid "Confidence"
 msgstr ""
 
-#: placecompleter_tool.py:547 placecompleter_tool.py:626 placecompleter_tool.py:730
+#: placecompleter_tool.py:548 placecompleter_tool.py:627 placecompleter_tool.py:731
 msgid "_Cancel"
 msgstr ""
 
-#: placecompleter_tool.py:548 placecompleter_tool.py:627
+#: placecompleter_tool.py:549 placecompleter_tool.py:628
 msgid "_OK"
 msgstr ""
 
-#: placecompleter_tool.py:578
+#: placecompleter_tool.py:579
 msgid "The response is ready. Looking up coordinates on Wikidata…"
 msgstr ""
 
-#: placecompleter_tool.py:710 placecompleter/ollama.py:103
+#: placecompleter_tool.py:711 placecompleter/ollama.py:103
 msgid "Ollama is not installed"
 msgstr ""
 
-#: placecompleter_tool.py:711
+#: placecompleter_tool.py:712
 msgid "Ollama runs a local AI model: free, no API key required.\nIt lacks web access and may be less reliable than Google AI mode or Claude.\nThe installer will ask for administrator permissions in the terminal window that opens. The command:"
 msgstr ""
 
-#: placecompleter_tool.py:731
+#: placecompleter_tool.py:732
 msgid "Download"
 msgstr ""
 
-#: placecompleter_tool.py:745
+#: placecompleter_tool.py:746
 msgid "another model name (optional)"
 msgstr ""
 
-#: placecompleter_tool.py:829
+#: placecompleter_tool.py:830
 msgid "Key saved. Finding an available model…"
 msgstr ""
 
-#: placecompleter_tool.py:852
+#: placecompleter_tool.py:853
 msgid "Remove"
 msgstr ""
 
-#: placecompleter_tool.py:853
+#: placecompleter_tool.py:854
 msgid "Test"
 msgstr ""
 
-#: placecompleter_tool.py:854
+#: placecompleter_tool.py:855
 msgid "Save"
 msgstr ""
 
-#: placecompleter_tool.py:864
+#: placecompleter_tool.py:865
 msgid "paste the key here"
 msgstr ""
 
-#: placecompleter_tool.py:872
+#: placecompleter_tool.py:873
 msgid "Sent only to %s."
 msgstr ""
 
@@ -151,47 +151,47 @@ msgstr ""
 msgid "All items are unchecked."
 msgstr ""
 
-#: placecompleter_tool.py:546 placecompleter_tool.py:625
+#: placecompleter_tool.py:547 placecompleter_tool.py:626
 msgid "Which place is this?"
 msgstr ""
 
-#: placecompleter_tool.py:648
+#: placecompleter_tool.py:649
 msgid "Cancelled: no place selected."
 msgstr ""
 
-#: placecompleter_tool.py:718
+#: placecompleter_tool.py:719
 msgid "Command copied: open a terminal and paste it (Ctrl+Shift+V)."
 msgstr ""
 
-#: placecompleter_tool.py:729
+#: placecompleter_tool.py:730
 msgid "Download a model"
 msgstr ""
 
-#: placecompleter_tool.py:735
+#: placecompleter_tool.py:736
 msgid "Ollama is running but no model is installed.\nDownloading a model (a few GB) takes a few minutes and stays stored locally on this computer.\nSelect a model below or enter a model name from ollama.com/library:"
 msgstr ""
 
-#: placecompleter_tool.py:760
+#: placecompleter_tool.py:761
 msgid "Starting download…"
 msgstr ""
 
-#: placecompleter_tool.py:786 placecompleter/ollama.py:136
+#: placecompleter_tool.py:787 placecompleter/ollama.py:136
 msgid "download cancelled"
 msgstr ""
 
-#: placecompleter_tool.py:850
+#: placecompleter_tool.py:851
 msgid "API key"
 msgstr ""
 
-#: placecompleter_tool.py:983
+#: placecompleter_tool.py:984
 msgid "This family tree is opened as read-only."
 msgstr ""
 
-#: placecompleter_tool.py:987
+#: placecompleter_tool.py:988
 msgid "Select at least one proposed change first."
 msgstr ""
 
-#: placecompleter_tool.py:993
+#: placecompleter_tool.py:994
 msgid "Changes are applied together in one step; Edit > Undo will revert all of them."
 msgstr ""
 
@@ -227,7 +227,7 @@ msgstr ""
 msgid "Level"
 msgstr ""
 
-#: placecompleter_tool.py:405 placecompleter_tool.py:501
+#: placecompleter_tool.py:405 placecompleter_tool.py:502
 msgid "Could not launch web browser. Please open this URL manually:\n%s"
 msgstr ""
 
@@ -259,131 +259,131 @@ msgstr ""
 msgid "%d change(s) selected."
 msgstr ""
 
-#: placecompleter_tool.py:471
+#: placecompleter_tool.py:472
 msgid "Invalid language codes ignored: %s. Please use standard 2-letter codes (e.g., en, he, fr)."
 msgstr ""
 
-#: placecompleter_tool.py:557
+#: placecompleter_tool.py:558
 msgid "Exclude this level"
 msgstr ""
 
-#: placecompleter_tool.py:597 placecompleter/geo.py:79
+#: placecompleter_tool.py:598 placecompleter/geo.py:79
 msgid "Could not query Wikidata: %s"
 msgstr ""
 
-#: placecompleter_tool.py:614
+#: placecompleter_tool.py:615
 msgid "Click Ask first, or paste a response into the text box."
 msgstr ""
 
-#: placecompleter_tool.py:617
+#: placecompleter_tool.py:618
 msgid "Specify the place name and date for the query."
 msgstr ""
 
-#: placecompleter_tool.py:630
+#: placecompleter_tool.py:631
 msgid "This name matches multiple places. Which one did you mean?"
 msgstr ""
 
-#: placecompleter_tool.py:685
+#: placecompleter_tool.py:686
 msgid "Starting Ollama…"
 msgstr ""
 
-#: placecompleter_tool.py:714
+#: placecompleter_tool.py:715
 msgid "Copy command"
 msgstr ""
 
-#: placecompleter_tool.py:714
+#: placecompleter_tool.py:715
 msgid "Open terminal to run installer"
 msgstr ""
 
-#: placecompleter_tool.py:755
+#: placecompleter_tool.py:756
 msgid "Downloading %s"
 msgstr ""
 
-#: placecompleter_tool.py:835
+#: placecompleter_tool.py:836
 msgid "Key saved, but could not select a model: %s"
 msgstr ""
 
-#: placecompleter_tool.py:848
+#: placecompleter_tool.py:849
 msgid "%s does not require an API key."
 msgstr ""
 
-#: placecompleter_tool.py:879
+#: placecompleter_tool.py:880
 msgid "No API key saved for this AI engine yet."
 msgstr ""
 
-#: placecompleter_tool.py:887
+#: placecompleter_tool.py:888
 msgid "Testing API key connection…"
 msgstr ""
 
-#: placecompleter_tool.py:912 placecompleter_tool.py:841
+#: placecompleter_tool.py:913 placecompleter_tool.py:842
 msgid "Key saved (%s)."
 msgstr ""
 
-#: placecompleter_tool.py:958
+#: placecompleter_tool.py:959
 msgid "Gramps display format for an event on this date: %s"
 msgstr ""
 
-#: placecompleter_tool.py:991
+#: placecompleter_tool.py:992
 msgid "Apply %d change(s) to the family tree?"
 msgstr ""
 
-#: placecompleter_tool.py:552
+#: placecompleter_tool.py:553
 msgid "The response specifies «%(name)s» (%(type)s), matching several existing places in your tree. No changes will be made until you choose one."
 msgstr ""
 
-#: placecompleter_tool.py:557
+#: placecompleter_tool.py:558
 msgid "New place «%s»"
 msgstr ""
 
-#: placecompleter_tool.py:680
+#: placecompleter_tool.py:681
 msgid "Ollama service is not running"
 msgstr ""
 
-#: placecompleter_tool.py:681
+#: placecompleter_tool.py:682
 msgid "Ollama is installed locally but is not currently active.\nStart it now? It will run in the background (ollama serve) until stopped or the computer shuts down."
 msgstr ""
 
-#: placecompleter_tool.py:698
+#: placecompleter_tool.py:699
 msgid "Downloading model %s…"
 msgstr ""
 
-#: placecompleter_tool.py:704
+#: placecompleter_tool.py:705
 msgid "Model %s successfully installed."
 msgstr ""
 
-#: placecompleter_tool.py:721
+#: placecompleter_tool.py:722
 msgid "A terminal window is open: enter your administrator password there. Once installation finishes, click Ask again."
 msgstr ""
 
-#: placecompleter_tool.py:771
+#: placecompleter_tool.py:772
 msgid "Downloading…"
 msgstr ""
 
-#: placecompleter_tool.py:837
+#: placecompleter_tool.py:838
 msgid "API key saved, but service is unavailable: %s"
 msgstr ""
 
-#: placecompleter_tool.py:878
+#: placecompleter_tool.py:879
 msgid "Key already saved: %(hint)s (in %(where)s). Entering a new key will overwrite it."
 msgstr ""
 
-#: placecompleter_tool.py:690
+#: placecompleter_tool.py:691
 msgid "To start manually via terminal run:  ollama serve   (or:  sudo systemctl start ollama )"
 msgstr ""
 
-#: placecompleter_tool.py:839
+#: placecompleter_tool.py:840
 msgid "Key saved; model %s was automatically selected."
 msgstr ""
 
-#: placecompleter_tool.py:873
+#: placecompleter_tool.py:874
 msgid "Key saved in %s (encrypted via system keyring)."
 msgstr ""
 
-#: placecompleter_tool.py:874
+#: placecompleter_tool.py:875
 msgid "No system keyring detected; key saved unencrypted in %s. Do not copy or sync this folder."
 msgstr ""
 
-#: placecompleter_tool.py:994
+#: placecompleter_tool.py:995
 msgid "%d change(s) will be skipped: %s"
 msgstr ""
 
@@ -391,11 +391,11 @@ msgstr ""
 msgid "requires configuration:"
 msgstr ""
 
-#: placecompleter_tool.py:683
+#: placecompleter_tool.py:684
 msgid "Start service"
 msgstr ""
 
-#: placecompleter_tool.py:903
+#: placecompleter_tool.py:904
 msgid "The saved key has been removed."
 msgstr ""
 
@@ -455,67 +455,67 @@ msgstr ""
 msgid "Place Completer opened for this place: specify a date and click Ask."
 msgstr ""
 
-#: placecompleter/chainlinks.py:264
+#: placecompleter/chainlinks.py:265
 msgid "These links already exist and require no changes: %s"
 msgstr ""
 
-#: placecompleter/chainlinks.py:107
+#: placecompleter/chainlinks.py:108
 msgid "a place cannot contain itself"
 msgstr ""
 
-#: placecompleter/chainlinks.py:109
+#: placecompleter/chainlinks.py:110
 msgid "this would create a circular hierarchy loop"
 msgstr ""
 
-#: placecompleter/chainlinks.py:127
+#: placecompleter/chainlinks.py:128
 msgid "%s -> %s excluded from hierarchy chain: %s. Next level linked directly to %s instead"
 msgstr ""
 
-#: placecompleter/chainlinks.py:148
+#: placecompleter/chainlinks.py:149
 msgid "it is a settlement sharing its name with the area specified in the answer"
 msgstr ""
 
-#: placecompleter/chainlinks.py:155
+#: placecompleter/chainlinks.py:156
 msgid "CONFLICT: in the tree, %s is linked to %s, but the response places it under %s (from %s), and the existing link is incorrect: %s. Result if you disconnect: %s will no longer be inside %s. Not selected automatically: changes to existing data must be approved one by one."
 msgstr ""
 
-#: placecompleter/chainlinks.py:213
+#: placecompleter/chainlinks.py:214
 msgid "%s -> %s: existing tree link has an invalid date range (%s). The response period (%s-%s) will replace it if selected"
 msgstr ""
 
-#: placecompleter/chainlinks.py:251
+#: placecompleter/chainlinks.py:252
 msgid "%s is also linked to %s, and the response places it under %s (from %s): both links will be retained, with the new link prioritized for matching years"
 msgstr ""
 
-#: placecompleter/chainlinks.py:89
+#: placecompleter/chainlinks.py:90
 msgid "the type of %s in the tree is «%s» but the response specifies %s: non-settlement types are not modified automatically here. Adjust the place type in Gramps if needed"
 msgstr ""
 
-#: placecompleter/chainlinks.py:175
+#: placecompleter/chainlinks.py:176
 msgid "%s is also linked to %s, which appears identical to %s (same name and type). Merge them in Gramps (Edit > Merge Places) to consolidate this hierarchy level"
 msgstr ""
 
-#: placecompleter/chainlinks.py:197
+#: placecompleter/chainlinks.py:198
 msgid "%s is also linked directly to %s (listed before the link to %s): it applies only to the years before this link takes effect"
 msgstr ""
 
-#: placecompleter/chainlinks.py:200
+#: placecompleter/chainlinks.py:201
 msgid "%s is also linked directly to %s (listed after the link to %s): it applies only to the years before this link takes effect"
 msgstr ""
 
-#: placecompleter/chainlinks.py:189
+#: placecompleter/chainlinks.py:190
 msgid "%s is also linked directly to %s (prior to link %s) covering the same date range. Disconnecting will lose no data: %s is accessible via %s"
 msgstr ""
 
-#: placecompleter/chainlinks.py:192
+#: placecompleter/chainlinks.py:193
 msgid "%s is also linked directly to %s (after link %s) covering the same date range. Disconnecting will lose no data: %s is accessible via %s"
 msgstr ""
 
-#: placecompleter/chainlinks.py:224
+#: placecompleter/chainlinks.py:225
 msgid "%s -> %s: the response specifies %s-%s, but the tree contains %s, and %s covers the intervening years; date period left unchanged for verification"
 msgstr ""
 
-#: placecompleter/chainlinks.py:228
+#: placecompleter/chainlinks.py:229
 msgid "%s -> %s: the response specifies %s-%s and the tree contains %s, with gaps not covered by the link; date period was left unchanged for review"
 msgstr ""
 
@@ -863,11 +863,11 @@ msgstr ""
 msgid " sent (%s)"
 msgstr ""
 
-#: placecompleter/findplace.py:78
+#: placecompleter/findplace.py:79
 msgid "tree contains a place named «%s» (%s) located %.0f km from query location; treated as a distinct place and left unchanged"
 msgstr ""
 
-#: placecompleter/findplace.py:92
+#: placecompleter/findplace.py:93
 msgid "%d places in the tree match this name: select target place"
 msgstr ""
 
@@ -1035,15 +1035,15 @@ msgstr ""
 msgid "failed to remove key from system keyring: %s"
 msgstr ""
 
-#: placecompleter/levels.py:75
+#: placecompleter/levels.py:76
 msgid "a place cannot contain another place of identical administrative type"
 msgstr ""
 
-#: placecompleter/levels.py:77
+#: placecompleter/levels.py:78
 msgid "settlement places belong to a single tier; nesting settlements is invalid"
 msgstr ""
 
-#: placecompleter/levels.py:81
+#: placecompleter/levels.py:82
 msgid "parent place administrative level rank is lower than child place"
 msgstr ""
 
@@ -1140,6 +1140,10 @@ msgid "«%s» is not in your tree under that name, but «%s» holds «%s» there
 msgstr ""
 
 #: placecompleter/screen.py:75
+msgid "the type «%s» is not used by any place of your tree yet; approving %s adds it as a new type of your own"
+msgstr ""
+
+#: placecompleter/screen.py:95
 msgid "hierarchy chain terminates at state «%s» without national container; please attach sovereign country entity"
 msgstr ""
 

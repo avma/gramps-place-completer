@@ -179,5 +179,84 @@ class GuideTests(unittest.TestCase):
             self.assertNotIn(sentence, text, sentence)
 
 
+class GuideExampleTests(unittest.TestCase):
+    """The snippets of JSON in the section Describing a type yourself are read by the loaders of the addon, and what the section says about them is true."""
+    @staticmethod
+    def blocks():
+        import re
+        with open(os.path.join(ROOT, "docs", "USER_GUIDE.md"), encoding="utf-8") as fh:
+            text = fh.read()
+        section = text[text.index("### Describing a type yourself"):]
+        section = section[:section.find("\n## ")] if "\n## " in section else section
+        return re.findall(r"<!-- json-(file|line):(\w+) -->\n```json\n(.*?)\n```", section, re.S)
+
+    def test_the_section_has_its_examples(self):
+        kinds_found = [(a, b) for a, b, _ in self.blocks()]
+        self.assertGreaterEqual(kinds_found.count(("file", "conventions")), 2)
+        self.assertGreaterEqual(kinds_found.count(("line", "conventions")), 5)
+        self.assertEqual(kinds_found.count(("file", "vocabulary")), 1)
+
+    def test_every_example_is_valid_json_that_the_addon_reads(self):
+        import json
+        import tempfile
+        from placecompleter import kinds, typelearn
+        for shape, which, code in self.blocks():
+            text = code if shape == "file" else "{" + code.rstrip().rstrip(",") + "}"
+            data = json.loads(text)                                                          # valid JSON, as the guide asks
+            with tempfile.TemporaryDirectory() as d:
+                if which == "conventions":
+                    with open(os.path.join(d, "type-conventions.json"), "w", encoding="utf-8") as fh:
+                        fh.write(text)
+                    read = kinds.load_tree_types(d)
+                    for key, value in data.items():
+                        if key == "description":
+                            continue
+                        if key == "rules":
+                            self.assertEqual([(r["words"], r["string"]) for r in read["rules"]], [([w.lower() for w in r["words"]], r["string"]) for r in value])
+                            self.assertTrue(all(r["value"] == 0 for r in read["rules"]))
+                        else:
+                            self.assertEqual(read[key], value, key)
+                else:
+                    path = os.path.join(d, "type-vocabulary.json")
+                    with open(path, "w", encoding="utf-8") as fh:
+                        fh.write(text)
+                    groups = typelearn.load_vocabulary([path])
+                    self.assertEqual([(g["role"], g["words"]) for g in groups], [(g["role"], g["words"]) for g in data["groups"]])
+
+    def test_the_file_as_copied_is_the_empty_file_of_the_addon(self):
+        import json
+        shown = json.loads(self.blocks()[0][2])
+        with open(os.path.join(ROOT, "data", "type-conventions.json"), encoding="utf-8") as fh:
+            shipped = json.load(fh)
+        self.assertEqual({k: v for k, v in shown.items() if k != "description"}, {k: v for k, v in shipped.items() if k != "description"})
+
+    def test_a_file_with_a_mistake_is_ignored_as_a_whole_and_json_tool_names_it(self):
+        import subprocess
+        import tempfile
+        from placecompleter import kinds
+        with tempfile.TemporaryDirectory() as d:
+            path = os.path.join(d, "type-conventions.json")
+            with open(path, "w", encoding="utf-8") as fh:
+                fh.write('{"settlements": ["Homestead"], "district": ["Okres"],}')          # a comma after the last item
+            read = kinds.load_tree_types(d)
+            self.assertEqual((read["settlements"], read["district"]), ([], []))
+            bad = subprocess.run([sys.executable, "-m", "json.tool", path], capture_output=True, text=True)
+            self.assertNotEqual(bad.returncode, 0)
+            self.assertIn("line 1", bad.stderr)
+            with open(path, "w", encoding="utf-8") as fh:
+                fh.write('{"settlements": ["Homestead"], "district": ["Okres"]}')
+            self.assertEqual(subprocess.run([sys.executable, "-m", "json.tool", path], capture_output=True, text=True).returncode, 0)
+            self.assertEqual(kinds.load_tree_types(d)["settlements"], ["Homestead"])
+
+    def test_the_vocabulary_is_read_at_every_question(self):
+        from unittest import mock
+        from placecompleter import typelearn
+        from placecompleter.model import Tree
+        with mock.patch.object(typelearn, "load_vocabulary", wraps=typelearn.load_vocabulary) as load:
+            typelearn.learn(Tree({}, []))
+            typelearn.learn(Tree({}, []))
+        self.assertEqual(load.call_count, 2)
+
+
 if __name__ == "__main__":
     unittest.main()

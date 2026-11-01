@@ -18,7 +18,7 @@ Nothing in this file is a promise to anybody. It is a plan for the owner, to kee
 
 ## A new version of Gramps (the routine)
 
-1. Add the version to `tools/setup_gramps_versions.sh` (a line with the version or tag) and run it: `sh tools/setup_gramps_versions.sh` (needs the network once, and `msgfmt`).
+1. Add the version to `tools/setup_gramps_versions.sh` (a line with the version or tag) and run it: `sh tools/setup_gramps_versions.sh` (needs the network once, and `msgfmt` from the package `gettext`: `sudo apt install gettext`). It also installs `orjson`, which Gramps needs and the `--no-deps` install leaves out, and ends by importing each version: a missing Python package is named in the last lines.
 2. Run all the versions: `sh tools/check_all.sh`. The last line says `ALL VERSIONS OK` or `SOME VERSION NOT OK`; each module that fails is named.
 3. **Green:** add the new version to the sentence "Tested with Gramps ..." at the top of `README.md`. Done.
 4. **Red:** read the first failing test; it names the part of Gramps that changed. Most likely one of the parts in the next section. Fix if it is small, else write

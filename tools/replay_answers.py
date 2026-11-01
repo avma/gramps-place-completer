@@ -61,7 +61,7 @@ sys.path.insert(0, ROOT)
 # Place Completer modules
 #
 # -------------------------------------------------------------------------
-from placecompleter import cli, ingest, rules, table                                           # noqa: E402
+from placecompleter import cli, ingest, kinds as kindslib, rules, table                      # noqa: E402
 from placecompleter.model import Tree                                                         # noqa: E402
 
 WORK = os.path.expanduser("~/gramps-place-work")
@@ -255,6 +255,7 @@ def main(argv=None):
     parser.add_argument("--db", default="")
     parser.add_argument("--out", default=os.path.join(WORK, "replay_report.tsv"))
     parser.add_argument("--ablate", action="store_true")
+    parser.add_argument("--no-learn", action="store_true", help="do not learn the custom place types of the tree (what the replay did before they were learned)")
     parser.add_argument("--without", default="")
     args = parser.parse_args(argv)
     paths = sorted(p for p in glob.glob(os.path.join(args.answers, "*.txt"))
@@ -268,6 +269,8 @@ def main(argv=None):
         with open(path, encoding="utf-8") as fh:
             items.append((os.path.basename(path), place, date, fh.read()))
     tree = Tree.from_sqlite(args.db) if args.db else Tree({}, [])
+    if not args.no_learn:
+        kindslib.learn_from(tree)
     aliases = ingest.alias_map(cli._pack_files(argparse.Namespace()))
     if args.ablate:
         print(ablation_report(ablate(tree, items, aliases, progress=lambda text: print(text, file=sys.stderr, flush=True))))

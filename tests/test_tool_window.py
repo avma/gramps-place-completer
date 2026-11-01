@@ -51,6 +51,7 @@ from test_engines import claude_reply                                           
 from test_ingest import SAMPLE, SAMPLE_CLAUDE, tree as bajmok_tree, typed                   # noqa: E402
 from test_keystore import SECRET, MemoryStore                                               # noqa: E402
 from placecompleter import geo as _geo_module                                                # noqa: E402
+from placecompleter import kinds as _kinds_module                                            # noqa: E402
 REAL_LOOKUP_MANY = _geo_module.lookup_many                                                   # the real one, before any test replaces it
 from placecompleter import keystore                                                          # noqa: E402
 
@@ -423,6 +424,17 @@ class WindowTests(Base):
                       "«Iowa [IOWA]», which applies to the other years)", texts)
         self.tool._on_row_toggled(None, str(list(self.tool.rows).index(change)))
         self.assertIn("City of Johnston, Polk County, Iowa, USA", self.tool.preview.set_text.call_args.args[0])
+
+    def test_the_custom_types_of_the_tree_are_learned_when_a_question_is_asked(self):
+        from placecompleter.typelearn import in_types
+        self.addCleanup(_kinds_module.forget_tree)
+        self.tree = Tree({"iowa": typed("iowa", "Iowa", 2), "usa": typed("usa", "USA", 1),
+                          "falu": typed("falu", "Kisfalu", 0, " Falu "), "falu2": typed("falu2", "Nagyfalu", 0, "Falu"), "kron": typed("kron", "Galicia", 0, "Kronland")}, [])
+        self.fill(place="Johnston", date="1950", engine="manual")
+        self.tool._on_ask()
+        self.assertTrue(in_types("falu", _kinds_module.TREE_TYPES["settlements"]))
+        self.assertEqual(_kinds_module.TREE_TYPES["settlements"], _kinds_module.FILE_TYPES["settlements"] + ["Falu"])      # the file first; the two writings are one type, and the tidy one is its name
+        self.assertEqual(_kinds_module.LEARNED["types"][0]["count"], 2)
 
     def test_the_apply_button_follows_the_state(self):
         self.fill(engine="manual")
@@ -1559,6 +1571,10 @@ class ApplyTests(Base):
         self.addCleanup(db.close)
         self.dbstate.db = db
         self.mod.Tree = Tree                                                    # the real one: read the open database
+        learned = mock.patch.object(_kinds_module, "learn_from", wraps=_kinds_module.learn_from)
+        learn = learned.start()
+        self.addCleanup(learned.stop)
+        self.addCleanup(_kinds_module.forget_tree)
         self.fill(place="Bajmok", date="1850", engine="manual")
         if True:
             self.tool._on_ask()
@@ -1571,7 +1587,9 @@ class ApplyTests(Base):
             confirm.run.return_value = self.gtk.ResponseType.OK
             self.gtk.MessageDialog.side_effect = lambda *a, **k: confirm
             before = len(Tree.from_db(db).places)
+            asked = learn.call_count
             self.tool._on_apply()
+        self.assertEqual(learn.call_count, asked + 1, "the custom types are read again after a write (it may have made one)")
         self.assertEqual(self.tool.session.state, "applied")
         self.assertIn("Edit > Undo", self.tool.status.set_text.call_args.args[0])
         confirm.format_secondary_text.assert_called()

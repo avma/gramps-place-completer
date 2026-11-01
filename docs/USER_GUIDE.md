@@ -154,7 +154,7 @@ Only the places that you check are touched, and nothing else in the tree.
 | **New places** | A place with its name (and the language of the name), its type, its place in the hierarchy and, when known, coordinates and web links. |
 | **Names** | The primary name of a place keeps its language and the period when the name was used. When the name changes, the old name stays as an **alternative name**, with its language and its period. |
 | **Type** | Set for a new place or one with no type; changed only as described in [Place types](#place-types). |
-| **Hierarchy (enclosure) links** | A link to the place that contains it, **with a date range**, placed so that the first link that fits a date is the right one. *Disconnect* removes a link, never a place. |
+| **Hierarchy (enclosure) links** | A link to the place that encloses it, **with a date range**, placed so that the first link that fits a date is the right one. *Disconnect* removes a link, never a place. |
 | **Coordinates** | Latitude and longitude, only where they are empty (from the response or from Wikidata). |
 | **Web links** | In the *Internet* tab of the place: the Wikipedia articles of your languages, a Wikidata link, and at most two other sites (see [Wikipedia languages in detail](#wikipedia-languages-in-detail)). |
 | **Citations** | The chain **Place → Citation → Source → Repository**, below. |

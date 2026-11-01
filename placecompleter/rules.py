@@ -119,6 +119,7 @@ MESSAGES = [
     ("M48", "B", "response specifies name ", "the year from which the name is used: not written"),
     ("M49", "A", "response lists alternati", "other places with this name: ask again with the region"),
     ("M51", "C", "the type of %s in the tree is", "the place of the tree has a type that is not a settlement: not changed (it may be another place of the same name)"),
+    ("M52", "B", "the type «%s» is not used by any place of your tree yet", "a type of your own that no place of the tree uses yet: approving the place makes it a new type (a note: nothing changes)"),
     ("M50", "A", "tree contains a place na", "the tree has a place of this name that is far from the one of the answer: another place, not changed (ID1)"),
 ]
 

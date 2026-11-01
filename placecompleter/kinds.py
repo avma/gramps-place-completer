@@ -27,6 +27,8 @@ whether two types are the same kind.
 # Standard python modules
 #
 # -------------------------------------------------------------------------
+import copy
+import functools
 import os
 import re
 
@@ -37,6 +39,8 @@ import re
 # -------------------------------------------------------------------------
 from . import data as datalib
 from .words import fold
+from . import typelearn
+from .typelearn import in_types, same_type_text
 
 
 OVERLAY_WORDS = ("intercommunal", "intercommunity", "intermunicipal")    # a structure that overlaps the levels without being inside one (a French intercommunality)
@@ -79,6 +83,25 @@ def load_tree_types(directory=""):
 
 
 TREE_TYPES = load_tree_types()
+FILE_TYPES = copy.deepcopy(TREE_TYPES)                        # what the file of the user says: it always comes first, and is what a tree that is closed leaves behind
+LEARNED = {"types": [], "skipped": [], "duplicates": []}                                       # what the tree in use said (typelearn.learn): for the command `types` and the tests
+
+
+def learn_from(tree):
+    """Read the custom place types that the tree uses and merge them with the file of the user (the file comes first). TREE_TYPES is changed in place, because
+    the whole engine reads it; call it again for another tree (the previous tree is forgotten: the base is always the file)."""
+    learned = typelearn.learn(tree)
+    LEARNED.update(types=learned["types"], skipped=learned["skipped"], duplicates=learned["duplicates"])
+    TREE_TYPES.clear()
+    TREE_TYPES.update(typelearn.merge(FILE_TYPES, learned["conventions"]))
+    return learned
+
+
+def forget_tree():
+    """Back to the file of the user alone (no tree)."""
+    LEARNED.update(types=[], skipped=[], duplicates=[])
+    TREE_TYPES.clear()
+    TREE_TYPES.update(copy.deepcopy(FILE_TYPES))
 
 
 def _custom(role, builtin):
@@ -89,8 +112,8 @@ def _custom(role, builtin):
 
 # the user's own convention for administrative units (learned from the tree); None = ask
 CONTAINER_TYPES = (
-    (("voivodeship", "crownland", "kronland", "vajdasag"), _custom("province", 8)),
-    (("empire", "kaisertum", "kaiserreich"), _custom("empire", 1)),
+    (("voivodeship", "crownland", "kronland", "vajdasag"), functools.partial(_custom, "province", 8)),
+    (("empire", "kaisertum", "kaiserreich"), functools.partial(_custom, "empire", 1)),
     (("county", "komitat", "varmegye"), {"value": 3, "string": ""}),
     (("district", "bezirk", "kreis", "jaras", "kerulet"), {"value": 12, "string": ""}),
     (("township",), {"value": 0, "string": "Township"}),   # before "town": a township is not a town
@@ -107,18 +130,18 @@ def _type_matches(tree, handle, wanted_text):
     ptype = tree.places[handle]["type"]
     low = (wanted_text or "").lower()
     if any(w in low for w in ("voivodeship", "crownland", "kronland")):
-        return (bool(TREE_TYPES["province"]) and ptype.get("string") == TREE_TYPES["province"]) or ptype.get("value") in (8, 9)
+        return same_type_text(ptype.get("string"), TREE_TYPES["province"]) or ptype.get("value") in (8, 9)
     if re.search(r"\bstate\b", low):                      # "state", "State of New York", "federal state"
         return ptype.get("value") in (1, 2)
     if any(w in low for w in ("empire", "kaisertum")):
-        return (bool(TREE_TYPES["empire"]) and ptype.get("string") == TREE_TYPES["empire"]) or ptype.get("value") == 1
+        return same_type_text(ptype.get("string"), TREE_TYPES["empire"]) or ptype.get("value") == 1
     if any(w in low for w in ("county", "komitat")):
         return ptype.get("value") == 3
     if any(w in low for w in ("district", "bezirk", "kreis")):
-        return (bool(ptype.get("string")) and ptype.get("string") in TREE_TYPES["district"]) or ptype.get("value") == 12
+        return in_types(ptype.get("string"), TREE_TYPES["district"]) or ptype.get("value") == 12
     expected = _container_type(wanted_text)                                   # a type of the rules of the tree, or the answer's own word
     if expected and expected["value"] == 0 and expected["string"]:
-        return (ptype.get("string") or "").casefold() == expected["string"].casefold()
+        return same_type_text(ptype.get("string"), expected["string"])
     return False
 
 
@@ -207,5 +230,5 @@ def _container_type(text):
             return {"value": rule["value"], "string": rule["string"]}
     for words, ptype in CONTAINER_TYPES:
         if any(w in low for w in words):
-            return ptype
+            return ptype() if callable(ptype) else ptype
     return _own_type(text)

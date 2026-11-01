@@ -28,6 +28,7 @@ T3 a place is not inside a place of its own type; T4 settlements are on one leve
 #
 # -------------------------------------------------------------------------
 from .i18n import _ as tr
+from .typelearn import type_key
 
 COUNTRY, AREA, MUNICIPALITY, SETTLEMENT, SUB_SETTLEMENT, STREET, BUILDING = 1, 2, 3, 4, 5, 6, 7
 
@@ -38,7 +39,7 @@ _BY_VALUE = {1: COUNTRY, 2: AREA, 3: AREA, 8: AREA, 9: AREA, 10: AREA, 12: AREA,
 
 
 def _same(a, b):
-    return a.get("value", -1) == b.get("value", -1) and (a.get("string") or "").casefold() == (b.get("string") or "").casefold()
+    return a.get("value", -1) == b.get("value", -1) and type_key(a.get("string")) == type_key(b.get("string"))
 
 
 def level(ptype, conventions):
@@ -48,18 +49,18 @@ def level(ptype, conventions):
     value = ptype.get("value", -1)
     if value in _BY_VALUE:
         return _BY_VALUE[value]
-    text = (ptype.get("string") or "").casefold()
+    text = type_key(ptype.get("string"))
     if value != 0 or not text:
         return None
     custom = {"empire": COUNTRY, "monarchy": COUNTRY, "province": AREA}
     for key, found in custom.items():
-        if conventions.get(key) and text == conventions[key].casefold():
+        if conventions.get(key) and text == type_key(conventions[key]):
             return found
-    if text in {s.casefold() for s in conventions.get("district", [])}:
+    if text in {type_key(s) for s in conventions.get("district", [])}:
         return AREA
-    if text in {r["string"].casefold() for r in conventions.get("rules", []) if r.get("string")}:
+    if text in {type_key(r["string"]) for r in conventions.get("rules", []) if r.get("string")}:
         return AREA                                                          # canton, járás ...: the types that the rules of the tree name
-    if text in {s.casefold() for s in conventions.get("settlements", [])}:
+    if text in {type_key(s) for s in conventions.get("settlements", [])}:
         return SETTLEMENT
     return None
 

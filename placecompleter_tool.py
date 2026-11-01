@@ -65,7 +65,7 @@ from gramps.gui.plug import tool
 from placecompleter import i18n                                             # first: the engine's texts are made when it is imported
 _ = i18n.install_from_gramps(__file__)
 
-from placecompleter import GUIDE_URL, confidence, engines, geo, hints, keystore, ollama, settings, wikidata   # noqa: E402
+from placecompleter import GUIDE_URL, confidence, engines, geo, hints, keystore, kinds, ollama, settings, wikidata   # noqa: E402
 from placecompleter import session as pcsession                             # noqa: E402
 from placecompleter.model import Tree                                       # noqa: E402
 
@@ -460,6 +460,7 @@ class PlaceCompleterTool(tool.Tool, ManagedWindow):
         self._wiki_token += 1                                         # whatever Wikidata is still answering belongs to the old question
         self._save_prefs()
         tree = Tree.from_db(self.dbstate.db)                              # the tree as it is now
+        kinds.learn_from(tree)                                            # its custom place types (the file of the user comes first)
         self.session = pcsession.Session(tree, WORK, pack_files=sorted(os.path.join(PACKS, f) for f in os.listdir(PACKS)
                                                                         if f.endswith(".json")) if os.path.isdir(PACKS) else ())
         self._clear_result()
@@ -1001,7 +1002,9 @@ class PlaceCompleterTool(tool.Tool, ManagedWindow):
         except Exception as exc:                                          # shown, not hidden
             ErrorDialog(self.label, str(exc), parent=self.window)
             return
-        s.refresh(Tree.from_db(db))
+        tree = Tree.from_db(db)
+        kinds.learn_from(tree)                                            # the write may have made a custom type
+        s.refresh(tree)
         self._say(s.message)
         self.rows.clear()
         self._update_buttons()

@@ -40,6 +40,7 @@ from .i18n import _ as tr
 from .complete import _bound, _iso
 from .dates import describe, interval, is_empty
 from .evidence import UNIT_FIELDS, _sources
+from .typelearn import in_types
 from .kinds import TREE_TYPES, _SETTLEMENT_TYPES, has_no_type, type_name, _container_type, _same_kind, _state_type
 from .matching import _alternatives, _ancestors, _homonym_settlement
 from .periods import _date, _intersect, _overlaps, _piece, _split
@@ -83,7 +84,7 @@ def existing_place(a):
                               "evidence": _sources(rec, ("SETTLEMENT_TYPE_ON_DATE",))})
         elif (rec.get("type_closed") and rec["type_value"] in _SETTLEMENT_TYPES and not has_no_type(kind)
               and (kind.get("value", -1) not in _SETTLEMENT_TYPES or kind.get("string"))
-              and kind.get("string") not in TREE_TYPES.get("settlements", [])):
+              and not in_types(kind.get("string"), TREE_TYPES.get("settlements", []))):
             # the place of the tree is not a settlement (an area, a canton, a type of the user's own): its type is not changed, and the screen says why (it may be
             # the canton or the province of the same name, which is another place, or the town itself that was typed wrongly)
             _need(out, "the type of %s in the tree is «%s» but the response specifies %s: non-settlement types are not modified "

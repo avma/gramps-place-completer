@@ -31,6 +31,7 @@ from . import rules
 from .i18n import _ as tr
 from .complete import parse_date
 from .dates import is_empty
+from .typelearn import census, type_key
 
 
 def _need(out, msgid, *args):
@@ -56,6 +57,24 @@ def _lbl(tree, handle):
     return tree.label(handle) if handle in tree.places else str(handle)
 
 
+def _new_types(out, proposals, tree):
+    """M52: a type of the user's own that the proposals give and that no place of the tree uses yet. In Gramps a type of your own exists only because places use
+    it, so approving the place (or the type of a place) is what adds the type to the tree: the note says so, once for each type, with the places that get it."""
+    fresh = {}
+    for q in proposals:
+        if q["kind"] in ("add-place", "set-type", "change-type") and q.get("type_value") == 0 and type_key(q.get("type_string")):
+            fresh.setdefault(type_key(q["type_string"]), {"name": q["type_string"].strip(), "places": []})["places"].append(
+                q["names"][0]["value"] if q["kind"] == "add-place" and q.get("names") else tree.label(q["place"]))
+    if not fresh or not rules.message_on("M52"):
+        return
+    used = {type_key(t) for t in census(tree)}
+    for key, new in fresh.items():
+        if key not in used:
+            places = list(dict.fromkeys(new["places"]))
+            shown = ", ".join("«%s»" % p for p in places[:3]) + (" +%d" % (len(places) - 3) if len(places) > 3 else "")
+            _need(out, "the type «%s» is not used by any place of your tree yet; approving %s adds it as a new type of your own", new["name"], shown)
+
+
 def finish(a):
     """The proposals made into the screen: nothing is selected for the user, the units, the chain, the preview."""
     about, child, date_text = a.about, a.child, a.date_text
@@ -65,6 +84,7 @@ def finish(a):
         if q["kind"] in ("rename-place", "set-link", "remove-link", "move-link", "change-type") or (q["kind"] == "set-name-date" and not is_empty(q.get("old"))):
             q["existing"] = True
     out["proposals"] = proposals
+    _new_types(out, proposals, tree)
     out["units"] = [{"name": u["mention"]["name"], "type": u["mention"]["type"], "handle": u.get("handle"), "key": u.get("key")} for u in units]
     if units:
         top = units[-1]

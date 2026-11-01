@@ -32,6 +32,7 @@ The topics that the steps use, in the order of their dependencies (a module impo
 |---|---|
 | `words.py` | the folding of names, the lists of generic words, the tests of an unknown value |
 | `kinds.py` | the types of places: the size classes, the custom types of the tree, the type of a level from a word |
+| `typelearn.py` | the custom types that a tree uses, read from the tree: the ways of writing one type joined (`type_key`), the role of each by a vocabulary (`data/type-vocabulary.json`), merged with the file of the user, which comes first |
 | `periods.py` | the date of a period and the arithmetic on periods |
 | `reader.py` | `parse_structured`: the labelled lines of the template made into one record |
 | `matching.py` | the names of a place by the packs; the place of the tree that a level is; what covers a date |

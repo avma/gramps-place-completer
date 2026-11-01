@@ -1082,6 +1082,13 @@ msgstr ""
 "אינם משתנים כאן אוטומטית. יש להתאים את סוג המקום בגרמפס לפי הצורך"
 
 msgid ""
+"the type «%s» is not used by any place of your tree yet; approving %s adds it "
+"as a new type of your own"
+msgstr ""
+"הסוג «%s» עדיין אינו בשימוש באף מקום באילן־היוחסין; אישור %s יוסיף אותו כסוג "
+"מותאם אישית חדש"
+
+msgid ""
 "%s is also linked to %s, which appears identical to %s (same name and type)."
 " Merge them in Gramps (Edit > Merge Places) to consolidate this hierarchy "
 "level"

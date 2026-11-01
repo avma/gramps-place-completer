@@ -37,6 +37,7 @@ from . import links as linklib
 from . import names as namelib
 from . import rules
 from .wikidata import km, tree_coordinates
+from .typelearn import in_types
 from .kinds import TREE_TYPES, _AREA_TYPES, _SETTLEMENT_TYPES
 from .matching import SAME_PLACE_KM
 from .screen import _need
@@ -62,7 +63,7 @@ def find_place(a):
         # the answer is a settlement: a canton, a province or another area of the tree that has the same name is not the place of the question (Blagnac, its canton)
         def is_area(h):
             held = tree.places[h]["type"] or {}
-            return held.get("value") in _AREA_TYPES or (held.get("value") == 0 and bool(held.get("string")) and held.get("string") not in TREE_TYPES.get("settlements", ()))
+            return held.get("value") in _AREA_TYPES or (held.get("value") == 0 and bool(held.get("string")) and not in_types(held.get("string"), TREE_TYPES.get("settlements", ())))
         settlements = [h for h in existing if not is_area(h)]
         if settlements:
             existing = settlements

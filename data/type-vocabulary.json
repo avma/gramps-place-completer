@@ -1,0 +1,20 @@
+{
+  "description": "STARTER DATA, to be checked: words that tell what a custom place type of YOUR tree is, so that the addon can learn the types from the tree (it reads only the types that places use). A type is recognised when its text, folded (case, accents, spaces, dashes, quotes), is one of the words of a group. 'role': province, empire and monarchy (the custom type of the tree for them), district and canton (types that are areas; the words of a group also become a rule: an answer that calls a level by one of them gets the type of your tree), settlement (types that are settlements, not areas). A group may say \"builtin\": the number of the type of Gramps that the engine gives its words (district is 12): a rule is then made from a custom type of your tree only when more places use it than that type of Gramps. A group is a set of synonyms: words that mean different units (jaras, kerulet) are in groups of their own, so that they are never joined. Add your own words (any language) in ~/.config/placecompleter/type-vocabulary.json (or PLACECOMPLETER_VOCABULARY): its groups are added to these; an update of the addon does not touch it.",
+  "groups": [
+    {"role": "province", "words": ["province", "provincia", "provinz", "provincie", "provincija", "voivodeship", "województwo", "vajdaság", "kronland", "crownland"]},
+    {"role": "empire", "words": ["empire", "kaisertum", "kaiserreich", "imperio", "impero", "imperium", "birodalom", "cesarstwo", "císařství"]},
+    {"role": "monarchy", "words": ["monarchy", "monarchie", "monarchia", "monarquia", "monarhija"]},
+    {"role": "canton", "words": ["canton", "kanton", "cantone", "cantón"]},
+    {"role": "district", "words": ["district", "distrito", "distretto"], "builtin": 12},
+    {"role": "district", "words": ["bezirk"], "builtin": 12},
+    {"role": "district", "words": ["kreis"], "builtin": 12},
+    {"role": "district", "words": ["okres"]},
+    {"role": "district", "words": ["okrug", "округ"]},
+    {"role": "district", "words": ["rayon", "raion", "район"]},
+    {"role": "district", "words": ["arrondissement"]},
+    {"role": "district", "words": ["járás"], "builtin": 12},
+    {"role": "district", "words": ["kerület"], "builtin": 12},
+    {"role": "district", "words": ["powiat"]},
+    {"role": "settlement", "words": ["settlement", "village", "dorf", "falu", "wieś", "vesnice", "selo", "село", "sat", "kylä", "hamlet", "weiler", "puszta", "tanya", "town", "stadt", "város", "miasto", "město", "mesto", "oraș", "city", "ciudad", "ville", "città", "stad", "kibbutz", "moshav", "suburb", "kibutz", "kibbuts"]}
+  ]
+}
