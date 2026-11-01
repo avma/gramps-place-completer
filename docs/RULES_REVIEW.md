@@ -1,67 +1,85 @@
-# Which rules do we really need? (a review after the form "table")
+# Which Rules Do We Really Need? (A Review After the "Table" Format)
 
-The first idea was small: ask an AI for the type of a place, its levels and its coordinates, and write them to Gramps instead of typing them.
-The rules of `ANALYZER_RULES.md` grew around that idea because the answers of the AI were free text and the tree has data of the user.
-The form `table` (Table 10) asks for a table; some of the rules may no longer be needed. This file says how we find out, not what to remove.
+The initial concept was modest: prompt an AI for a place's type, administrative hierarchy levels, and geographic coordinates, and commit them directly to Gramps instead of entering them manually.
 
-## The groups (a first sorting; the evidence decides)
+The rules detailed in `ANALYZER_RULES.md` evolved around this concept because early AI responses consisted of unstructured, free-form text, and existing user data in the family tree required strict protection.
 
-| Group | Rules | What it protects | Decision |
+With the introduction of the structured `table` format (Table 10), responses are returned in a standardized tabular format. Consequently, several legacy rules may no longer be necessary. This document defines the evaluation methodology used to determine candidate rules for removal, rather than declaring immediate deprecation.
+
+---
+
+## The Groups (An Initial Classification)
+
+*The ultimate decision for each group depends on empirical evaluation.*
+
+| Group | Rules Included | What It Protects | Decision Strategy |
 |---|---|---|---|
-| A. Safety of the tree | P0 (what exists is changed one by one), T1-T5 (no loop, no place inside a place of its own type), C1, C2, C4 (a link is added before an old one, nothing is touched), the stale checks of the writer, Undo, a type of the user's own is never changed | the data of the user | **keep**, whatever the evidence |
-| B. Making up for a free-text answer | ST1-ST6 (the closed list for the type: the question says it now), LV1 (overlapping structures), TB5 (years written backwards), the word lists `SETTLEMENT_TYPES` and `CONTAINER_TYPES`, "listed twice as a level and as the state", "the chain ends at the state with no country above it", "the first level is the parent" (Sissa), the name periods that are inferred, "the answer contradicts itself", `compare_with_saved`, the echo test and the five forms | a bad or loose answer | **test** with the replay (below) |
-| C. Correcting links that exist | C3, C5, C6, C7 (a period, a disconnect, a cut), `rename-place`, `set-name-language` | an untidy tree | **test**: they fire on the tree, not on the answer |
-| D. More than the first idea | LK1-LK5 (web links), CT1-CT5 (citations and their routing), Table 7 (Wikidata links), the Wikidata look-up of coordinates, the languages of Wikipedia | extras | **the user decides** whether they stay |
+| **A. Tree Data Integrity** | **P0** (existing data modified only with explicit individual approval), **T1–T5** (prohibitions against self-enclosure, circular loops, and identical-type nesting), **C1, C2, C4** (prepending new hierarchy links before existing ones without altering legacy records), stale-state writer checks, atomic Undo operations, and preservation of user-defined custom place types. | User data integrity | **Retain unconditionally**, regardless of empirical evidence. |
+| **B. Unstructured Text Handling** | **ST1–ST6** (closed-vocabulary place type taxonomy), **LV1** (overlapping administrative structures), **TB5** (parsing reversed/RTL historical year ranges), standard term dictionaries (`SETTLEMENT_TYPES` and `CONTAINER_TYPES`), deduplication logic (co-named levels and sovereign states), top-of-chain rules (a chain that ends at a state with no country above it), the rule that the first level is the parent (*Sissa* case), inferred name active periods, self-contradiction detection, `compare_with_saved`, echo testing, and multi-prompt template fallbacks. | Formatting variations or ambiguous AI responses | **Evaluate empirically** using the replay benchmark. |
+| **C. Existing Link Reconciliation** | **C3, C5, C6, C7** (date boundary adjustments, invalid link disconnections, link truncation), `rename-place`, `set-name-language`. | Existing database hierarchy accuracy | **Evaluate empirically**: triggered against database records, not raw AI responses. |
+| **D. Extended Capabilities** | **LK1–LK5** (web link processing), **CT1–CT5** (citation routing and caps), **Table 7** (Wikidata entity links), automated Wikidata coordinate lookups, Wikipedia language prioritization. | Non-core functional enhancements | **User-configured**: retained or removed based on user preference. |
 
-## The method
+---
 
-1. **Collect answers of the form `table`**, about 20: by hand in the window with the engine `manual` (the answers are saved in
-   `~/gramps-place-work/answers`, and the window overwrites an answer of the same place and year: move the old folder aside first), or with no
-   one at the keyboard: `python3 tools/collect_answers.py` asks an engine with a key (Claude, OpenAI or Ollama) the table question for a list of
-   places and keeps the answers in `~/gramps-place-work/answers-table`, without touching the old ones (`--check` says whether the engine is
-   ready, `--dry-run` prints the questions, `--report --db SNAPSHOT` also writes the two reports of step 2). Places that are not alike: France (Aussonne 1997, Blagnac 2026, Toulouse, Paris 1980), Italy (Parma 1990,
-   Sissa 1990), Hungary, Serbia, Romania (Bajmok 1877, Hadad 1900, Zombor 1850), Israel (Kfar Hess), the USA (Johnston 1950, which is ambiguous),
-   a very small village, a very large city, a place whose name changed, a place whose state changed.
-2. **Replay them, read-only**, against the snapshot (the rules about places that exist only fire with a tree):
-   `python3 tools/replay_answers.py --db PATH-TO-THE-SNAPSHOT-SQLITE`
-   It prints which proposals and which messages (each message is a rule) fired, in how many answers, and writes a table.
-3. **Read the result with three questions for every rule of groups B, C and D:**
-   - did it fire at all, and in how many of the answers?
-   - when it fired, was what it did right?
-   - what happens without it: **data lost or wrong data** (keep it), or only an extra note or a proposal nobody needed (it can go)?
-4. **A rule is removed only when** it never fired, or fired in fewer than one answer in twenty, **and** its absence cannot damage the tree.
-   A rule that protects the data stays even if it never fires: a rare danger is still a danger.
-5. **What is removed goes in steps**, each a separate installer with the tests that go with it, so that any step can be undone.
+## The Evaluation Methodology
 
-## The switches (`placecompleter/rules.py`)
+1. **Collect `table`-format AI Responses (~20 samples):**
+   * *Manual Collection:* Use the addon interface set to `manual` engine mode (responses are saved to `~/gramps-place-work/answers`; move existing folders aside to avoid overwriting).
+   * *Automated Collection:* Run `python3 tools/collect_answers.py` using an API-keyed engine (Claude, OpenAI, or Ollama) to query a diverse set of historical test places and output to `~/gramps-place-work/answers-table`.
+     * Utility flags: `--check` verifies engine readiness, `--dry-run` displays prompts, `--report --db SNAPSHOT` executes Step 2 reporting.
+   * *Required Diversity:* Include diverse geographic and historical contexts:
+     * **France:** Aussonne (1997), Blagnac (2026), Toulouse, Paris (1980)
+     * **Italy:** Parma (1990), Sissa (1990)
+     * **Central/Eastern Europe:** Bajmok (1877), Hadad (1900), Zombor (1850)
+     * **Israel:** Kfar Hess
+     * **United States:** Johnston (1950, ambiguous entity)
+     * **Variations:** Small villages, major metropolises, entities with historical name changes, and entities with shifting sovereign allegiance.
 
-Every rule has an id and can be switched off, for an experiment only; nothing here is a setting of a user. With every rule on (the usual state)
-nothing changes. The list is in `rules.py`:
-- the behavior rules of the answer and the extras: ST3, ST6, LV1, LV2, LV3, LK, WL, CT2, CT4, CT5;
-- the rules of the periods of names: NP1, NP3, NP5 (a name's years end it only when a later name is given; a name starts when the state began; a name
-  of a level gets the answer's period, off by default). NP2, NP4 and NP6 were removed (Table 12 of ANALYZER_RULES.md);
-- the rules of the nesting and of the links: T1, T2 (T2-T4), C3, C4, C5, C6 (C6 and C7), C8;
-- ID1 (a place of the tree with the name but far from the answer is another place) and NL (the language of the names of levels);
-- the rules that are OFF by default (`DEFAULT_OFF`: NP5 and NL): switched on with `PLACECOMPLETER_RULES_ON=NP5,NL`; `--ablate` tries them ON;
-- the notes of the analysis, M01-M49, one rule each (a test checks that every note belongs to a rule);
-- the rules that cannot be switched, listed so that the list is complete: P0 (what exists is changed one by one), C1-C2 (the chain is made and
-  linked; a link as the answer says is left alone), C9 (a level the user unchecked is not touched).
-A test shows each of the rules of the second and third lists through an existing test of the program: with the rule on the test passes, with the
-rule off it fails.
+2. **Execute Read-Only Replay Analysis:**
+   Run `python3 tools/replay_answers.py --db PATH-TO-SNAPSHOT-SQLITE` against a representative database snapshot (since tree-dependent rules require database context to fire). The tool outputs trigger counts for every proposal type and rule message, generating a detailed summary table.
 
-- `python3 tools/replay_answers.py --db SNAPSHOT --ablate` switches the rules off one at a time over the saved answers and prints, for each, how many
-  answers change in what would be proposed and in the notes. A rule that changes neither is a rule these answers never needed; a rule that changes
-  only the notes is information (or noise), not data.
-- `--without M20,LV1` switches rules off for a whole run of the normal report.
-- `PLACECOMPLETER_RULES_OFF=M20,LV1` does the same for any run of the program.
-- WL, CT2, CT4 and CT5 act on Wikidata and on the writing, so the replay cannot measure them: they are seen by writing to a database
-  (`test_rules.py` shows each).
+3. **Evaluate Results Against Three Criteria (Groups B, C, and D):**
+   * Did the rule fire, and across how many sample responses?
+   * When triggered, did the rule execute correctly?
+   * What is the impact of removing the rule: **data loss or database corruption** (rule must be retained), or merely a redundant UI note/proposal (rule can be safely removed)?
 
-When the review decides to remove a rule, the switch is the first step (switched off, the tests and the answers say what changes), and the code
-of the rule goes after that, in one installer for all of them.
+4. **Deprecation Criteria:**
+   A rule is eligible for removal **only if** it never triggers (or triggers in fewer than 1 in 20 responses) **and** its absence poses zero risk to database integrity. Protective data-integrity rules are retained regardless of trigger frequency.
 
-## What the replay cannot tell
+5. **Staged Removal Process:**
+   Approved deprecations are carried out in distinct, incremental steps, each delivered as its own installer together with its tests (and committed on its own), so that any step can be reversed.
 
-- It counts the rules that fire on the answers we have. A rule against a mistake that an AI makes once in a hundred answers will not show up in twenty.
-- A rule that "never fired" may protect a case that is not in our answers. Group A is therefore never removed by this method.
-- The AI of another day can answer differently: the review should be repeated after a few months of real use.
+---
+
+## Feature Switches (`placecompleter/rules.py`)
+
+Every rule is assigned a unique identifier and can be dynamically toggled off for experimental verification (not exposed as end-user settings). When all switches are enabled (the default state), behavior remains standard.
+
+Defined rule categories in `rules.py`:
+* **AI Response and Feature Rules:** `ST3`, `ST6`, `LV1`, `LV2`, `LV3`, `LK`, `WL`, `CT2`, `CT4`, `CT5`.
+* **Name Active Period Rules:** `NP1` (a name's years end it only when a later name is given), `NP3` (a name starts when the state that ruled then began) and `NP5` (a name of a level gets the period from the response). `NP3` and `NP5` are disabled by default. *Note: Rules `NP2`, `NP4`, and `NP6` were removed (see Table 12 of `ANALYZER_RULES.md`).*
+* **Hierarchy Nesting and Link Rules:** `T1`, `T2` (`T2–T4`), `C3`, `C4`, `C5`, `C6` (`C6` and `C7`), `C8`.
+* **Identity and Localization Rules:** `ID1` (disambiguates distant co-named places) and `NL` (governs administrative level name language tagging).
+* **Default-Disabled Rules (`DEFAULT_OFF`):** `NP3`, `NP5` and `NL`. They can be enabled explicitly via `PLACECOMPLETER_RULES_ON=NP3,NP5,NL`, or evaluated during ablation runs using `--ablate`.
+* **Analysis UI Notes:** Individual rules `M01` through `M52`, one for each note (the numbers of the notes that were removed, Table 12 of `ANALYZER_RULES.md`, are missing). Unit tests verify that every note belongs to a rule and every rule has a note.
+* **Non-Switchable Core Rules:** Permanently active rules listed for completeness: `P0` (strict approval for existing data edits), `C1–C2` (hierarchy chain instantiation and matching-link preservation), `C9` (preservation of user-deselected administrative levels).
+
+### Ablation and Diagnostic Controls
+
+* `python3 tools/replay_answers.py --db SNAPSHOT --ablate`
+  Sequentially disables each rule across saved test answers, printing net changes in generated proposals and UI notes. A rule that yields zero net changes across all samples is a candidate for removal; a rule affecting only UI notes represents informational feedback rather than functional logic.
+* `--without M51,LV1`
+  Disables specified rules for a standard reporting run.
+* `PLACECOMPLETER_RULES_OFF=M51,LV1`
+  Environment variable setting that disables specified rules across any execution of the program.
+* **Non-Replay Features:** `WL`, `CT2`, `CT4`, and `CT5` operate during Wikidata interaction and database commit phases. They are evaluated via active database write tests (`test_rules.py`) rather than dry-run replays.
+
+When a decision is made to deprecate a rule, toggling its switch serves as the initial step to verify test and response behavior, followed by code removal in a unified release build.
+
+---
+
+## Limitations of Replay Analysis
+
+* **Sample Size Sensitivity:** The evaluation counts rule triggers across the available sample set. Rules designed to handle rare AI edge cases (e.g., occurring once in 100 responses) may not trigger within a 20-response test run.
+* **Unsampled Edge Cases:** A rule with zero triggers may still safeguard a scenario not present in the current evaluation set. Consequently, **Group A rules are permanently exempt from automated removal.**
+* **Evolving AI Engine Behavior:** AI models evolve over time and may alter response patterns. Empirical evaluations should be re-run periodically after extended real-world usage.

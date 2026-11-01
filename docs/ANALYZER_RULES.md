@@ -10,7 +10,7 @@ These tables describe how the analysis handles the administrative hierarchy of a
 
 **Nothing is checked for you.** When the proposals appear, no change is checked. You check the changes you accept, one by one or with the **Select all** button.
 
-| Kind of change | Example | Included by **Select all**? |
+| Change type | Example | Included by **Select all**? |
 |---|---|---|
 | An addition | A new place, a new link, an alternative name | Yes |
 | Filling an empty field | Coordinates, the language of a name, a place type | Yes |
@@ -24,7 +24,7 @@ These tables describe how the analysis handles the administrative hierarchy of a
 
 When you press the button again (it then reads **Clear all**), it unchecks everything, including the changes that you checked by hand.
 
-A **rival** is another proposal for the same field of the same place that gives a different value. Examples: two different periods for one name, two sets of coordinates, or two different place types. Only one of them can be chosen, never both. When you check one by hand, the other is unchecked. The same decision proposed twice is not a rivalry.
+A **rival** is another proposal for the same field of the same place that gives a different value. Examples: two different periods for one name, two sets of coordinates, or two different place types. Only one of them can be selected, never both. When you check one by hand, the other is unchecked. The same decision proposed twice is not a rivalry.
 Tests: `test_existing_data.py` (`SelectAllButtonTests`).
 
 A disconnect always comes with the new link that replaces it. Checking the disconnect also checks the new link, and unchecking the new link also unchecks the disconnect.
@@ -37,7 +37,7 @@ Tests: `test_existing_data.py`.
 | 1 | Country; the custom types of your tree for an empire and a monarchy | The highest level |
 | 2 | State, County, Province, Region, Department, District; the custom types of your tree for a province, a district, a canton, a járás, and so on | |
 | 3 | Municipality | Encloses settlements |
-| 4 | City, Town, Village, Hamlet; the custom settlement types of your tree (kibbutz, moshav, and so on) | An open list. It comes from your conventions file (`~/.config/placecompleter/type-conventions.json`; see the developer guide). |
+| 4 | City, Town, Village, Hamlet; the custom settlement types of your tree (kibbutz, moshav, and so on) | An open list. It comes from your conventions file (`~/.config/placecompleter/type-conventions.json`; see the developer guide) and from the custom types that your tree uses (`typelearn.py`). |
 | 5 | Neighborhood, Borough | |
 | 6 | Street | |
 | 7 | Number, Building, Farm | |
@@ -72,7 +72,7 @@ Tests: `test_real_answers.py` (`SissaMovedTests`).
 
 The last column says whether the action is an addition or a change to existing data (see P0).
 
-| # | Situation | Action | Kind of change |
+| # | Situation | Action | Change type |
 |---|---|---|---|
 | C1 | The tree has no link to the parent. | The whole chain from the response is created and linked. | Addition |
 | C2 | The existing link is exactly as the response says. | Nothing is done. The screen shows one line: *"These links already exist"*. | |
@@ -102,7 +102,7 @@ A web link of a place is a statement about that place itself. The addresses in t
 **LK5, the limits for each place.** A place can have at most:
 
 - one Wikidata link;
-- one Wikipedia article for each language you chose;
+- one Wikipedia article for each language you selected;
 - two other sites.
 
 The links that the place already has count toward these limits. Your languages are a setting: a list in order of preference. The default is the language of Gramps, then English. English is used only when none of your languages has an article. If the response has no article in one of your languages, the article is taken from the sitelinks of the Wikidata item (an address is never guessed). The same page in another form (http or https, `www`, a mobile address, a fragment, tracking parameters) counts as the same link.
@@ -150,6 +150,12 @@ The levels above the place (the unit types in `CONTAINERS`) are a different ques
 | ST6 (empty type) | **A place with no type is given the type from the response** (`set-type`). In Gramps, two kinds of type look like an empty field in the *Type* column: Unknown (value -1) and a custom type with empty text (value 0, Custom). `kinds.has_no_type` treats both as "no type" (for the type of the place, for the type of a level, in the safety check of the writer, and in the gramplets). Earlier versions of the addon counted only Unknown, so a place with a blank custom type (for example, one made by an import or by an older version) got no proposal, and the screen said nothing. |
 | ST6 (note) | The response gives a settlement class (`town`, `city`, and so on), but the place in the tree has a type that is **neither a settlement nor unknown**. Examples: an area type of Gramps such as District or Province, a canton, or a custom type that is not in the `settlements` list of `type-conventions.json`. In this case the type is **not changed**, and the screen **says so**. The reason may be that the place is the canton or the province with the same name (another place), or that the town itself has the wrong type. Before this note, the screen said nothing and nothing was proposed. Switch: `M51`.<br>Tests: `test_type_notes.py`. |
 
+## Table 8c: A Custom Type That Is New in the Tree (Note M52)
+
+| # | Rule |
+|---|---|
+| M52 (note) | A proposal (a new place, a type for a place that has none, or a type change) gives a place a **custom type** (value 0, with a text), and **no place in your tree uses that type yet**. In this case the screen says so, once for each type, and names the places that get it (up to three, then `+N`). Types are compared by `typelearn.type_key`, so capital letters, spaces and dashes do not matter. In Gramps, a custom type exists only because places use it, so approving the place is what adds the type to the tree. The note is information only: it does not change anything that is proposed, and it does not check anything for you. A type of Gramps and a blank type are never new. The tree is read (`typelearn.census`) only when a proposal gives a custom type. Switch: `M52`.<br>Tests: `test_new_type_note.py`. |
+
 ## Table 9: Levels and Places That Share a Name
 
 | # | Rule |
@@ -180,7 +186,7 @@ Tests: `test_table.py`.
 | # | Rule |
 |---|---|
 | ID1 | A place in the tree that has the name from the response **and coordinates**, and is more than 30 km from the coordinates in the response, is **another place with the same name**. For example, Johnston in Iowa and Johnston in Rhode Island are about 1,600 km apart. The place in the tree is not changed, the place from the response becomes a new place, and the screen says so. The names of the places above are **not** compared: one place has many names in different languages and periods (the Banat is an example), and a rule on them would reject the right place. A place without coordinates, or a response without coordinates, cannot be compared: it is handled as before. When two places have the name, the nearer one is taken without asking. |
-| NP5, NL | **Off by default.** The period (NP5) and the language (NL) of an existing name of a **level** are not proposed. They made up about half of all the proposals for responses in the `table` form, and they are not part of the first idea (type, levels, coordinates). The name of the place itself keeps its language and its period. `PLACECOMPLETER_RULES_ON=NP5,NL` switches them on. |
+| NP3, NP5, NL | **Off by default.** NP3: a name starts when the state that ruled at that time began. In Gramps, a name that has one period and no other name is shown as `?` for an earlier event, so no period is better. NP5 and NL: the period (NP5) and the language (NL) of an existing name of a **level** are not proposed. They made up about half of all the proposals for responses in the `table` form, and they are not part of the first idea (type, levels, coordinates). The name of the place itself keeps its language and its period. `PLACECOMPLETER_RULES_ON=NP3,NP5,NL` switches them on. |
 
 Tests: `test_identity.py`, `test_defaults.py`.
 
